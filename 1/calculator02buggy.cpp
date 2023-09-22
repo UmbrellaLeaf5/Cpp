@@ -3,21 +3,6 @@
 // "Software - Principles and Practice using C++" by Bjarne Stroustrup
 //
 
-/*
-  This file is known as calculator02buggy.cpp
-
-  I have inserted 5 errors that should cause this not to compile
-  I have inserted 3 logic errors that should cause the program to give wrong
-  results
-
-  First try to find and remove the bugs without looking in the book.
-  If that gets tedious, compare the code to that in the book (or posted
-  source code)
-
-  Happy hunting!
-
-*/
-
 #include "../lib/std_lib_facilities.h"
 
 class Token
