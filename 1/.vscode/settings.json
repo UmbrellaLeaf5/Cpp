@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "clang-format.executable": "/absolute/path/to/clang-format",
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
