@@ -6,7 +6,7 @@
   We have inserted 3 bugs that the compiler will catch and 3 that it won't.
 */
 
-#include <std_lib_facilities.h>
+#include <D:/Programs/2023-2024/C++/lib/std_lib_facilities.h>
 
 struct Token
 {
@@ -17,6 +17,8 @@ struct Token
   Token(char ch) : kind{ch}, value{0} {}
 
   Token(char ch, double val) : kind{ch}, value{val} {}
+
+  Token(char ch , string n) : kind{ch} , name{n} {}
 };
 
 class Token_stream
