@@ -107,7 +107,6 @@ Token Token_stream::get()
 
       if (s == declkey)
         return Token{let};
-
       return Token{name, s};
     }
     error("Bad token");
