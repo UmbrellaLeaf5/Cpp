@@ -1,7 +1,12 @@
 #include <D:/Programs/2023-2024/C++/lib/std_lib_facilities.h>
+#include <windows.h>
 
-// строка, показывающая, что пользователь ввёл не то, что от него ожидалось
-const string player_do_wrong = "Invalid input. Please follow the logic of the game and try again!";
+// строки, показывающая, что пользователь ввёл не то, что от него ожидалось
+const string player_do_wrong = "Invalid input. Please follow the logic of the game!";
+const string player_do_wrong_hold_on = "Invalid input. Please follow the logic of the game and try again!";
+
+// переменная, которая отвечает за закрытие программы при cin.fail()
+bool cin_ok = true;
 
 // вывод стартового сообщения
 void start_menu() 
@@ -25,36 +30,40 @@ void game_show(vector <int> situation)
 }
 
 // функция, выполняющая ввод данных в программу и проверку
-int reading(char r_c) 
+int reading(char r_c)
 {
-    string temp;
-    getline(cin, temp); 
-    if (cin.fail())
+    string temp; 
+    while (!cin.fail())
     {
-        cout << player_do_wrong << endl;
-        return -1;
+        getline(cin, temp);
+        if (temp.length() > 1)
+        {
+            cout << player_do_wrong << endl << "Only the first character is valid." << endl;
+            Sleep(2000);
+        }
+        char res {temp[0]}; // нас интересует только первый символ из строки, которую ввёл пользователь
+        switch(r_c){
+            case 'r': // случай, когда пользователь вводит ряд
+                switch(res){
+                    case '1': case '2': case '3':
+                        return (res - '0') - 1;
+                    default:
+                        cout << player_do_wrong_hold_on << endl;
+                        break;
+                }
+                break;
+            case 'c': // случай, когда пользователь вводит кол-во фишек
+                switch(res){
+                    case '1': case '2': case '3': case '4': case '5':
+                        return res - '0';
+                    default:
+                        cout << player_do_wrong_hold_on << endl;
+                        break;
+                }
+                break;
+        }
     }
-    char res {temp[0]}; // нас интересует только первый символ из строки, которую ввёл пользователь
-    switch(r_c){
-        case 'r': // случай, когда пользователь вводит ряд
-            switch(res){
-                case '1': case '2': case '3':
-                    return (res - '0') - 1;
-                default:
-                    cout << player_do_wrong << endl;
-                    reading(r_c);
-            }
-            break;
-        case 'c': // случай, когда пользователь вводит кол-во фишек
-            switch(res){
-                case '1': case '2': case '3': case '4': case '5':
-                    return res - '0';
-                default:
-                    cout << player_do_wrong << endl;
-                    reading(r_c);
-            }
-            break;
-    }
+    cin_ok = false;
 }
 
 // функция, возвращающая информацию об окончании игры
@@ -63,26 +72,34 @@ bool is_win(vector <int> situation){
 
 // функция, проверяющая, что фишки можно вычесть адекватно
 bool chips_test(vector <int> situation, int chips, int row){
-    return (situation[row] - chips >= 0) && (chips != -1);}
+    return (situation[row] - chips >= 0);}
 
 int main()
 {
     start_menu();
     vector <int> status = {3, 4, 5}; // вектор, задающий количество фишек
-    while (not(is_win(status)) || cin.fail())
+    for(int turn = 0; not(is_win(status)); turn ++)
+    //while (not(is_win(status)))
     {
         game_show(status);
         cout << "Enter the row." << endl;
         int r = reading('r'); // выбранный пользователем ряд
+        if (not(cin_ok)) // проверка на то, что пользователь не сломал ввод
+            break;
         cout << "Enter the number of chips." << endl;
         int c = reading('c'); // выбранное пользователем количество фишек
-        if (chips_test(status, c, r)){
+        if (not(cin_ok)) // проверка на то, что пользователь не сломал ввод
+            break;
+        if (chips_test(status, c, r)){ // проверка на возможность вычитания введенного количества фишек
             status[r] -= c;
         }
         else{
-            cout << player_do_wrong << endl;
+            cout << player_do_wrong << " Now, loading..." << endl;
+            Sleep(5000); 
         }
+        system("cls");
     }
-    cout << "You won! ";
+    if (cin_ok) 
+        cout << "You won! ";
     keep_window_open();
 }
