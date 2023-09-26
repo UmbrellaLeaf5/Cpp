@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/calculator.dir/calculator08buggy.obj"
-  "CMakeFiles/calculator.dir/calculator08buggy.obj.d"
+  "CMakeFiles/calculator.dir/calculator08.obj"
+  "CMakeFiles/calculator.dir/calculator08.obj.d"
   "calculator.exe"
   "calculator.exe.manifest"
   "calculator.pdb"

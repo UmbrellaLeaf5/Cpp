@@ -68,29 +68,29 @@ include 1/006-007/calculator/CMakeFiles/calculator.dir/progress.make
 # Include the compile flags for this target's objects.
 include 1/006-007/calculator/CMakeFiles/calculator.dir/flags.make
 
-1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.obj: 1/006-007/calculator/CMakeFiles/calculator.dir/flags.make
-1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.obj: 1/006-007/calculator/CMakeFiles/calculator.dir/includes_CXX.rsp
-1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.obj: D:/Programs/2023-2024/C++/1/006-007/calculator/calculator08buggy.cpp
-1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.obj: 1/006-007/calculator/CMakeFiles/calculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Programs\2023-2024\C++\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.obj"
-	cd /d D:\Programs\2023-2024\C++\build\1\006-007\calculator && "D:\Program Files\MinGW\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.obj -MF CMakeFiles\calculator.dir\calculator08buggy.obj.d -o CMakeFiles\calculator.dir\calculator08buggy.obj -c D:\Programs\2023-2024\C++\1\006-007\calculator\calculator08buggy.cpp
+1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.obj: 1/006-007/calculator/CMakeFiles/calculator.dir/flags.make
+1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.obj: 1/006-007/calculator/CMakeFiles/calculator.dir/includes_CXX.rsp
+1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.obj: D:/Programs/2023-2024/C++/1/006-007/calculator/calculator08.cpp
+1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.obj: 1/006-007/calculator/CMakeFiles/calculator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Programs\2023-2024\C++\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.obj"
+	cd /d D:\Programs\2023-2024\C++\build\1\006-007\calculator && "D:\Program Files\MinGW\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.obj -MF CMakeFiles\calculator.dir\calculator08.obj.d -o CMakeFiles\calculator.dir\calculator08.obj -c D:\Programs\2023-2024\C++\1\006-007\calculator\calculator08.cpp
 
-1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/calculator.dir/calculator08buggy.i"
-	cd /d D:\Programs\2023-2024\C++\build\1\006-007\calculator && "D:\Program Files\MinGW\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Programs\2023-2024\C++\1\006-007\calculator\calculator08buggy.cpp > CMakeFiles\calculator.dir\calculator08buggy.i
+1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/calculator.dir/calculator08.i"
+	cd /d D:\Programs\2023-2024\C++\build\1\006-007\calculator && "D:\Program Files\MinGW\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Programs\2023-2024\C++\1\006-007\calculator\calculator08.cpp > CMakeFiles\calculator.dir\calculator08.i
 
-1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/calculator08buggy.s"
-	cd /d D:\Programs\2023-2024\C++\build\1\006-007\calculator && "D:\Program Files\MinGW\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Programs\2023-2024\C++\1\006-007\calculator\calculator08buggy.cpp -o CMakeFiles\calculator.dir\calculator08buggy.s
+1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/calculator08.s"
+	cd /d D:\Programs\2023-2024\C++\build\1\006-007\calculator && "D:\Program Files\MinGW\mingw64\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Programs\2023-2024\C++\1\006-007\calculator\calculator08.cpp -o CMakeFiles\calculator.dir\calculator08.s
 
 # Object files for target calculator
 calculator_OBJECTS = \
-"CMakeFiles/calculator.dir/calculator08buggy.obj"
+"CMakeFiles/calculator.dir/calculator08.obj"
 
 # External object files for target calculator
 calculator_EXTERNAL_OBJECTS =
 
-1/006-007/calculator/calculator.exe: 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.obj
+1/006-007/calculator/calculator.exe: 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.obj
 1/006-007/calculator/calculator.exe: 1/006-007/calculator/CMakeFiles/calculator.dir/build.make
 1/006-007/calculator/calculator.exe: 1/006-007/calculator/CMakeFiles/calculator.dir/linkLibs.rsp
 1/006-007/calculator/calculator.exe: 1/006-007/calculator/CMakeFiles/calculator.dir/objects1.rsp

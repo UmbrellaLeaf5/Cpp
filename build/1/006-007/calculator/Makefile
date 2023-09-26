@@ -175,19 +175,19 @@ calculator/fast:
 .PHONY : calculator/fast
 
 # target to build an object file
-calculator08buggy.obj:
-	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\006-007\calculator\CMakeFiles\calculator.dir\build.make 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.obj
-.PHONY : calculator08buggy.obj
+calculator08.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\006-007\calculator\CMakeFiles\calculator.dir\build.make 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.obj
+.PHONY : calculator08.obj
 
 # target to preprocess a source file
-calculator08buggy.i:
-	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\006-007\calculator\CMakeFiles\calculator.dir\build.make 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.i
-.PHONY : calculator08buggy.i
+calculator08.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\006-007\calculator\CMakeFiles\calculator.dir\build.make 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.i
+.PHONY : calculator08.i
 
 # target to generate assembly for a file
-calculator08buggy.s:
-	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\006-007\calculator\CMakeFiles\calculator.dir\build.make 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.s
-.PHONY : calculator08buggy.s
+calculator08.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\006-007\calculator\CMakeFiles\calculator.dir\build.make 1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.s
+.PHONY : calculator08.s
 
 # Help Target
 help:
@@ -202,9 +202,9 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... calculator
-	@echo ... calculator08buggy.obj
-	@echo ... calculator08buggy.i
-	@echo ... calculator08buggy.s
+	@echo ... calculator08.obj
+	@echo ... calculator08.i
+	@echo ... calculator08.s
 .PHONY : help
 
 
