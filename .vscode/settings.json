@@ -1,4 +1,5 @@
 {
+  "cmake.installPrefix": "${workspaceFolder}",
   "editor.formatOnSave": true,
   "clang-format.executable": "/absolute/path/to/clang-format",
   "C_Cpp_Runner.cCompilerPath": "gcc",

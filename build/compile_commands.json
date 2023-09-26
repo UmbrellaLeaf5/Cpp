@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/Programs/2023-2024/C++/build/1/006-007/calculator",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -pedantic -Wall -Wextra -g -std=gnu++17 -o CMakeFiles\\calculator.dir\\calculator08buggy.obj -c D:\\Programs\\2023-2024\\C++\\1\\006-007\\calculator\\calculator08buggy.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/006-007/calculator/calculator08buggy.cpp",
+  "output": "1/006-007/calculator/CMakeFiles/calculator.dir/calculator08buggy.obj"
+}
+]
