@@ -39,9 +39,10 @@ int reading(char r_c)
         if (temp.length() > 1)
         {
             cout << player_do_wrong << endl << "Only the first character is valid." << endl;
+            // нас интересует только первый символ из строки, которую ввёл пользователь
             Sleep(2000);
         }
-        char res {temp[0]}; // нас интересует только первый символ из строки, которую ввёл пользователь
+        char res {temp[0]};
         switch(r_c){
             case 'r': // случай, когда пользователь вводит ряд
                 switch(res){
@@ -78,28 +79,27 @@ int main()
 {
     start_menu();
     vector <int> status = {3, 4, 5}; // вектор, задающий количество фишек
-    for(int turn = 0; not(is_win(status)); turn ++)
-    //while (not(is_win(status)))
+    for(int turn = 0; not(is_win(status)); turn ++) // цикл выполняется до тех пор, пока не будет достигнуто условие победы
     {
         game_show(status);
         cout << "Enter the row." << endl;
-        int r = reading('r'); // выбранный пользователем ряд
+        int player_row = reading('r'); // выбранный пользователем ряд
         if (not(cin_ok)) // проверка на то, что пользователь не сломал ввод
             break;
         cout << "Enter the number of chips." << endl;
-        int c = reading('c'); // выбранное пользователем количество фишек
+        int player_chips = reading('c'); // выбранное пользователем количество фишек
         if (not(cin_ok)) // проверка на то, что пользователь не сломал ввод
             break;
-        if (chips_test(status, c, r)){ // проверка на возможность вычитания введенного количества фишек
-            status[r] -= c;
+        if (chips_test(status, player_chips, player_row)){ // проверка на возможность вычитания введенного количества фишек
+            status[player_row] -= player_chips;
         }
         else{
             cout << player_do_wrong << " Now, loading..." << endl;
-            Sleep(5000); 
+            Sleep(3000); 
         }
         system("cls");
     }
-    if (cin_ok) 
+    if (cin_ok) // при несломанном вводе и выходе из основного цикла, кто-то побеждает
         cout << "You won! ";
     keep_window_open();
 }
