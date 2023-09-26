@@ -122,7 +122,7 @@ void Token_stream::ignore(char c)
   }
   full = false;
 
-  char ch;
+  char ch = 0;
   while (cin >> ch)
     if (ch == c)
       return;
@@ -140,33 +140,28 @@ vector<Variable> var_table;
 
 double get_value (string s)
 {
-  for (int i = 0; i < var_table.size(); ++i)
-    if (var_table[i].name == s)
-      return var_table[i].value;
+  for (const Variable& v : var_table)
+    if (v.name == s)
+      return v.value;
 
   error("get: undefined name ", s);
 }
 
 void set_value (string s, double d)
 {
-  for (int i = 0; i <= var_table.size(); ++i)
-  {
-    if (var_table[i].name == s)
-    {
-      var_table[i].value = d;
-      return;
+  for (Variable& v:var_table){
+    if (v.name == s) {
+      v.value = d;
+      return ; 
     }
   }
-
   error("set: undefined name ", s);
 }
 
-bool is_declared (string s)
+bool is_declared (string var)
 {
-  for (int i = 0; i < var_table.size(); ++i)
-    if (var_table[i].name == s)
-      return true;
-
+  for (const Variable& v : var_table)
+    if (v.name == var) return true ;
   return false;
 }
 
@@ -278,14 +273,14 @@ double declaration ()
   if (is_declared(var))
     error(var, " declared twice");
 
-  t = ts.get();
-  if (t.kind != '=')
+  Token t2 = ts.get();
+  if (t2.kind != '=')
     error("'=' missing in declaration of ", var);
 
   return define_name(var, expression());
 }
 
-double statement ()
+double  statement ()
 {
   Token t = ts.get();
   switch (t.kind)
@@ -302,7 +297,7 @@ void clean_up_mess () { ts.ignore(print); }
 
 void calculate ()
 {
-  while (true)
+  while (cin)
     try
     {
       cout << prompt;
@@ -329,14 +324,18 @@ try
   define_name("e", 2.718281828459045);
 
   calculate();
+  keep_window_open();
+  return 0;
 }
 catch (exception& e)
 {
   cerr << "exception: " << e.what() << endl;
+  keep_window_open("~~");
   return 1;
 }
 catch (...)
 {
   cerr << "Oops, unknown exception" << endl;
+  keep_window_open("~~");
   return 2;
 }

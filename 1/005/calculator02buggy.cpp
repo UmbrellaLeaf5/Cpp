@@ -3,7 +3,7 @@
 // "Software - Principles and Practice using C++" by Bjarne Stroustrup
 //
 
-#include "../lib/std_lib_facilities.h"
+#include <D:/Programs/2023-2024/C++/lib/std_lib_facilities.h>
 
 class Token
 {

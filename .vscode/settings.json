@@ -60,6 +60,8 @@
   "files.associations": {
     "ostream": "cpp",
     "iostream": "cpp",
-    "string": "cpp"
+    "string": "cpp",
+    "optional": "cpp",
+    "random": "cpp"
   }
 }
