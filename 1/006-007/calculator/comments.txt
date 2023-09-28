@@ -1,0 +1,10 @@
+Для Token, Token_stream
+token.h
+token.cpp
+
+Для всего, что касается переменных
+variable.h
+variable.cpp
+
+Для грамматики и основного цикла вычислений
+calculator.cpp

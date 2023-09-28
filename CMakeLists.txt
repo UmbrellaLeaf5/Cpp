@@ -5,4 +5,4 @@ set(LIB_DIR "./lib")
 include_directories(
     ${LIB_DIR}
 )
-add_subdirectory("006-007/calculator")
+add_subdirectory("1/006-007/calculator")

@@ -162,7 +162,7 @@ template<class T> char* as_bytes(T& i)	// needed for binary I/O
 inline void keep_window_open()
 {
 	cin.clear();
-	cout << "Please enter a character to exit\n";
+	cout << "Please enter a character to exit.\n";
 	char ch;
 	cin >> ch;
 	return;
