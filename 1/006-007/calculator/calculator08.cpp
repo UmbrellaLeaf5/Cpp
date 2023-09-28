@@ -104,8 +104,6 @@ void Token_stream::ignore(char c)
       return;
 }
 
-
-
 vector<Variable> var_table;
 
 double get_value (string s)
