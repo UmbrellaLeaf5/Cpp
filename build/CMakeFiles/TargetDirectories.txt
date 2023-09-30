@@ -4,10 +4,10 @@ D:/Programs/2023-2024/C++/build/CMakeFiles/list_install_components.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/local.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/strip.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/calculator.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/edit_cache.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/rebuild_cache.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/list_install_components.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/install.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/install/local.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/install/strip.dir
+D:/Programs/2023-2024/C++/build/1/008/vec2D/CMakeFiles/vec2d.dir
+D:/Programs/2023-2024/C++/build/1/008/vec2D/CMakeFiles/edit_cache.dir
+D:/Programs/2023-2024/C++/build/1/008/vec2D/CMakeFiles/rebuild_cache.dir
+D:/Programs/2023-2024/C++/build/1/008/vec2D/CMakeFiles/list_install_components.dir
+D:/Programs/2023-2024/C++/build/1/008/vec2D/CMakeFiles/install.dir
+D:/Programs/2023-2024/C++/build/1/008/vec2D/CMakeFiles/install/local.dir
+D:/Programs/2023-2024/C++/build/1/008/vec2D/CMakeFiles/install/strip.dir

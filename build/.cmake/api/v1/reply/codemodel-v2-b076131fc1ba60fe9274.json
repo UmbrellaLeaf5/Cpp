@@ -16,12 +16,12 @@
 					"source" : "."
 				},
 				{
-					"build" : "1/006-007/calculator",
+					"build" : "1/008/vec2D",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.006-007.calculator-Release-11fed1d91f6d58ca37f2.json",
+					"jsonFile" : "directory-1.008.vec2D-Release-2b1a9001591025c20c86.json",
 					"parentIndex" : 0,
 					"projectIndex" : 1,
-					"source" : "1/006-007/calculator",
+					"source" : "1/008/vec2D",
 					"targetIndexes" : 
 					[
 						0
@@ -47,7 +47,7 @@
 					[
 						1
 					],
-					"name" : "calculator",
+					"name" : "vec2d",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -59,9 +59,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "calculator::@04554f4434757d8e5a57",
-					"jsonFile" : "target-calculator-Release-22fbe9ca9c1643213173.json",
-					"name" : "calculator",
+					"id" : "vec2d::@85252048433aef3bfe3f",
+					"jsonFile" : "target-vec2d-Release-b0873174d21df211f4e4.json",
+					"name" : "vec2d",
 					"projectIndex" : 1
 				}
 			]

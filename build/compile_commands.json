@@ -1,8 +1,8 @@
 [
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/006-007/calculator",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\calculator.dir\\calculator08.obj -c D:\\Programs\\2023-2024\\C++\\1\\006-007\\calculator\\calculator08.cpp",
-  "file": "D:/Programs/2023-2024/C++/1/006-007/calculator/calculator08.cpp",
-  "output": "1/006-007/calculator/CMakeFiles/calculator.dir/calculator08.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/008/vec2D",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/vec2d.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\vec2d.dir\\vec2d.obj -c D:\\Programs\\2023-2024\\C++\\1\\008\\vec2D\\vec2d.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/008/vec2D/vec2d.cpp",
+  "output": "1/008/vec2D/CMakeFiles/vec2d.dir/vec2d.obj"
 }
 ]

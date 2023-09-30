@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "1/006-007/calculator/calculator.exe"
+			"path" : "1/008/vec2D/vec2d.exe"
 		},
 		{
-			"path" : "1/006-007/calculator/calculator.pdb"
+			"path" : "1/008/vec2D/vec2d.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -19,7 +19,7 @@
 		],
 		"files" : 
 		[
-			"1/006-007/calculator/CMakeLists.txt",
+			"1/008/vec2D/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -63,7 +63,7 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "D:/Programs/2023-2024/C++/./lib"
+					"path" : "D:/Programs/2023-2024/C++/lib"
 				}
 			],
 			"language" : "CXX",
@@ -81,7 +81,7 @@
 			]
 		}
 	],
-	"id" : "calculator::@04554f4434757d8e5a57",
+	"id" : "vec2d::@85252048433aef3bfe3f",
 	"install" : 
 	{
 		"destinations" : 
@@ -115,12 +115,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "calculator",
-	"nameOnDisk" : "calculator.exe",
+	"name" : "vec2d",
+	"nameOnDisk" : "vec2d.exe",
 	"paths" : 
 	{
-		"build" : "1/006-007/calculator",
-		"source" : "1/006-007/calculator"
+		"build" : "1/008/vec2D",
+		"source" : "1/008/vec2D"
 	},
 	"sourceGroups" : 
 	[
@@ -137,7 +137,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "1/006-007/calculator/calculator08.cpp",
+			"path" : "1/008/vec2D/vec2d.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

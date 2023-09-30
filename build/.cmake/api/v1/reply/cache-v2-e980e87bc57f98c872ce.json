@@ -1379,7 +1379,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Programs/2023-2024/C++/build/1/006-007/calculator"
+			"value" : "D:/Programs/2023-2024/C++/build/1/008/vec2D"
 		},
 		{
 			"name" : "calculator_IS_TOP_LEVEL",
@@ -1403,7 +1403,43 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Programs/2023-2024/C++/1/006-007/calculator"
+			"value" : "D:/Programs/2023-2024/C++/1/008/vec2D"
+		},
+		{
+			"name" : "vec2d_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Programs/2023-2024/C++/build/1/008/vec2D"
+		},
+		{
+			"name" : "vec2d_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "vec2d_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Programs/2023-2024/C++/1/008/vec2D"
 		}
 	],
 	"kind" : "cache",
