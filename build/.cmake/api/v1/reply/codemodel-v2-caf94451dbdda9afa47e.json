@@ -16,12 +16,12 @@
 					"source" : "."
 				},
 				{
-					"build" : "1/008/vec2D",
+					"build" : "1/009/logic_scheme",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.008.vec2D-Release-2b1a9001591025c20c86.json",
+					"jsonFile" : "directory-1.009.logic_scheme-Release-bfd8686c29b930f22902.json",
 					"parentIndex" : 0,
 					"projectIndex" : 1,
-					"source" : "1/008/vec2D",
+					"source" : "1/009/logic_scheme",
 					"targetIndexes" : 
 					[
 						0
@@ -47,7 +47,7 @@
 					[
 						1
 					],
-					"name" : "vec2d",
+					"name" : "logic_scheme",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -59,9 +59,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "vec2d::@85252048433aef3bfe3f",
-					"jsonFile" : "target-vec2d-Release-b0873174d21df211f4e4.json",
-					"name" : "vec2d",
+					"id" : "logic_scheme::@1b55abbb95f3e90d2f69",
+					"jsonFile" : "target-logic_scheme-Release-4ac8f2f75e672829cbfd.json",
+					"name" : "logic_scheme",
 					"projectIndex" : 1
 				}
 			]

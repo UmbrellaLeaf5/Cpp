@@ -62,57 +62,57 @@ CMAKE_BINARY_DIR = D:\Programs\2023-2024\C++\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: 1/008/vec2D/all
+all: 1/009/logic_scheme/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: 1/008/vec2D/preinstall
+preinstall: 1/009/logic_scheme/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: 1/008/vec2D/clean
+clean: 1/009/logic_scheme/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory 1/008/vec2D
+# Directory level rules for directory 1/009/logic_scheme
 
 # Recursive "all" directory target.
-1/008/vec2D/all: 1/008/vec2D/CMakeFiles/vec2d.dir/all
-.PHONY : 1/008/vec2D/all
+1/009/logic_scheme/all: 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/all
+.PHONY : 1/009/logic_scheme/all
 
 # Recursive "preinstall" directory target.
-1/008/vec2D/preinstall:
-.PHONY : 1/008/vec2D/preinstall
+1/009/logic_scheme/preinstall:
+.PHONY : 1/009/logic_scheme/preinstall
 
 # Recursive "clean" directory target.
-1/008/vec2D/clean: 1/008/vec2D/CMakeFiles/vec2d.dir/clean
-.PHONY : 1/008/vec2D/clean
+1/009/logic_scheme/clean: 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/clean
+.PHONY : 1/009/logic_scheme/clean
 
 #=============================================================================
-# Target rules for target 1/008/vec2D/CMakeFiles/vec2d.dir
+# Target rules for target 1/009/logic_scheme/CMakeFiles/logic_scheme.dir
 
 # All Build rule for target.
-1/008/vec2D/CMakeFiles/vec2d.dir/all:
-	$(MAKE) $(MAKESILENT) -f 1\008\vec2D\CMakeFiles\vec2d.dir\build.make 1/008/vec2D/CMakeFiles/vec2d.dir/depend
-	$(MAKE) $(MAKESILENT) -f 1\008\vec2D\CMakeFiles\vec2d.dir\build.make 1/008/vec2D/CMakeFiles/vec2d.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Programs\2023-2024\C++\build\CMakeFiles --progress-num=1,2 "Built target vec2d"
-.PHONY : 1/008/vec2D/CMakeFiles/vec2d.dir/all
+1/009/logic_scheme/CMakeFiles/logic_scheme.dir/all:
+	$(MAKE) $(MAKESILENT) -f 1\009\logic_scheme\CMakeFiles\logic_scheme.dir\build.make 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/depend
+	$(MAKE) $(MAKESILENT) -f 1\009\logic_scheme\CMakeFiles\logic_scheme.dir\build.make 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Programs\2023-2024\C++\build\CMakeFiles --progress-num=1,2 "Built target logic_scheme"
+.PHONY : 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/all
 
 # Build rule for subdir invocation for target.
-1/008/vec2D/CMakeFiles/vec2d.dir/rule: cmake_check_build_system
+1/009/logic_scheme/CMakeFiles/logic_scheme.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/008/vec2D/CMakeFiles/vec2d.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles 0
-.PHONY : 1/008/vec2D/CMakeFiles/vec2d.dir/rule
+.PHONY : 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/rule
 
 # Convenience name for target.
-vec2d: 1/008/vec2D/CMakeFiles/vec2d.dir/rule
-.PHONY : vec2d
+logic_scheme: 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/rule
+.PHONY : logic_scheme
 
 # clean rule for target.
-1/008/vec2D/CMakeFiles/vec2d.dir/clean:
-	$(MAKE) $(MAKESILENT) -f 1\008\vec2D\CMakeFiles\vec2d.dir\build.make 1/008/vec2D/CMakeFiles/vec2d.dir/clean
-.PHONY : 1/008/vec2D/CMakeFiles/vec2d.dir/clean
+1/009/logic_scheme/CMakeFiles/logic_scheme.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 1\009\logic_scheme\CMakeFiles\logic_scheme.dir\build.make 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/clean
+.PHONY : 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

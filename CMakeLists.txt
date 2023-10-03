@@ -6,4 +6,5 @@ include_directories(
     ${LIB_DIR}
 )
 #add_subdirectory("1/006-007/calculator")
-add_subdirectory("1/008/vec2D")
+#add_subdirectory("1/008/vec2D")
+add_subdirectory("1/009/logic_scheme")

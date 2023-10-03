@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"1/008/vec2D/CMakeLists.txt"
+			"1/009/logic_scheme/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -30,16 +30,16 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"1/008/vec2D/vec2d.exe"
+				"1/009/logic_scheme/logic_scheme.exe"
 			],
-			"targetId" : "vec2d::@85252048433aef3bfe3f",
+			"targetId" : "logic_scheme::@1b55abbb95f3e90d2f69",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "1/008/vec2D",
-		"source" : "1/008/vec2D"
+		"build" : "1/009/logic_scheme",
+		"source" : "1/009/logic_scheme"
 	}
 }

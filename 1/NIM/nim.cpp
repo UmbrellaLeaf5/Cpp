@@ -131,7 +131,7 @@ bool chip_operation_cin_fail(vector <int>& chips_game_status, int& player_chips,
     {
         cout << "Invalid input. You can not take so many chips from this row!" << endl;
         player_chips = reading('c');
-        if (not(cin_ok)) // проверка на то, что пользователь не сломал ввод
+        if (!(cin_ok)) // проверка на то, что пользователь не сломал ввод
             return 1;
     }
     chips_game_status[player_row] -= player_chips;
@@ -145,6 +145,26 @@ bool row_test_ok(vector <int> chips_game_status, int row){
 // функция, проверяющая корректность ввода ряда
 bool row_operation_cin_fail(vector <int>& chips_game_status, int& player_row)
 {
+    /*bool is_first_iteration = true;
+    while(true) 
+    {
+        if (!cin)
+            return;
+
+        if (is_first_iteration) 
+        {
+            cout << "";
+            is_first_iteration = false;
+        }
+
+        if (IsCorrectRow(GetNumber()) 
+        {
+            //
+            break;
+        }
+
+    } */  
+    
     player_row = reading('r');
     if (not(cin_ok)) // проверка на то, что пользователь не сломал ввод
         return 1;
@@ -177,9 +197,10 @@ void somebody_wins_message(vector<int> chips_game_status, bool bot_is_winner)
 //функция, выполняющая 1 ход игры и проверяющая, что он прошел успешно
 bool game_action_turn_cin_fail(vector<int>& chips_game_status, bool& bot_is_winner, int turn)
 {
-    if (cin_ok) // если ввод сломали, не следует лишний раз выводить поле
+    if (cin)
+    //if (cin_ok) // если ввод сломали, не следует лишний раз выводить поле
         game_show(chips_game_status, turn);
-    if (not(turn % 2)){ // ход пользователя
+    if (!(turn % 2)){ // ход пользователя
         cout << "Enter the row." << endl;
         int player_row; // ряд, который вводит пользователь
         if (row_operation_cin_fail(chips_game_status, player_row)) // проверка на нормальный ввод ряда
@@ -205,8 +226,13 @@ int main()
 
     // цикл выполняется до тех пор, пока не будет достигнуто условие победы
     // есть счетчик, по которому определяется, кто ходит
-    for(int turn = 0; not(is_win(chips_game_status)); turn ++) 
+    for(int turn = 0; !is_win(chips_game_status); turn++) 
     {
+        /*bot_wins_true = game_action_turn(chips_game_status, turn);
+
+        if (!cin)
+            break;*/
+        
         if(game_action_turn_cin_fail(chips_game_status, bot_wins_true, turn))
             break;
         system("cls"); // чистка консоли

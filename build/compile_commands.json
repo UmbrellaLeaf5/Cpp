@@ -1,8 +1,8 @@
 [
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/008/vec2D",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/vec2d.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\vec2d.dir\\vec2d.obj -c D:\\Programs\\2023-2024\\C++\\1\\008\\vec2D\\vec2d.cpp",
-  "file": "D:/Programs/2023-2024/C++/1/008/vec2D/vec2d.cpp",
-  "output": "1/008/vec2D/CMakeFiles/vec2d.dir/vec2d.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/009/logic_scheme",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/logic_scheme.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\logic_scheme.dir\\logic_scheme.obj -c D:\\Programs\\2023-2024\\C++\\1\\009\\logic_scheme\\logic_scheme.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/009/logic_scheme/logic_scheme.cpp",
+  "output": "1/009/logic_scheme/CMakeFiles/logic_scheme.dir/logic_scheme.obj"
 }
 ]

@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "1/008/vec2D/vec2d.exe"
+			"path" : "1/009/logic_scheme/logic_scheme.exe"
 		},
 		{
-			"path" : "1/008/vec2D/vec2d.pdb"
+			"path" : "1/009/logic_scheme/logic_scheme.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -19,7 +19,7 @@
 		],
 		"files" : 
 		[
-			"1/008/vec2D/CMakeLists.txt",
+			"1/009/logic_scheme/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -81,7 +81,7 @@
 			]
 		}
 	],
-	"id" : "vec2d::@85252048433aef3bfe3f",
+	"id" : "logic_scheme::@1b55abbb95f3e90d2f69",
 	"install" : 
 	{
 		"destinations" : 
@@ -115,12 +115,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "vec2d",
-	"nameOnDisk" : "vec2d.exe",
+	"name" : "logic_scheme",
+	"nameOnDisk" : "logic_scheme.exe",
 	"paths" : 
 	{
-		"build" : "1/008/vec2D",
-		"source" : "1/008/vec2D"
+		"build" : "1/009/logic_scheme",
+		"source" : "1/009/logic_scheme"
 	},
 	"sourceGroups" : 
 	[
@@ -137,7 +137,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "1/008/vec2D/vec2d.cpp",
+			"path" : "1/009/logic_scheme/logic_scheme.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
