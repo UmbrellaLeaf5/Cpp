@@ -1,11 +1,11 @@
-#include <D:/Programs/2023-2024/C++/lib/std_lib_facilities.h>
+#include <iostream>
 #include <windows.h> // только для Sleep();
+#include <vector>
+#include <numeric>
+using namespace std;
 
 // строки, показывающая, что пользователь ввёл не то, что от него ожидалось
 const string player_do_wrong_message = "Invalid input. Please follow the logic of the game and try again!";
-
-// переменная, которая даёт понять, что ввод был провален
-bool cin_ok = true;
 
 // вывод стартового сообщения
 void show_start_menu() 
@@ -71,7 +71,6 @@ int reading(char reading_object_type)
                 break;
         }
     }
-    cin_ok = false;
     return 0;
 }
 
@@ -79,9 +78,9 @@ int reading(char reading_object_type)
 int nim_sum(vector <int> chips_game_status)
 {
     int nim = 0;
-    for (auto i = 0; i < chips_game_status.size(); i++)
+    for (auto& i : chips_game_status)
     {
-        nim = nim ^ chips_game_status[i];
+        nim = nim ^ i;
     }
     return nim;
 }
@@ -124,14 +123,14 @@ bool chips_test_ok(vector <int> chips_game_status, int chips, int row){
 bool chip_operation_cin_fail(vector <int>& chips_game_status, int& player_chips, int player_row)
 {
     player_chips = reading('c');
-    if (not(cin_ok)) // проверка на то, что пользователь не сломал ввод
+    if (!cin) // проверка на то, что пользователь не сломал ввод
         return 1;
     // пока пользователь не введет адекватное значение, будем продолжать спрашивать
     while(not(chips_test_ok(chips_game_status, player_chips, player_row)))
     {
         cout << "Invalid input. You can not take so many chips from this row!" << endl;
         player_chips = reading('c');
-        if (!(cin_ok)) // проверка на то, что пользователь не сломал ввод
+        if (!cin) // проверка на то, что пользователь не сломал ввод
             return 1;
     }
     chips_game_status[player_row] -= player_chips;
@@ -166,14 +165,14 @@ bool row_operation_cin_fail(vector <int>& chips_game_status, int& player_row)
     } */  
     
     player_row = reading('r');
-    if (not(cin_ok)) // проверка на то, что пользователь не сломал ввод
+    if (!cin) // проверка на то, что пользователь не сломал ввод
         return 1;
     // пока пользователь не введет адекватное значение, будем продолжать спрашивать
     while(not(row_test_ok(chips_game_status, player_row)))
     {
         cout << "Invalid input. There are no chips left in this row!" << endl;
         player_row = reading('r');
-        if (not(cin_ok)) // проверка на то, что пользователь не сломал ввод
+        if (!cin) // проверка на то, что пользователь не сломал ввод
             return 1;
     }
     return 0;
@@ -238,11 +237,10 @@ int main()
         system("cls"); // чистка консоли
     }
 
-    if (cin_ok){ // при несломанном вводе и выходе из основного цикла, кто-то побеждает
+    if (!cin.fail()){ // при несломанном вводе и выходе из основного цикла, кто-то побеждает
         somebody_wins_message(chips_game_status, bot_wins_true);
     }
-    keep_window_open();
+    cout << endl;
+    system("pause");
     return 0;
 }
-
-// юху, 222 :)

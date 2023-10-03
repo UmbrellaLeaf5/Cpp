@@ -64,6 +64,7 @@
     "string": "cpp",
     "optional": "cpp",
     "random": "cpp",
-    "atomic": "cpp"
+    "atomic": "cpp",
+    "numeric": "cpp"
   }
 }
