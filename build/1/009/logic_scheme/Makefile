@@ -131,14 +131,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles D:\Programs\2023-2024\C++\build\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles D:\Programs\2023-2024\C++\build\1\009\logic_scheme\\CMakeFiles\progress.marks
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/009/logic_scheme/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/009/logic_scheme/clean
 .PHONY : clean
 
 # The main clean target
@@ -147,31 +147,47 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/009/logic_scheme/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/009/logic_scheme/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named logic_scheme
+# Convenience name for target.
+1/009/logic_scheme/CMakeFiles/logic_scheme.dir/rule:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/rule
+.PHONY : 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/rule
 
-# Build rule for target.
-logic_scheme: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 logic_scheme
+# Convenience name for target.
+logic_scheme: 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/rule
 .PHONY : logic_scheme
 
 # fast build rule for target.
 logic_scheme/fast:
-	$(MAKE) $(MAKESILENT) -f 1\009\logic_scheme\CMakeFiles\logic_scheme.dir\build.make 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/build
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\009\logic_scheme\CMakeFiles\logic_scheme.dir\build.make 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/build
 .PHONY : logic_scheme/fast
+
+# target to build an object file
+logic_scheme.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\009\logic_scheme\CMakeFiles\logic_scheme.dir\build.make 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/logic_scheme.obj
+.PHONY : logic_scheme.obj
+
+# target to preprocess a source file
+logic_scheme.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\009\logic_scheme\CMakeFiles\logic_scheme.dir\build.make 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/logic_scheme.i
+.PHONY : logic_scheme.i
+
+# target to generate assembly for a file
+logic_scheme.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\009\logic_scheme\CMakeFiles\logic_scheme.dir\build.make 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/logic_scheme.s
+.PHONY : logic_scheme.s
 
 # Help Target
 help:
@@ -186,6 +202,9 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... logic_scheme
+	@echo ... logic_scheme.obj
+	@echo ... logic_scheme.i
+	@echo ... logic_scheme.s
 .PHONY : help
 
 
@@ -197,6 +216,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

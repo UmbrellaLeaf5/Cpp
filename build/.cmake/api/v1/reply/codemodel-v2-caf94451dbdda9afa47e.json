@@ -16,12 +16,12 @@
 					"source" : "."
 				},
 				{
-					"build" : "1/006-007/calculator",
+					"build" : "1/009/logic_scheme",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.006-007.calculator-Release-11fed1d91f6d58ca37f2.json",
+					"jsonFile" : "directory-1.009.logic_scheme-Release-bfd8686c29b930f22902.json",
 					"parentIndex" : 0,
 					"projectIndex" : 1,
-					"source" : "1/006-007/calculator",
+					"source" : "1/009/logic_scheme",
 					"targetIndexes" : 
 					[
 						0
@@ -47,7 +47,7 @@
 					[
 						1
 					],
-					"name" : "calculator",
+					"name" : "logic_scheme",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -59,9 +59,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "calculator::@04554f4434757d8e5a57",
-					"jsonFile" : "target-calculator-Release-22fbe9ca9c1643213173.json",
-					"name" : "calculator",
+					"id" : "logic_scheme::@1b55abbb95f3e90d2f69",
+					"jsonFile" : "target-logic_scheme-Release-4ac8f2f75e672829cbfd.json",
+					"name" : "logic_scheme",
 					"projectIndex" : 1
 				}
 			]

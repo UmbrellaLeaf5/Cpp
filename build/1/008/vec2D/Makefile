@@ -131,14 +131,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles D:\Programs\2023-2024\C++\build\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles D:\Programs\2023-2024\C++\build\1\008\vec2D\\CMakeFiles\progress.marks
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/008/vec2D/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/008/vec2D/clean
 .PHONY : clean
 
 # The main clean target
@@ -147,31 +147,47 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/008/vec2D/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/008/vec2D/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named logic_scheme
+# Convenience name for target.
+1/008/vec2D/CMakeFiles/vec2d.dir/rule:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/008/vec2D/CMakeFiles/vec2d.dir/rule
+.PHONY : 1/008/vec2D/CMakeFiles/vec2d.dir/rule
 
-# Build rule for target.
-logic_scheme: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 logic_scheme
-.PHONY : logic_scheme
+# Convenience name for target.
+vec2d: 1/008/vec2D/CMakeFiles/vec2d.dir/rule
+.PHONY : vec2d
 
 # fast build rule for target.
-logic_scheme/fast:
-	$(MAKE) $(MAKESILENT) -f 1\009\logic_scheme\CMakeFiles\logic_scheme.dir\build.make 1/009/logic_scheme/CMakeFiles/logic_scheme.dir/build
-.PHONY : logic_scheme/fast
+vec2d/fast:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\008\vec2D\CMakeFiles\vec2d.dir\build.make 1/008/vec2D/CMakeFiles/vec2d.dir/build
+.PHONY : vec2d/fast
+
+# target to build an object file
+vec2d.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\008\vec2D\CMakeFiles\vec2d.dir\build.make 1/008/vec2D/CMakeFiles/vec2d.dir/vec2d.obj
+.PHONY : vec2d.obj
+
+# target to preprocess a source file
+vec2d.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\008\vec2D\CMakeFiles\vec2d.dir\build.make 1/008/vec2D/CMakeFiles/vec2d.dir/vec2d.i
+.PHONY : vec2d.i
+
+# target to generate assembly for a file
+vec2d.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\008\vec2D\CMakeFiles\vec2d.dir\build.make 1/008/vec2D/CMakeFiles/vec2d.dir/vec2d.s
+.PHONY : vec2d.s
 
 # Help Target
 help:
@@ -185,7 +201,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... logic_scheme
+	@echo ... vec2d
+	@echo ... vec2d.obj
+	@echo ... vec2d.i
+	@echo ... vec2d.s
 .PHONY : help
 
 
@@ -197,6 +216,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

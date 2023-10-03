@@ -1,7 +1,7 @@
 {
   "cmake.installPrefix": "${workspaceFolder}",
   "editor.formatOnSave": true,
-  "clang-format.executable": "/absolute/path/to/clang-format",
+  "clang-format.executable": "D:/Programs/2023-2024/C++/1/.clang-format",
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
@@ -63,6 +63,8 @@
     "iostream": "cpp",
     "string": "cpp",
     "optional": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "atomic": "cpp",
+    "numeric": "cpp"
   }
 }

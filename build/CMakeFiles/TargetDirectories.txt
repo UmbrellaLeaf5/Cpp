@@ -4,10 +4,10 @@ D:/Programs/2023-2024/C++/build/CMakeFiles/list_install_components.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/local.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/strip.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/calculator.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/edit_cache.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/rebuild_cache.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/list_install_components.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/install.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/install/local.dir
-D:/Programs/2023-2024/C++/build/1/006-007/calculator/CMakeFiles/install/strip.dir
+D:/Programs/2023-2024/C++/build/1/009/logic_scheme/CMakeFiles/logic_scheme.dir
+D:/Programs/2023-2024/C++/build/1/009/logic_scheme/CMakeFiles/edit_cache.dir
+D:/Programs/2023-2024/C++/build/1/009/logic_scheme/CMakeFiles/rebuild_cache.dir
+D:/Programs/2023-2024/C++/build/1/009/logic_scheme/CMakeFiles/list_install_components.dir
+D:/Programs/2023-2024/C++/build/1/009/logic_scheme/CMakeFiles/install.dir
+D:/Programs/2023-2024/C++/build/1/009/logic_scheme/CMakeFiles/install/local.dir
+D:/Programs/2023-2024/C++/build/1/009/logic_scheme/CMakeFiles/install/strip.dir

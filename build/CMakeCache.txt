@@ -261,13 +261,31 @@ Project_IS_TOP_LEVEL:STATIC=ON
 Project_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++
 
 //Value Computed by CMake
-calculator_BINARY_DIR:STATIC=D:/Programs/2023-2024/C++/build/1/006-007/calculator
+calculator_BINARY_DIR:STATIC=D:/Programs/2023-2024/C++/build/1/008/vec2D
 
 //Value Computed by CMake
 calculator_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-calculator_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++/1/006-007/calculator
+calculator_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++/1/008/vec2D
+
+//Value Computed by CMake
+logic_scheme_BINARY_DIR:STATIC=D:/Programs/2023-2024/C++/build/1/009/logic_scheme
+
+//Value Computed by CMake
+logic_scheme_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+logic_scheme_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++/1/009/logic_scheme
+
+//Value Computed by CMake
+vec2d_BINARY_DIR:STATIC=D:/Programs/2023-2024/C++/build/1/008/vec2D
+
+//Value Computed by CMake
+vec2d_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+vec2d_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++/1/008/vec2D
 
 
 ########################

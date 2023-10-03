@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"1/006-007/calculator/CMakeLists.txt"
+			"1/009/logic_scheme/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -30,16 +30,16 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"1/006-007/calculator/calculator.exe"
+				"1/009/logic_scheme/logic_scheme.exe"
 			],
-			"targetId" : "calculator::@04554f4434757d8e5a57",
+			"targetId" : "logic_scheme::@1b55abbb95f3e90d2f69",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "1/006-007/calculator",
-		"source" : "1/006-007/calculator"
+		"build" : "1/009/logic_scheme",
+		"source" : "1/009/logic_scheme"
 	}
 }
