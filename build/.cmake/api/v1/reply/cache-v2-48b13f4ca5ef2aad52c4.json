@@ -1406,6 +1406,42 @@
 			"value" : "D:/Programs/2023-2024/C++/1/008/vec2D"
 		},
 		{
+			"name" : "logic_elements_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Programs/2023-2024/C++/build/1/010/logic_elements"
+		},
+		{
+			"name" : "logic_elements_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "logic_elements_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Programs/2023-2024/C++/1/010/logic_elements"
+		},
+		{
 			"name" : "logic_scheme_BINARY_DIR",
 			"properties" : 
 			[

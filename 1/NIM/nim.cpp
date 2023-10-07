@@ -1,7 +1,5 @@
-#include <iostream>
+#include "std_lib_facilities.h"
 #include <windows.h> // только для Sleep();
-#include <vector>
-#include <numeric>
 #include <stdlib.h> // только для exit();
 using namespace std;
 

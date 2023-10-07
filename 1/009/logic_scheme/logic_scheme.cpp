@@ -1,4 +1,4 @@
-#include <D:/Programs/2023-2024/C++/lib/std_lib_facilities.h>
+#include "std_lib_facilities.h"
 #include "logic.h"
 
 int main()

@@ -131,14 +131,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles D:\Programs\2023-2024\C++\build\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles D:\Programs\2023-2024\C++\build\1\010\logic_elements\\CMakeFiles\progress.marks
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/010/logic_elements/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/010/logic_elements/clean
 .PHONY : clean
 
 # The main clean target
@@ -147,31 +147,80 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/010/logic_elements/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/010/logic_elements/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named logic_elements
+# Convenience name for target.
+1/010/logic_elements/CMakeFiles/logic_elements.dir/rule:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/010/logic_elements/CMakeFiles/logic_elements.dir/rule
+.PHONY : 1/010/logic_elements/CMakeFiles/logic_elements.dir/rule
 
-# Build rule for target.
-logic_elements: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 logic_elements
+# Convenience name for target.
+logic_elements: 1/010/logic_elements/CMakeFiles/logic_elements.dir/rule
 .PHONY : logic_elements
 
 # fast build rule for target.
 logic_elements/fast:
-	$(MAKE) $(MAKESILENT) -f 1\010\logic_elements\CMakeFiles\logic_elements.dir\build.make 1/010/logic_elements/CMakeFiles/logic_elements.dir/build
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\010\logic_elements\CMakeFiles\logic_elements.dir\build.make 1/010/logic_elements/CMakeFiles/logic_elements.dir/build
 .PHONY : logic_elements/fast
+
+logic.obj: logic.cpp.obj
+.PHONY : logic.obj
+
+# target to build an object file
+logic.cpp.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\010\logic_elements\CMakeFiles\logic_elements.dir\build.make 1/010/logic_elements/CMakeFiles/logic_elements.dir/logic.cpp.obj
+.PHONY : logic.cpp.obj
+
+logic.i: logic.cpp.i
+.PHONY : logic.i
+
+# target to preprocess a source file
+logic.cpp.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\010\logic_elements\CMakeFiles\logic_elements.dir\build.make 1/010/logic_elements/CMakeFiles/logic_elements.dir/logic.cpp.i
+.PHONY : logic.cpp.i
+
+logic.s: logic.cpp.s
+.PHONY : logic.s
+
+# target to generate assembly for a file
+logic.cpp.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\010\logic_elements\CMakeFiles\logic_elements.dir\build.make 1/010/logic_elements/CMakeFiles/logic_elements.dir/logic.cpp.s
+.PHONY : logic.cpp.s
+
+main.obj: main.cpp.obj
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\010\logic_elements\CMakeFiles\logic_elements.dir\build.make 1/010/logic_elements/CMakeFiles/logic_elements.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\010\logic_elements\CMakeFiles\logic_elements.dir\build.make 1/010/logic_elements/CMakeFiles/logic_elements.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\010\logic_elements\CMakeFiles\logic_elements.dir\build.make 1/010/logic_elements/CMakeFiles/logic_elements.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -186,6 +235,12 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... logic_elements
+	@echo ... logic.obj
+	@echo ... logic.i
+	@echo ... logic.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 
@@ -197,6 +252,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
