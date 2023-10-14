@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"1/010/logic_elements/CMakeLists.txt"
+			"1/012/shape_primitives/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,7 +17,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 10,
+				"line" : 45,
 				"parent" : 0
 			}
 		]
@@ -30,16 +30,16 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"1/010/logic_elements/logic_elements.exe"
+				"1/012/shape_primitives/shape_primitives.exe"
 			],
-			"targetId" : "logic_elements::@f68f00e73d0825712c0d",
+			"targetId" : "shape_primitives::@bbbf83bd80abceb1c9d4",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "1/010/logic_elements",
-		"source" : "1/010/logic_elements"
+		"build" : "1/012/shape_primitives",
+		"source" : "1/012/shape_primitives"
 	}
 }

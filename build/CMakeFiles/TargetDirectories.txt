@@ -4,10 +4,10 @@ D:/Programs/2023-2024/C++/build/CMakeFiles/list_install_components.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/local.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/strip.dir
-D:/Programs/2023-2024/C++/build/1/010/logic_elements/CMakeFiles/logic_elements.dir
-D:/Programs/2023-2024/C++/build/1/010/logic_elements/CMakeFiles/edit_cache.dir
-D:/Programs/2023-2024/C++/build/1/010/logic_elements/CMakeFiles/rebuild_cache.dir
-D:/Programs/2023-2024/C++/build/1/010/logic_elements/CMakeFiles/list_install_components.dir
-D:/Programs/2023-2024/C++/build/1/010/logic_elements/CMakeFiles/install.dir
-D:/Programs/2023-2024/C++/build/1/010/logic_elements/CMakeFiles/install/local.dir
-D:/Programs/2023-2024/C++/build/1/010/logic_elements/CMakeFiles/install/strip.dir
+D:/Programs/2023-2024/C++/build/1/012/shape_primitives/CMakeFiles/shape_primitives.dir
+D:/Programs/2023-2024/C++/build/1/012/shape_primitives/CMakeFiles/edit_cache.dir
+D:/Programs/2023-2024/C++/build/1/012/shape_primitives/CMakeFiles/rebuild_cache.dir
+D:/Programs/2023-2024/C++/build/1/012/shape_primitives/CMakeFiles/list_install_components.dir
+D:/Programs/2023-2024/C++/build/1/012/shape_primitives/CMakeFiles/install.dir
+D:/Programs/2023-2024/C++/build/1/012/shape_primitives/CMakeFiles/install/local.dir
+D:/Programs/2023-2024/C++/build/1/012/shape_primitives/CMakeFiles/install/strip.dir

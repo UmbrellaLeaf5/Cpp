@@ -20,6 +20,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Compiler/GNU-C.cmake"
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake"
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Compiler/GNU.cmake"
+  "D:/Program Files/CMake/share/cmake-3.27/Modules/FindFLTK.cmake"
+  "D:/Program Files/CMake/share/cmake-3.27/Modules/FindOpenGL.cmake"
+  "D:/Program Files/CMake/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake"
+  "D:/Program Files/CMake/share/cmake-3.27/Modules/FindPackageMessage.cmake"
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake"
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
@@ -29,7 +33,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Platform/Windows-windres.cmake"
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Platform/Windows.cmake"
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake"
-  "D:/Programs/2023-2024/C++/1/010/logic_elements/CMakeLists.txt"
+  "D:/Program Files/CMake/share/cmake-3.27/Modules/SelectLibraryConfigurations.cmake"
+  "D:/Programs/2023-2024/C++/1/012/shape_primitives/CMakeLists.txt"
   "D:/Programs/2023-2024/C++/CMakeLists.txt"
   "CMakeFiles/3.27.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.27.6/CMakeCXXCompiler.cmake"
@@ -46,10 +51,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "1/010/logic_elements/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "1/012/shape_primitives/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "1/010/logic_elements/CMakeFiles/logic_elements.dir/DependInfo.cmake"
+  "1/012/shape_primitives/CMakeFiles/shape_primitives.dir/DependInfo.cmake"
   )

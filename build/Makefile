@@ -161,17 +161,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named logic_elements
+# Target rules for targets named shape_primitives
 
 # Build rule for target.
-logic_elements: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 logic_elements
-.PHONY : logic_elements
+shape_primitives: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 shape_primitives
+.PHONY : shape_primitives
 
 # fast build rule for target.
-logic_elements/fast:
-	$(MAKE) $(MAKESILENT) -f 1\010\logic_elements\CMakeFiles\logic_elements.dir\build.make 1/010/logic_elements/CMakeFiles/logic_elements.dir/build
-.PHONY : logic_elements/fast
+shape_primitives/fast:
+	$(MAKE) $(MAKESILENT) -f 1\012\shape_primitives\CMakeFiles\shape_primitives.dir\build.make 1/012/shape_primitives/CMakeFiles/shape_primitives.dir/build
+.PHONY : shape_primitives/fast
 
 # Help Target
 help:
@@ -185,7 +185,7 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... logic_elements
+	@echo ... shape_primitives
 .PHONY : help
 
 

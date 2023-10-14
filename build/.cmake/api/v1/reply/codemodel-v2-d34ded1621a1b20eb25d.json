@@ -12,20 +12,24 @@
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
 					"projectIndex" : 0,
 					"source" : "."
 				},
 				{
-					"build" : "1/010/logic_elements",
+					"build" : "1/012/shape_primitives",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.010.logic_elements-Release-e67d398a90bc4c24398f.json",
+					"jsonFile" : "directory-1.012.shape_primitives-Release-ffd452edb4e43677d5ff.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 1,
-					"source" : "1/010/logic_elements",
+					"source" : "1/012/shape_primitives",
 					"targetIndexes" : 
 					[
 						0
@@ -51,7 +55,7 @@
 					[
 						1
 					],
-					"name" : "logic_elements",
+					"name" : "shape_primitives",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -63,9 +67,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "logic_elements::@f68f00e73d0825712c0d",
-					"jsonFile" : "target-logic_elements-Release-8f23dc3118b949bd80f2.json",
-					"name" : "logic_elements",
+					"id" : "shape_primitives::@bbbf83bd80abceb1c9d4",
+					"jsonFile" : "target-shape_primitives-Release-294b38284368162e09df.json",
+					"name" : "shape_primitives",
 					"projectIndex" : 1
 				}
 			]

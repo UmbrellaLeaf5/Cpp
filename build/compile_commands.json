@@ -1,14 +1,26 @@
 [
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/010/logic_elements",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/logic_elements.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\logic_elements.dir\\main.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\010\\logic_elements\\main.cpp",
-  "file": "D:/Programs/2023-2024/C++/1/010/logic_elements/main.cpp",
-  "output": "1/010/logic_elements/CMakeFiles/logic_elements.dir/main.cpp.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/012/shape_primitives",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/shape_primitives.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\shape_primitives.dir\\main.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\012\\shape_primitives\\main.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/012/shape_primitives/main.cpp",
+  "output": "1/012/shape_primitives/CMakeFiles/shape_primitives.dir/main.cpp.obj"
 },
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/010/logic_elements",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/logic_elements.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\logic_elements.dir\\logic.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\010\\logic_elements\\logic.cpp",
-  "file": "D:/Programs/2023-2024/C++/1/010/logic_elements/logic.cpp",
-  "output": "1/010/logic_elements/CMakeFiles/logic_elements.dir/logic.cpp.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/012/shape_primitives",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/shape_primitives.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\shape_primitives.dir\\__\\__\\__\\lib\\Graph_lib\\Graph.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Graph_lib\\Graph.cpp",
+  "file": "D:/Programs/2023-2024/C++/lib/Graph_lib/Graph.cpp",
+  "output": "1/012/shape_primitives/CMakeFiles/shape_primitives.dir/__/__/__/lib/Graph_lib/Graph.cpp.obj"
+},
+{
+  "directory": "D:/Programs/2023-2024/C++/build/1/012/shape_primitives",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/shape_primitives.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\shape_primitives.dir\\__\\__\\__\\lib\\Graph_lib\\GUI.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Graph_lib\\GUI.cpp",
+  "file": "D:/Programs/2023-2024/C++/lib/Graph_lib/GUI.cpp",
+  "output": "1/012/shape_primitives/CMakeFiles/shape_primitives.dir/__/__/__/lib/Graph_lib/GUI.cpp.obj"
+},
+{
+  "directory": "D:/Programs/2023-2024/C++/build/1/012/shape_primitives",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/shape_primitives.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\shape_primitives.dir\\__\\__\\__\\lib\\Graph_lib\\Window.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Graph_lib\\Window.cpp",
+  "file": "D:/Programs/2023-2024/C++/lib/Graph_lib/Window.cpp",
+  "output": "1/012/shape_primitives/CMakeFiles/shape_primitives.dir/__/__/__/lib/Graph_lib/Window.cpp.obj"
 }
 ]
