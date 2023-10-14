@@ -7,4 +7,5 @@ include_directories(
 )
 #add_subdirectory("1/006-007/calculator")
 #add_subdirectory("1/008/vec2D")
-add_subdirectory("1/009/logic_scheme")
+#add_subdirectory("1/009/logic_scheme")
+add_subdirectory("1/010/logic_elements")

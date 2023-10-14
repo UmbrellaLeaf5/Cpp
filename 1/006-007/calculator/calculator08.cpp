@@ -6,7 +6,7 @@
   We have inserted 3 bugs that the compiler will catch and 3 that it won't.
 */
 
-#include <D:/Programs/2023-2024/C++/lib/std_lib_facilities.h>
+#include "std_lib_facilities.h"
 #include "token.h"
 #include "variable.h"
 

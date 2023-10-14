@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"1/009/logic_scheme/CMakeLists.txt"
+			"1/010/logic_elements/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,7 +17,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 7,
+				"line" : 10,
 				"parent" : 0
 			}
 		]
@@ -30,16 +30,16 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"1/009/logic_scheme/logic_scheme.exe"
+				"1/010/logic_elements/logic_elements.exe"
 			],
-			"targetId" : "logic_scheme::@1b55abbb95f3e90d2f69",
+			"targetId" : "logic_elements::@f68f00e73d0825712c0d",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "1/009/logic_scheme",
-		"source" : "1/009/logic_scheme"
+		"build" : "1/010/logic_elements",
+		"source" : "1/010/logic_elements"
 	}
 }

@@ -39,7 +39,7 @@ bool contains (const vector<string>& items, const string& val)
 }
 */
 
-#include "../lib/std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 vector<string> noun_items = {"C++", "fish", "birds"};
 vector<string> verb_items = {"fly", "swim", "rules"};

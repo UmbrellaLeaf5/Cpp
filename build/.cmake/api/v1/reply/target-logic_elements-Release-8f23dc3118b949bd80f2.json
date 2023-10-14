@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "1/009/logic_scheme/logic_scheme.exe"
+			"path" : "1/010/logic_elements/logic_elements.exe"
 		},
 		{
-			"path" : "1/009/logic_scheme/logic_scheme.pdb"
+			"path" : "1/010/logic_elements/logic_elements.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -19,7 +19,7 @@
 		],
 		"files" : 
 		[
-			"1/009/logic_scheme/CMakeLists.txt",
+			"1/010/logic_elements/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -30,13 +30,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 3,
+				"line" : 4,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 7,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
@@ -77,11 +77,12 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
-	"id" : "logic_scheme::@1b55abbb95f3e90d2f69",
+	"id" : "logic_elements::@f68f00e73d0825712c0d",
 	"install" : 
 	{
 		"destinations" : 
@@ -115,12 +116,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "logic_scheme",
-	"nameOnDisk" : "logic_scheme.exe",
+	"name" : "logic_elements",
+	"nameOnDisk" : "logic_elements.exe",
 	"paths" : 
 	{
-		"build" : "1/009/logic_scheme",
-		"source" : "1/009/logic_scheme"
+		"build" : "1/010/logic_elements",
+		"source" : "1/010/logic_elements"
 	},
 	"sourceGroups" : 
 	[
@@ -128,7 +129,15 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2
 			]
 		}
 	],
@@ -137,8 +146,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "1/009/logic_scheme/logic_scheme.cpp",
+			"path" : "1/010/logic_elements/main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "1/010/logic_elements/logic.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "1/010/logic_elements/logic.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
