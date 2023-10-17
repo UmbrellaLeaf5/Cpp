@@ -161,17 +161,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named shape_primitives
+# Target rules for targets named fractals
 
 # Build rule for target.
-shape_primitives: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 shape_primitives
-.PHONY : shape_primitives
+fractals: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 fractals
+.PHONY : fractals
 
 # fast build rule for target.
-shape_primitives/fast:
-	$(MAKE) $(MAKESILENT) -f 1\012\shape_primitives\CMakeFiles\shape_primitives.dir\build.make 1/012/shape_primitives/CMakeFiles/shape_primitives.dir/build
-.PHONY : shape_primitives/fast
+fractals/fast:
+	$(MAKE) $(MAKESILENT) -f 1\013\fractals\CMakeFiles\fractals.dir\build.make 1/013/fractals/CMakeFiles/fractals.dir/build
+.PHONY : fractals/fast
 
 # Help Target
 help:
@@ -185,7 +185,7 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... shape_primitives
+	@echo ... fractals
 .PHONY : help
 
 

@@ -1,7 +1,6 @@
 {
   "cmake.installPrefix": "${workspaceFolder}",
   "editor.formatOnSave": true,
-  "clang-format.executable": "D:/Programs/2023-2024/C++/.clang-format",
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
