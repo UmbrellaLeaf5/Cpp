@@ -65,6 +65,20 @@
     "random": "cpp",
     "atomic": "cpp",
     "numeric": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "regex": "cpp",
+    "array": "cpp",
+    "*.tcc": "cpp",
+    "bitset": "cpp",
+    "functional": "cpp",
+    "memory": "cpp",
+    "tuple": "cpp",
+    "fstream": "cpp",
+    "iomanip": "cpp",
+    "istream": "cpp",
+    "limits": "cpp",
+    "sstream": "cpp",
+    "streambuf": "cpp",
+    "utility": "cpp"
   }
 }
