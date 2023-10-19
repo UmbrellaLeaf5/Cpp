@@ -1,14 +1,20 @@
 /*
 	Грамматика:
 
-	Инструкция:
-		Выражение
+	Вычисление:
+		Инструкция
 		Вывод
 		Выход
+		Вычисление Инструкция
+	Инструкция:
+		Объявление
+		Выражение
+	Объявление:
+		# Имя = Выражение
 	Вывод:
 		;
 	Выход:
-		quit
+		exit
 	Выражение:
 		Терм
 		Выражение + Терм
@@ -17,12 +23,12 @@
 		Первичное_выражение
 		Терм * Первичное_выражение
 		Терм / Первичное_выражение
-		Переменная Терм % Первичное_выражение
+		Терм % Первичное_выражение
 	Первичное_выражение:
 		Число
 		(Выражение)
 		-Первичное_выражение
-		Переменная + Первичное_выражение
+		+Первичное_выражение
 		Корень квадратный (Выражение)
 		Возвести в степень (Выражение, Выражение)
 	Число:
@@ -60,8 +66,8 @@ public:
 };
 
 // константы, обозначающие типы получаемых токенов (в самой структуре токенов используеются именно они)
-const char let = 'L';
-const char quit = 'Q';
+const char let = '#';
+const char quit = 'q';
 const char print = ';';
 const char number = '8';
 const char name = 'a';
@@ -83,7 +89,7 @@ Token Token_stream::get()
 		// кейсы для операторов
 		case '(': case ')': case '{': case '}':
 		case '+': case '-': case '*': case '/': case '%':
-		case ';': case '=': case ',':
+		case ';': case '=': case ',': case '#':
 			return Token(received_char);
 		// кейсы для чисел
 		case '0': case '1': case '2': case '3': case '4': 
@@ -106,9 +112,7 @@ Token Token_stream::get()
 					input_string += received_char; 
 				cin.unget();
 				// если получены служебные слова, организуем соотв. действия в токене
-				if (input_string == "let") 
-					return Token(let); 
-				if (input_string == "quit") 
+				if (input_string == "exit") 
 					return Token(quit);
 				if (input_string == "sqrt") 
 					return Token(square_root);
@@ -212,6 +216,9 @@ double primary()
 		// кейс для отрицательного первичного выражения
 		case '-': 
 			return -primary();
+		// кейс, если пользователь решит начать перв. выраж. с плюса
+		case '+':
+			return primary();
 		// кейс для числа
 		case number:
 			return received_token.value;
@@ -273,16 +280,25 @@ double term()
 			// кейс для умножения
 			case '*':
 			{
-				left_part *= primary(); // // не объявляю правое первичное выражение за отдельную переменную, но имею это в виду
+				left_part *= primary(); // не объявляю правое первичное выражение за отдельную переменную, но имею это в виду
 				break;
 			}
 			// кейс для деления
 			case '/':
 			{
-				double received_right_primary = primary(); // считывание первичного выражения справа
-				if (received_right_primary == 0) // ошибка, связанная с делением на ноль
-					error("divide by zero");
-				left_part /= received_right_primary;
+				double received_right_part = primary(); // считывание первичного выражения справа
+				if (received_right_part == 0) // ошибка, связанная с делением на ноль
+					error("/: divide by zero");
+				left_part /= received_right_part;
+				break;
+			}
+			// кейс для остатка от деления
+			case '%':
+			{
+				double received_right_part = primary(); // считывание первичного выражения справа
+				if (received_right_part == 0) // ошибка, связанная с делением на ноль
+					error("%: divided by zero");
+				left_part = fmod(left_part, received_right_part); // фукция из cmath, вычисляющая остаток с плавающей запятой
 				break;
 			}
 			// кейс, когда терм закончился
@@ -303,7 +319,7 @@ double expression()
 		switch (received_token.kind) {
 			// кейс для сложения
 			case '+':
-				left_part += term(); // не объявляю правый терм за отдельную переменную, но имею это в виду
+				left_part += term(); // не объявляю правый терм за отдельную переменную
 				break;
 			// кейс для вычитания
 			case '-':
