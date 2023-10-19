@@ -310,6 +310,15 @@ calculator_IS_TOP_LEVEL:STATIC=OFF
 calculator_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++/1/008/vec2D
 
 //Value Computed by CMake
+fractals_BINARY_DIR:STATIC=D:/Programs/2023-2024/C++/build/1/013/fractals
+
+//Value Computed by CMake
+fractals_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+fractals_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++/1/013/fractals
+
+//Value Computed by CMake
 logic_elements_BINARY_DIR:STATIC=D:/Programs/2023-2024/C++/build/1/010/logic_elements
 
 //Value Computed by CMake

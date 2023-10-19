@@ -194,8 +194,8 @@
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h \
- D:\Programs\2023-2024\C++\lib\Graph_lib\Point.h \
- D:\Programs\2023-2024\C++\lib\Graph_lib\fltk.h \
+ D:/Programs/2023-2024/C++/lib/Graph_lib/Point.h \
+ D:/Programs/2023-2024/C++/lib/Graph_lib/fltk.h \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Enumerations.H \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/abi-version.h \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Fl_Export.H \

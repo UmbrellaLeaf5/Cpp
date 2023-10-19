@@ -6,8 +6,8 @@
 #include <string>
 #include <vector>
 
-#include "Point.h"
-#include "fltk.h"
+#include "Graph_lib/Point.h"
+#include "Graph_lib/fltk.h"
 
 namespace Graph_lib {
 

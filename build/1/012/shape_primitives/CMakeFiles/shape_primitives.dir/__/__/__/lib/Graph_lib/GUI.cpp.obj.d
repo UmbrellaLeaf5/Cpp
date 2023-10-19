@@ -176,8 +176,8 @@
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_heap.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tempbuf.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h \
- D:\Programs\2023-2024\C++\lib\Graph_lib\Point.h \
- D:\Programs\2023-2024\C++\lib\Graph_lib\fltk.h \
+ D:/Programs/2023-2024/C++/lib/Graph_lib/Point.h \
+ D:/Programs/2023-2024/C++/lib/Graph_lib/fltk.h \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Enumerations.H \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/abi-version.h \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Fl_Export.H \
@@ -423,4 +423,6 @@
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Fl_Pixmap.H \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Fl_JPEG_Image.H \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Fl_PNG_Image.H \
- D:\Programs\2023-2024\C++\lib\Graph_lib\Window.h
+ D:\Programs\2023-2024\C++\lib\Graph_lib\Window.h \
+ D:\Programs\2023-2024\C++\lib\Graph_lib\Point.h \
+ D:\Programs\2023-2024\C++\lib\Graph_lib\fltk.h

@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "1/012/shape_primitives/shape_primitives.exe"
+			"path" : "1/013/fractals/fractals.exe"
 		},
 		{
-			"path" : "1/012/shape_primitives/shape_primitives.pdb"
+			"path" : "1/013/fractals/fractals.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -21,7 +21,7 @@
 		],
 		"files" : 
 		[
-			"1/012/shape_primitives/CMakeLists.txt",
+			"1/013/fractals/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -38,7 +38,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 45,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
@@ -50,13 +50,13 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 30,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 37,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
@@ -111,11 +111,13 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4,
+				5
 			]
 		}
 	],
-	"id" : "shape_primitives::@bbbf83bd80abceb1c9d4",
+	"id" : "fractals::@d043eef01b96a8f42fb8",
 	"install" : 
 	{
 		"destinations" : 
@@ -249,12 +251,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "shape_primitives",
-	"nameOnDisk" : "shape_primitives.exe",
+	"name" : "fractals",
+	"nameOnDisk" : "fractals.exe",
 	"paths" : 
 	{
-		"build" : "1/012/shape_primitives",
-		"source" : "1/012/shape_primitives"
+		"build" : "1/013/fractals",
+		"source" : "1/013/fractals"
 	},
 	"sourceGroups" : 
 	[
@@ -265,7 +267,9 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4,
+				5
 			]
 		}
 	],
@@ -274,7 +278,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "1/012/shape_primitives/main.cpp",
+			"path" : "1/013/fractals/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -293,6 +297,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "lib/Graph_lib/Window.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Vector_lib/poly.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Vector_lib/vec2d.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

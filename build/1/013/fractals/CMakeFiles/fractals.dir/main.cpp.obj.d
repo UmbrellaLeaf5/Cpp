@@ -1,5 +1,5 @@
-1/012/shape_primitives/CMakeFiles/shape_primitives.dir/main.cpp.obj: \
- D:\Programs\2023-2024\C++\1\012\shape_primitives\main.cpp \
+1/013/fractals/CMakeFiles/fractals.dir/main.cpp.obj: \
+ D:\Programs\2023-2024\C++\1\013\fractals\main.cpp \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -428,4 +428,10 @@
  D:/Programs/2023-2024/C++/lib/Graph_lib/Graph.h \
  D:/Programs/2023-2024/C++/lib/Graph_lib/Window.h \
  D:/Programs/2023-2024/C++/lib/Graph_lib/Point.h \
- D:/Programs/2023-2024/C++/lib/Graph_lib/fltk.h
+ D:/Programs/2023-2024/C++/lib/Graph_lib/fltk.h \
+ D:/Programs/2023-2024/C++/lib/Vector_lib/vec2d.h \
+ D:/Programs/2023-2024/C++/lib/Vector_lib/poly.h \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc

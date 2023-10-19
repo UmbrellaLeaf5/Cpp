@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"1/012/shape_primitives/CMakeLists.txt"
+			"1/013/fractals/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,7 +17,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 45,
+				"line" : 47,
 				"parent" : 0
 			}
 		]
@@ -30,16 +30,16 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"1/012/shape_primitives/shape_primitives.exe"
+				"1/013/fractals/fractals.exe"
 			],
-			"targetId" : "shape_primitives::@bbbf83bd80abceb1c9d4",
+			"targetId" : "fractals::@d043eef01b96a8f42fb8",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "1/012/shape_primitives",
-		"source" : "1/012/shape_primitives"
+		"build" : "1/013/fractals",
+		"source" : "1/013/fractals"
 	}
 }

@@ -20,16 +20,16 @@
 					"source" : "."
 				},
 				{
-					"build" : "1/012/shape_primitives",
+					"build" : "1/013/fractals",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.012.shape_primitives-Release-ffd452edb4e43677d5ff.json",
+					"jsonFile" : "directory-1.013.fractals-Release-49fbce2c4252f2d1857d.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 1,
-					"source" : "1/012/shape_primitives",
+					"source" : "1/013/fractals",
 					"targetIndexes" : 
 					[
 						0
@@ -55,7 +55,7 @@
 					[
 						1
 					],
-					"name" : "shape_primitives",
+					"name" : "fractals",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -67,9 +67,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "shape_primitives::@bbbf83bd80abceb1c9d4",
-					"jsonFile" : "target-shape_primitives-Release-294b38284368162e09df.json",
-					"name" : "shape_primitives",
+					"id" : "fractals::@d043eef01b96a8f42fb8",
+					"jsonFile" : "target-fractals-Release-4976788d467c7995e9e0.json",
+					"name" : "fractals",
 					"projectIndex" : 1
 				}
 			]
