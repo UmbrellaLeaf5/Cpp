@@ -20,9 +20,11 @@
 		Переменная Терм % Первичное_выражение
 	Первичное_выражение:
 		Число
-		( Выражение )
-		- Первичное_выражение
+		(Выражение)
+		-Первичное_выражение
 		Переменная + Первичное_выражение
+		Корень квадратный (Выражение)
+		Возвести в степень (Выражение, Выражение)
 	Число:
 		Литерал_с_плавающей_точкой
 */
@@ -63,6 +65,9 @@ const char quit = 'Q';
 const char print = ';';
 const char number = '8';
 const char name = 'a';
+const char square_root = 'r';
+const char power = 'p';
+const char comma = ',';
 
 Token Token_stream::get()
 {
@@ -76,9 +81,9 @@ Token Token_stream::get()
 	switch (received_char) 
 	{
 		// кейсы для операторов
-		case '(': case ')': case '+': case '-':
-		case '*': case '/': case '%': 
-		case ';': case '=':
+		case '(': case ')': case '{': case '}':
+		case '+': case '-': case '*': case '/': case '%':
+		case ';': case '=': case ',':
 			return Token(received_char);
 		// кейсы для чисел
 		case '0': case '1': case '2': case '3': case '4': 
@@ -105,6 +110,10 @@ Token Token_stream::get()
 					return Token(let); 
 				if (input_string == "quit") 
 					return Token(quit);
+				if (input_string == "sqrt") 
+					return Token(square_root);
+				if (input_string == "pow") 
+					return Token(power);
 				return Token(name, input_string); // а было получено не служебное слово, то это была переменная
 			}
 			error("Bad token");
@@ -145,7 +154,7 @@ double get_value(string prob_name)
 		if (names[i].name == prob_name) 
 			return names[i].value;
 	}
-	error("get: undefined name ", prob_name); // переменной не оказалось в нашем списке
+	error("get_value: undefined name ", prob_name); // переменной не оказалось в нашем списке
 }
 
 // функция, отвечающая за передачу значения переменной по имени
@@ -184,12 +193,20 @@ double primary()
 	switch (received_token.kind) 
 	{
 		// кейс для выражение в скобках
-		case '(': 
+		case '(':
 		{	
 			double received_expression = expression(); // вызываем чтение выражения
 			received_token = ts.get();
 			if (received_token.kind != ')') 
-				error("'(' expected");
+				error("')' expected");
+			return received_expression;
+		}
+		case '{':
+		{	
+			double received_expression = expression(); // вызываем чтение выражения
+			received_token = ts.get();
+			if (received_token.kind != '}') 
+				error("'}' expected");
 			return received_expression;
 		}
 		// кейс для отрицательного первичного выражения
@@ -201,6 +218,44 @@ double primary()
 		// кейс для уже существующей переменной
 		case name: 
 			return get_value(received_token.name);
+		// кейс для квадратного корня
+		case square_root:
+		{
+			received_token = ts.get();
+			if (received_token.kind == '(') 
+			{
+				double received_expression = expression();
+				received_token = ts.get();
+				if (received_token.kind != ')')
+					error("'(' expected");
+				if (received_expression >= 0) // проверка на то, что берем корень неотрицательного числа
+					return sqrt(received_expression);
+				else
+					error("square root of a negative number");
+			}
+		else
+			error("'(' expected");
+		}
+		// кейс для возведения в степень
+		case power:
+		{
+			received_token = ts.get();
+			if (received_token.kind == '(') 
+			{
+				double base_number = expression(); // переменная - основание
+				received_token = ts.get();
+				if (received_token.kind != comma) // за первым аргументом должна следовать запятая
+					error("',' expected");
+				// переменная - показатель
+				int power_number = narrow_cast<int>(expression()); // "сужение" значения с потерей информации и генерацией исключения в противном случае
+				received_token = ts.get();
+				if (received_token.kind != ')')
+					error("')' expected");
+				return pow(base_number, power_number);
+			}
+			else
+				error("'(' expected");
+		}
 		// кейс, если мы не получили, чего хотели
 		default:
 			error("primary expected");
