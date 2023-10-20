@@ -10,7 +10,8 @@
 		Объявление
 		Выражение
 	Объявление:
-		# Имя = Выражение
+		# Имя_переменной = Выражение
+		$ Имя_константы = Выражение
 	Вывод:
 		;
 	Выход:
@@ -19,6 +20,7 @@
 		Терм
 		Выражение + Терм
 		Выражение - Терм
+		Имя_переменной = Выражение
 	Терм:
 		Первичное_выражение
 		Терм * Первичное_выражение
@@ -29,10 +31,15 @@
 		(Выражение)
 		-Первичное_выражение
 		+Первичное_выражение
+		Имя_переменной
 		Корень квадратный (Выражение)
 		Возвести в степень (Выражение, Выражение)
+		Имя_переменной = Выражение
+		Имя_константы = Выражение
 	Число:
 		Литерал_с_плавающей_точкой
+	Имя_константы/Имя_переменной:
+		Комбинация_символов
 */
 
 #include "std_lib_facilities.h"
@@ -59,7 +66,7 @@ public:
 	// функция, отвечающая за получение следующего токена из потока
 	Token get(); 
 	// функция, отвечающая за возврат токена в поток токенов
-	void unget(Token t) { buffer = t; is_full = true; } 
+	void unget(Token receive_token) { buffer = receive_token; is_full = true; } 
 
 	// функция, отвечающая за игнорирование ввода токенов до появления символа, переданного как аргумент
 	void ignore(char last_ignore_char); 
@@ -67,6 +74,7 @@ public:
 
 // константы, обозначающие типы получаемых токенов (в самой структуре токенов используеются именно они)
 const char let = '#';
+const char cnst = '$';
 const char quit = 'q';
 const char print = ';';
 const char number = '8';
@@ -89,11 +97,11 @@ Token Token_stream::get()
 		// кейсы для операторов
 		case '(': case ')': case '{': case '}':
 		case '+': case '-': case '*': case '/': case '%':
-		case ';': case '=': case ',': case '#':
+		case ';': case '=': case ',': case '#': case '$':
 			return Token(received_char);
 		// кейсы для чисел
-		case '0': case '1': case '2': case '3': case '4': 
-		case '5': case '6': case '7': case '8': case '9': 
+		case '0': case '1': case '2': case '3': case '4':
+		case '5': case '6': case '7': case '8': case '9':
 		{
 			cin.unget(); // возвращаем предыдущий символ в стандартный поток ввода
 			double received_value;
@@ -120,7 +128,7 @@ Token Token_stream::get()
 					return Token(power);
 				return Token(name, input_string); // а было получено не служебное слово, то это была переменная
 			}
-			error("Bad token");
+			error("bad token");
 		}
 	}
 }
@@ -145,7 +153,9 @@ void Token_stream::ignore(char last_ignore_char)
 struct Variable { 
 	string name;
 	double value;
-	Variable(string n, double v) :name(n), value(v) { }
+	bool is_const;
+	Variable(string n, double val) :name(n), value(val), is_const(false) { }
+	Variable(string n, double val, bool is_constanta): name(n), value(val), is_const(is_constanta) { }
 };
 
 // ветор вводимых пользователем переменных
@@ -162,13 +172,17 @@ double get_value(string prob_name)
 }
 
 // функция, отвечающая за передачу значения переменной по имени
-void set_value(string received_name, double received_value) 
+double set_value(string received_name, double received_value) 
 {
 	for (int i = 0; i <= names.size(); ++i)
 	{
-		if (names[i].name == received_name) {
-			names[i].value = received_value;
-			return;
+		if (names[i].name == received_name) 
+		{
+			if(!names[i].is_const){
+				names[i].value = received_value;
+				return names[i].value;
+			}
+			error("set: " + received_name + " is const");
 		}
 	}
 	error("set: undefined name ", received_name); // переменной не оказалось в нашем списке
@@ -224,7 +238,17 @@ double primary()
 			return received_token.value;
 		// кейс для уже существующей переменной
 		case name: 
-			return get_value(received_token.name);
+		{
+			Token received_token_2 = ts.get(); // вспомогательный токен для получения значения перемнной
+			if(received_token_2.kind == '=') {
+				double var_value = expression();
+				return set_value(received_token.name, var_value);
+			}
+			else {
+				ts.unget(received_token_2); // возвращаем вспомогательный токен в поток
+				return get_value(received_token.name);
+			}
+		}
 		// кейс для квадратного корня
 		case square_root:
 		{
@@ -272,8 +296,8 @@ double primary()
 // функция, считывающая терм
 double term() 
 {
-	double left_part = primary(); // левая часть терма - всегда первичное выражение
-	while (true) {
+	double left_part = primary();
+	for(;;) {
 		Token received_token = ts.get();
 		switch (received_token.kind) 
 		{
@@ -313,9 +337,25 @@ double term()
 
 double expression() 
 {
-	double left_part = term(); // левая часть выражения - всегда терм
-	while (true) {
-		Token received_token = ts.get();
+	double left_part = 0;
+	Token received_token = ts.get();
+	if (received_token.kind == name) {
+		Token received_token_2 = ts.get(); // дополнительный токен для корректного получения значения переменной
+		if (received_token_2.kind == '=') {
+			double var_value = expression();
+			left_part = set_value(received_token.name, var_value);
+		}
+		else {
+			ts.unget(received_token_2);
+			left_part = get_value(received_token.name);
+		}
+	}
+	else {
+		ts.unget(received_token);
+		left_part = term();
+	}
+	for(;;) {
+		received_token = ts.get();
 		switch (received_token.kind) {
 			// кейс для сложения
 			case '+':
@@ -325,7 +365,8 @@ double expression()
 			case '-':
 				left_part -= term();
 				break;
-			default: // кейс, когда выражение закончилось
+			// кейс, когда выражение закончилось
+			default: 
 				ts.unget(received_token); // возвращаем токен в поток
 				return left_part;
 		}
@@ -333,24 +374,28 @@ double expression()
 }
 
 // функция, добавляющая новую переменную в ветор переменных, если пользователь ввёд её корректно
-double define_name(string received_var, double val) { 
+double define_name(string received_var, double val, bool is_const) { 
 	if (is_declared(received_var)) // проверяем, не существует ли уже переменная с таким именем
-		error(received_var, " declared twice");
-	names.push_back(Variable(received_var, val)); // иначе добавляем её в вектор
+		error(received_var, ": declared twice");
+	names.push_back(Variable(received_var, val, is_const)); // иначе добавляем её в вектор
 	return val;
 }
 
-// функция, отвечающая за объявление переменной ('let имя = выражение')
-double declaration()  {
+// функция, отвечающая за объявление переменной ('let имя_переменной = выражение')
+double declaration(bool is_const)  {
 	Token received_token = ts.get();
-	if (received_token.kind != name) // полученное при вводе не соотв. заданным правилам для имени переменной
+	if (received_token.kind != name){ // полученное при вводе не соотв. заданным правилам для имени переменной
+		ts.unget(received_token); // возвращаем токен в поток
 		error("name expected in declaration");
+	}
 	string var_name = received_token.name; // присваиваем строке имя полученного из потока токена
 	Token received_token_2 = ts.get(); // используем второй токен, чтобы проверить присваивание значения для переменной
-	if (received_token_2.kind != '=') 
-		error("= missing in declaration of ", var_name);
-	double received_var_value = expression();
-	define_name(var_name, received_var_value); // при успехе - запоминаем переменную в программу
+	if (received_token_2.kind != '='){
+		ts.unget(received_token_2);
+		error("=: missing in declaration of ", var_name);
+	}
+	double received_var_value = expression(); // получаем значение переменной - выражение
+	define_name(var_name, received_var_value, is_const); // при успехе - запоминаем переменную в программу
 	return received_var_value;
 }
 
@@ -361,7 +406,10 @@ double statement() {
 	{
 		// кейс для объявления
 		case let: 
-			return declaration();
+			return declaration(false);
+		// кейс для констант
+		case cnst:
+			return declaration(true);
 		// кейс для выражения
 		default:
 			ts.unget(received_token);
@@ -408,8 +456,8 @@ int main()
 	try 
 	{
 		// объявляем известные константы как переменные
-		define_name("pi", 3.1415926535);
-		define_name("e", 2.7182818284);
+		define_name("pi", 3.1415926535, true);
+		define_name("e", 2.7182818284, true);
 
 		calculate(); // вызываем весь основной алгоритм калькулятора
 		return 0;
