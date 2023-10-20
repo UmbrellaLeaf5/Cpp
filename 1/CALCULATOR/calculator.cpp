@@ -58,18 +58,19 @@ struct Token {
 
 // поток с буфером для чтения токенов
 class Token_stream { 
-	bool is_full; // переменная, отвечающая за переполнение потока токенов
-	Token buffer; // "буферный" считываемый токен
-public:
-	Token_stream() : is_full(0), buffer(0) { }
+	private:
+		bool is_full; // переменная, отвечающая за переполнение потока токенов
+		Token buffer; // "буферный" считываемый токен
+	public:
+		Token_stream() : is_full(0), buffer(0) { }
 
-	// функция, отвечающая за получение следующего токена из потока
-	Token get(); 
-	// функция, отвечающая за возврат токена в поток токенов
-	void unget(Token receive_token) { buffer = receive_token; is_full = true; } 
+		// функция, отвечающая за получение следующего токена из потока
+		Token get(); 
+		// функция, отвечающая за возврат токена в поток токенов
+		void unget(Token receive_token) { buffer = receive_token; is_full = true; } 
 
-	// функция, отвечающая за игнорирование ввода токенов до появления символа, переданного как аргумент
-	void ignore(char last_ignore_char); 
+		// функция, отвечающая за игнорирование ввода токенов до появления символа, переданного как аргумент
+		void ignore(char last_ignore_char); 
 };
 
 // константы, обозначающие типы получаемых токенов (в самой структуре токенов используеются именно они)
@@ -158,11 +159,22 @@ struct Variable {
 	Variable(string n, double val, bool is_constanta): name(n), value(val), is_const(is_constanta) { }
 };
 
-// ветор вводимых пользователем переменных
-vector<Variable> names; 
+class Names{ // класс, описывающий список переменных и методы работы с ним
+	private:
+		// ветор вводимых пользователем переменных
+		vector<Variable> names; 
+	public: 
+		// функция, отвечающая за получение значения переменной по имени, которое ей дал пользователь
+		double get_value(string prob_name);
+		// функция, отвечающая за передачу значения переменной по имени
+		double set_value(string received_name, double received_value); 
+		// функция, отвечающая за проверку существования переменной 
+		bool is_declared(string prob_name);
+		// функция, добавляющая новую переменную в ветор переменных, если пользователь ввёд её корректно 
+		double define_name(string received_var, double val, bool is_const);
+};
 
-// функция, отвечающая за получение значения переменной по имени, которое ей дал пользователь
-double get_value(string prob_name) 
+double Names::get_value(string prob_name) 
 {
 	for (int i = 0; i < names.size(); ++i) {
 		if (names[i].name == prob_name) 
@@ -171,8 +183,8 @@ double get_value(string prob_name)
 	error("get_value: undefined name ", prob_name); // переменной не оказалось в нашем списке
 }
 
-// функция, отвечающая за передачу значения переменной по имени
-double set_value(string received_name, double received_value) 
+
+double Names::set_value(string received_name, double received_value) 
 {
 	for (int i = 0; i <= names.size(); ++i)
 	{
@@ -188,8 +200,8 @@ double set_value(string received_name, double received_value)
 	error("set: undefined name ", received_name); // переменной не оказалось в нашем списке
 }
 
-// функция, отвечающая за проверку существования переменной 
-bool is_declared(string prob_name) 
+
+bool Names::is_declared(string prob_name) 
 {
 	for (int i = 0; i < names.size(); ++i) {
 		if (names[i].name == prob_name) 
@@ -198,8 +210,18 @@ bool is_declared(string prob_name)
 	return false;
 }
 
+double Names::define_name(string received_var, double value, bool is_const) { 
+	if (is_declared(received_var)) // проверяем, не существует ли уже переменная с таким именем
+		error(received_var, ": declared twice");
+	names.push_back(Variable(received_var, value, is_const)); // иначе добавляем её в вектор
+	return value;
+}
+
 // поток ввода токенов, используемый во всей программе
 Token_stream ts; 
+
+// таблица символов, используемая во всей программе
+Names nm;
 
 // функция, считывающая выражение 
 double expression();
@@ -242,11 +264,11 @@ double primary()
 			Token received_token_2 = ts.get(); // вспомогательный токен для получения значения перемнной
 			if(received_token_2.kind == '=') {
 				double var_value = expression();
-				return set_value(received_token.name, var_value);
+				return nm.set_value(received_token.name, var_value);
 			}
 			else {
 				ts.unget(received_token_2); // возвращаем вспомогательный токен в поток
-				return get_value(received_token.name);
+				return nm.get_value(received_token.name);
 			}
 		}
 		// кейс для квадратного корня
@@ -343,11 +365,11 @@ double expression()
 		Token received_token_2 = ts.get(); // дополнительный токен для корректного получения значения переменной
 		if (received_token_2.kind == '=') {
 			double var_value = expression();
-			left_part = set_value(received_token.name, var_value);
+			left_part = nm.set_value(received_token.name, var_value);
 		}
 		else {
 			ts.unget(received_token_2);
-			left_part = get_value(received_token.name);
+			left_part = nm.get_value(received_token.name);
 		}
 	}
 	else {
@@ -373,14 +395,6 @@ double expression()
 	}
 }
 
-// функция, добавляющая новую переменную в ветор переменных, если пользователь ввёд её корректно
-double define_name(string received_var, double val, bool is_const) { 
-	if (is_declared(received_var)) // проверяем, не существует ли уже переменная с таким именем
-		error(received_var, ": declared twice");
-	names.push_back(Variable(received_var, val, is_const)); // иначе добавляем её в вектор
-	return val;
-}
-
 // функция, отвечающая за объявление переменной ('let имя_переменной = выражение')
 double declaration(bool is_const)  {
 	Token received_token = ts.get();
@@ -395,7 +409,7 @@ double declaration(bool is_const)  {
 		error("=: missing in declaration of ", var_name);
 	}
 	double received_var_value = expression(); // получаем значение переменной - выражение
-	define_name(var_name, received_var_value, is_const); // при успехе - запоминаем переменную в программу
+	nm.define_name(var_name, received_var_value, is_const); // при успехе - запоминаем переменную в программу
 	return received_var_value;
 }
 
@@ -456,8 +470,8 @@ int main()
 	try 
 	{
 		// объявляем известные константы как переменные
-		define_name("pi", 3.1415926535, true);
-		define_name("e", 2.7182818284, true);
+		nm.define_name("pi", 3.1415926535, true);
+		nm.define_name("e", 2.7182818284, true);
 
 		calculate(); // вызываем весь основной алгоритм калькулятора
 		return 0;
