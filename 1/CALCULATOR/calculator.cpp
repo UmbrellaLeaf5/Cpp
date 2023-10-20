@@ -45,6 +45,22 @@
 #include "std_lib_facilities.h"
 #include <cmath>
 
+// функция, выводящаяя инструкцию по работе с программой
+void user_help_cout()
+{
+	cout << "Instructions for using the calculator:" << endl;
+	cout << "With the enabled operations, this calculator can calculate lowercase mathematical expressions." << endl;
+	cout << "Allowed operations in accordance with the axioms of mathematics:" << endl;
+	cout << "! addition ('+'), subtraction ('-');" << endl;
+	cout << "! multiplication ('*'), division ('/'), division remainder ('%');" << endl;
+	cout << "! exponentiation ('pow(,)'), square root ('sqrt()');" << endl;
+	cout << "! declaration of variables ('#'), declaration of constants ('$');" << endl;
+	cout << "! evaluating the expression in brackets, assigning new values to variables ('=')." << endl;
+	cout << "To get the result of a calculation, use the symbol ';' to separate expressions and line breaks, or just use line breaks." << endl;
+	cout << "An example of a working program using all the commands:" << endl;
+	cout << "> # s = 10; $ p = 5; 2 + s; s = 5 * p; pow(p, 4); sqrt(s); s % 10; s / 5; s / (5 % 10) + 6 - 7;" << endl;
+}
+
 // структура токена (у него есть тип, значение и (возможно) имя переменной)
 struct Token { 
 	char kind;
@@ -76,8 +92,10 @@ class Token_stream {
 // константы, обозначающие типы получаемых токенов (в самой структуре токенов используеются именно они)
 const char let = '#';
 const char cnst = '$';
-const char quit = 'q';
+const char exiting = 'e';
+const char help = 'h';
 const char print = ';';
+const char line_break = '\n';
 const char number = '8';
 const char name = 'a';
 const char square_root = 'r';
@@ -92,13 +110,18 @@ Token Token_stream::get()
 		return buffer; 
 	} 
 	char received_char; 
-	cin >> received_char;
+	cin.get(received_char);
+	while (isspace(received_char)) { // пропускаем все пробельные символы
+		if (received_char == '\n') // конец строки - вывод на экран
+			return line_break; // перенос строки мы обрабатываем как отдельный случай, поэтому возвраащем не токен
+		cin.get(received_char);
+	}
 	switch (received_char) 
 	{
 		// кейсы для операторов
 		case '(': case ')': case '{': case '}':
 		case '+': case '-': case '*': case '/': case '%':
-		case ';': case '=': case ',': case '#': case '$':
+		case ';': case '\n': case '=': case ',': case '#': case '$': 
 			return Token(received_char);
 		// кейсы для чисел
 		case '0': case '1': case '2': case '3': case '4':
@@ -109,7 +132,7 @@ Token Token_stream::get()
 			cin >> received_value;
 			return Token(number, received_value);
 		}
-		// кейс для переменных или служебных слов типа 'let', 'quit'
+		// кейс для переменных или служебных слов типа 'sqrt', 'exit', 'pow'
 		default: 
 		{
 			if (isalpha(received_char)) 
@@ -122,11 +145,13 @@ Token Token_stream::get()
 				cin.unget();
 				// если получены служебные слова, организуем соотв. действия в токене
 				if (input_string == "exit") 
-					return Token(quit);
+					return Token(exiting);
 				if (input_string == "sqrt") 
 					return Token(square_root);
 				if (input_string == "pow") 
 					return Token(power);
+				if (input_string == "help")
+					return Token(help);
 				return Token(name, input_string); // а было получено не служебное слово, то это была переменная
 			}
 			error("bad token");
@@ -145,9 +170,13 @@ void Token_stream::ignore(char last_ignore_char)
 	is_full = false;
 
 	char received_char;
-	while (cin >> received_char)
-		if (received_char == last_ignore_char) 
-			return; // останавливаемся, когда найдём этот символ
+	while (cin.get(received_char))
+	{
+		if (received_char == line_break)
+			received_char = print; // пусть наш игнор воспринимает перенос строки как ";"
+		if (received_char == last_ignore_char) // останавливаемся при нахождении символа - аргумента функции
+			return;
+	}
 }
 
 // структура, хранящая переменные в памяти (у них есть имя и значение)
@@ -226,6 +255,9 @@ Names nm;
 // функция, считывающая выражение 
 double expression();
 
+// функция, считывающая терм
+double term();
+
 // функция, считывающая первичное выражение
 double primary() 
 {
@@ -261,12 +293,15 @@ double primary()
 		// кейс для уже существующей переменной
 		case name: 
 		{
-			Token received_token_2 = ts.get(); // вспомогательный токен для получения значения перемнной
-			if(received_token_2.kind == '=') {
+			if(!nm.is_declared(received_token.name)) // проверяем существование переменной в списке имён
+				error(received_token.name + ": is not declared");
+			Token received_token_2 = ts.get(); // вспомогательный токен для получения значения после левой части
+			// проверяем, что мы вводим после имени перменной
+			if(received_token_2.kind == '='){ 
 				double var_value = expression();
 				return nm.set_value(received_token.name, var_value);
 			}
-			else {
+			else{
 				ts.unget(received_token_2); // возвращаем вспомогательный токен в поток
 				return nm.get_value(received_token.name);
 			}
@@ -315,7 +350,7 @@ double primary()
 	}
 }
 
-// функция, считывающая терм
+
 double term() 
 {
 	double left_part = primary();
@@ -363,9 +398,17 @@ double expression()
 	Token received_token = ts.get();
 	if (received_token.kind == name) {
 		Token received_token_2 = ts.get(); // дополнительный токен для корректного получения значения переменной
+		// если получаем на вход '=' это присваивание
 		if (received_token_2.kind == '=') {
 			double var_value = expression();
 			left_part = nm.set_value(received_token.name, var_value);
+		}
+		// если получаем на вход операции терма, то... не вышло исправить баг, связанный с этим :(
+		else if (received_token_2.kind == '*' || received_token_2.kind == '/' || received_token_2.kind == '%')
+		{
+			ts.unget(received_token_2);
+			ts.unget(received_token);
+			left_part = term();
 		}
 		else {
 			ts.unget(received_token_2);
@@ -449,13 +492,18 @@ void calculate()
 		{
 			cout << input_letter; // начинается ввод
 			Token received_token = ts.get();
-			while (received_token.kind == print) // пропускаем несколько символов вывода подряд
+			while (received_token.kind == print || received_token.kind == line_break) // пропускаем несколько символов вывода подряд
 				received_token = ts.get(); 
-			if (received_token.kind == quit) // выход из программы если на ввод было получено соотв. слово
+			if (received_token.kind == exiting) // выход из программы если на ввод было получено соотв. слово
 				return; 
-			ts.unget(received_token); 
-			// если нечего выводить на экран, но и не происходит выход из программы, то возвращаем токен в поток ввода и обрабатываем инструкцию, выводя результат
-			cout << result_letter << statement() << endl;
+			if (received_token.kind == help) // вывод сообщения - инструкции
+				user_help_cout();
+			else
+			{
+				ts.unget(received_token); 
+				// если нечего выводить на экран, но и не происходит выход из программы, то возвращаем токен в поток ввода и обрабатываем инструкцию, выводя результат
+				cout << result_letter << statement() << endl;
+			}
 		}
 		catch (runtime_error& exc) // в случае ошибки выводим сообщение и очищаем поток токенов, но не завершаем программу
 		{ 
