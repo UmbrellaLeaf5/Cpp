@@ -1,38 +1,26 @@
 [
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/013/fractals",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/fractals.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\fractals.dir\\main.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\013\\fractals\\main.cpp",
-  "file": "D:/Programs/2023-2024/C++/1/013/fractals/main.cpp",
-  "output": "1/013/fractals/CMakeFiles/fractals.dir/main.cpp.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/CALCULATOR",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\calculator.dir\\calculator.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\CALCULATOR\\calculator.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/CALCULATOR/calculator.cpp",
+  "output": "1/CALCULATOR/CMakeFiles/calculator.dir/calculator.cpp.obj"
 },
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/013/fractals",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/fractals.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\fractals.dir\\__\\__\\__\\lib\\Graph_lib\\Graph.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Graph_lib\\Graph.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Graph_lib/Graph.cpp",
-  "output": "1/013/fractals/CMakeFiles/fractals.dir/__/__/__/lib/Graph_lib/Graph.cpp.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/CALCULATOR",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\calculator.dir\\main_grammar_functions.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\CALCULATOR\\main_grammar_functions.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/CALCULATOR/main_grammar_functions.cpp",
+  "output": "1/CALCULATOR/CMakeFiles/calculator.dir/main_grammar_functions.cpp.obj"
 },
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/013/fractals",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/fractals.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\fractals.dir\\__\\__\\__\\lib\\Graph_lib\\GUI.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Graph_lib\\GUI.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Graph_lib/GUI.cpp",
-  "output": "1/013/fractals/CMakeFiles/fractals.dir/__/__/__/lib/Graph_lib/GUI.cpp.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/CALCULATOR",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\calculator.dir\\Names.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\CALCULATOR\\Names.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/CALCULATOR/Names.cpp",
+  "output": "1/CALCULATOR/CMakeFiles/calculator.dir/Names.cpp.obj"
 },
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/013/fractals",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/fractals.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\fractals.dir\\__\\__\\__\\lib\\Graph_lib\\Window.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Graph_lib\\Window.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Graph_lib/Window.cpp",
-  "output": "1/013/fractals/CMakeFiles/fractals.dir/__/__/__/lib/Graph_lib/Window.cpp.obj"
-},
-{
-  "directory": "D:/Programs/2023-2024/C++/build/1/013/fractals",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/fractals.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\fractals.dir\\__\\__\\__\\lib\\Vector_lib\\poly.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Vector_lib\\poly.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Vector_lib/poly.cpp",
-  "output": "1/013/fractals/CMakeFiles/fractals.dir/__/__/__/lib/Vector_lib/poly.cpp.obj"
-},
-{
-  "directory": "D:/Programs/2023-2024/C++/build/1/013/fractals",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/fractals.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\fractals.dir\\__\\__\\__\\lib\\Vector_lib\\vec2d.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Vector_lib\\vec2d.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Vector_lib/vec2d.cpp",
-  "output": "1/013/fractals/CMakeFiles/fractals.dir/__/__/__/lib/Vector_lib/vec2d.cpp.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/CALCULATOR",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\calculator.dir\\Token.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\CALCULATOR\\Token.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/CALCULATOR/Token.cpp",
+  "output": "1/CALCULATOR/CMakeFiles/calculator.dir/Token.cpp.obj"
 }
 ]

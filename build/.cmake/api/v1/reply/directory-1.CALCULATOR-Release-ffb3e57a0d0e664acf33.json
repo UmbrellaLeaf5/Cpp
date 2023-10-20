@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"1/013/fractals/CMakeLists.txt"
+			"1/CALCULATOR/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,7 +17,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 47,
+				"line" : 30,
 				"parent" : 0
 			}
 		]
@@ -30,16 +30,16 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"1/013/fractals/fractals.exe"
+				"1/CALCULATOR/calculator.exe"
 			],
-			"targetId" : "fractals::@d043eef01b96a8f42fb8",
+			"targetId" : "calculator::@879c774fc5678528d4ce",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "1/013/fractals",
-		"source" : "1/013/fractals"
+		"build" : "1/CALCULATOR",
+		"source" : "1/CALCULATOR"
 	}
 }

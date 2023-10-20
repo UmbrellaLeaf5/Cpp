@@ -4,10 +4,10 @@ D:/Programs/2023-2024/C++/build/CMakeFiles/list_install_components.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/local.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/strip.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/fractals.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/edit_cache.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/rebuild_cache.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/list_install_components.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/install.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/install/local.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/install/strip.dir
+D:/Programs/2023-2024/C++/build/1/CALCULATOR/CMakeFiles/calculator.dir
+D:/Programs/2023-2024/C++/build/1/CALCULATOR/CMakeFiles/edit_cache.dir
+D:/Programs/2023-2024/C++/build/1/CALCULATOR/CMakeFiles/rebuild_cache.dir
+D:/Programs/2023-2024/C++/build/1/CALCULATOR/CMakeFiles/list_install_components.dir
+D:/Programs/2023-2024/C++/build/1/CALCULATOR/CMakeFiles/install.dir
+D:/Programs/2023-2024/C++/build/1/CALCULATOR/CMakeFiles/install/local.dir
+D:/Programs/2023-2024/C++/build/1/CALCULATOR/CMakeFiles/install/strip.dir

@@ -1599,7 +1599,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Programs/2023-2024/C++/build/1/008/vec2D"
+			"value" : "D:/Programs/2023-2024/C++/build/1/CALCULATOR"
 		},
 		{
 			"name" : "calculator_IS_TOP_LEVEL",
@@ -1623,7 +1623,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Programs/2023-2024/C++/1/008/vec2D"
+			"value" : "D:/Programs/2023-2024/C++/1/CALCULATOR"
 		},
 		{
 			"name" : "fractals_BINARY_DIR",
