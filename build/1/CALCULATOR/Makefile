@@ -131,14 +131,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles D:\Programs\2023-2024\C++\build\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles D:\Programs\2023-2024\C++\build\1\CALCULATOR\\CMakeFiles\progress.marks
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/CALCULATOR/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/CALCULATOR/clean
 .PHONY : clean
 
 # The main clean target
@@ -147,31 +147,128 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/CALCULATOR/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/CALCULATOR/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named calculator
+# Convenience name for target.
+1/CALCULATOR/CMakeFiles/calculator.dir/rule:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/CALCULATOR/CMakeFiles/calculator.dir/rule
+.PHONY : 1/CALCULATOR/CMakeFiles/calculator.dir/rule
 
-# Build rule for target.
-calculator: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 calculator
+# Convenience name for target.
+calculator: 1/CALCULATOR/CMakeFiles/calculator.dir/rule
 .PHONY : calculator
 
 # fast build rule for target.
 calculator/fast:
-	$(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/build
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/build
 .PHONY : calculator/fast
+
+Names.obj: Names.cpp.obj
+.PHONY : Names.obj
+
+# target to build an object file
+Names.cpp.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/Names.cpp.obj
+.PHONY : Names.cpp.obj
+
+Names.i: Names.cpp.i
+.PHONY : Names.i
+
+# target to preprocess a source file
+Names.cpp.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/Names.cpp.i
+.PHONY : Names.cpp.i
+
+Names.s: Names.cpp.s
+.PHONY : Names.s
+
+# target to generate assembly for a file
+Names.cpp.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/Names.cpp.s
+.PHONY : Names.cpp.s
+
+Token.obj: Token.cpp.obj
+.PHONY : Token.obj
+
+# target to build an object file
+Token.cpp.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/Token.cpp.obj
+.PHONY : Token.cpp.obj
+
+Token.i: Token.cpp.i
+.PHONY : Token.i
+
+# target to preprocess a source file
+Token.cpp.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/Token.cpp.i
+.PHONY : Token.cpp.i
+
+Token.s: Token.cpp.s
+.PHONY : Token.s
+
+# target to generate assembly for a file
+Token.cpp.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/Token.cpp.s
+.PHONY : Token.cpp.s
+
+calculator.obj: calculator.cpp.obj
+.PHONY : calculator.obj
+
+# target to build an object file
+calculator.cpp.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/calculator.cpp.obj
+.PHONY : calculator.cpp.obj
+
+calculator.i: calculator.cpp.i
+.PHONY : calculator.i
+
+# target to preprocess a source file
+calculator.cpp.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/calculator.cpp.i
+.PHONY : calculator.cpp.i
+
+calculator.s: calculator.cpp.s
+.PHONY : calculator.s
+
+# target to generate assembly for a file
+calculator.cpp.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/calculator.cpp.s
+.PHONY : calculator.cpp.s
+
+main_grammar_functions.obj: main_grammar_functions.cpp.obj
+.PHONY : main_grammar_functions.obj
+
+# target to build an object file
+main_grammar_functions.cpp.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/main_grammar_functions.cpp.obj
+.PHONY : main_grammar_functions.cpp.obj
+
+main_grammar_functions.i: main_grammar_functions.cpp.i
+.PHONY : main_grammar_functions.i
+
+# target to preprocess a source file
+main_grammar_functions.cpp.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/main_grammar_functions.cpp.i
+.PHONY : main_grammar_functions.cpp.i
+
+main_grammar_functions.s: main_grammar_functions.cpp.s
+.PHONY : main_grammar_functions.s
+
+# target to generate assembly for a file
+main_grammar_functions.cpp.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/main_grammar_functions.cpp.s
+.PHONY : main_grammar_functions.cpp.s
 
 # Help Target
 help:
@@ -186,6 +283,18 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... calculator
+	@echo ... Names.obj
+	@echo ... Names.i
+	@echo ... Names.s
+	@echo ... Token.obj
+	@echo ... Token.i
+	@echo ... Token.s
+	@echo ... calculator.obj
+	@echo ... calculator.i
+	@echo ... calculator.s
+	@echo ... main_grammar_functions.obj
+	@echo ... main_grammar_functions.i
+	@echo ... main_grammar_functions.s
 .PHONY : help
 
 
@@ -197,6 +306,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d D:\Programs\2023-2024\C++\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

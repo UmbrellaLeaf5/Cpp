@@ -20,16 +20,16 @@
 					"source" : "."
 				},
 				{
-					"build" : "1/013/fractals",
+					"build" : "1/CALCULATOR",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.013.fractals-Release-49fbce2c4252f2d1857d.json",
+					"jsonFile" : "directory-1.CALCULATOR-Release-ffb3e57a0d0e664acf33.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 1,
-					"source" : "1/013/fractals",
+					"source" : "1/CALCULATOR",
 					"targetIndexes" : 
 					[
 						0
@@ -55,7 +55,7 @@
 					[
 						1
 					],
-					"name" : "fractals",
+					"name" : "calculator",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -67,9 +67,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "fractals::@d043eef01b96a8f42fb8",
-					"jsonFile" : "target-fractals-Release-4976788d467c7995e9e0.json",
-					"name" : "fractals",
+					"id" : "calculator::@879c774fc5678528d4ce",
+					"jsonFile" : "target-calculator-Release-af5e9ecf802f1b782a25.json",
+					"name" : "calculator",
 					"projectIndex" : 1
 				}
 			]

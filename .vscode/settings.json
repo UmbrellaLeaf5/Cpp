@@ -79,6 +79,8 @@
     "limits": "cpp",
     "sstream": "cpp",
     "streambuf": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "cmath": "cpp",
+    "stdexcept": "cpp"
   }
 }
