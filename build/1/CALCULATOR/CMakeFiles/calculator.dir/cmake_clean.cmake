@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/calculator.dir/Token.cpp.obj.d"
   "CMakeFiles/calculator.dir/calculator.cpp.obj"
   "CMakeFiles/calculator.dir/calculator.cpp.obj.d"
+  "CMakeFiles/calculator.dir/calculator_globals.cpp.obj"
+  "CMakeFiles/calculator.dir/calculator_globals.cpp.obj.d"
   "CMakeFiles/calculator.dir/main_grammar_functions.cpp.obj"
   "CMakeFiles/calculator.dir/main_grammar_functions.cpp.obj.d"
   "calculator.exe"

@@ -161,17 +161,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named graph_lib_inheritance
+# Target rules for targets named calculator
 
 # Build rule for target.
-graph_lib_inheritance: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 graph_lib_inheritance
-.PHONY : graph_lib_inheritance
+calculator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 calculator
+.PHONY : calculator
 
 # fast build rule for target.
-graph_lib_inheritance/fast:
-	$(MAKE) $(MAKESILENT) -f 1\014\Graph_lib_inheritance\CMakeFiles\graph_lib_inheritance.dir\build.make 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/build
-.PHONY : graph_lib_inheritance/fast
+calculator/fast:
+	$(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/build
+.PHONY : calculator/fast
 
 # Help Target
 help:
@@ -185,7 +185,7 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... graph_lib_inheritance
+	@echo ... calculator
 .PHONY : help
 
 

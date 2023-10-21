@@ -1,5 +1,7 @@
-1/CALCULATOR/CMakeFiles/calculator.dir/main_grammar_functions.cpp.obj: \
- D:\Programs\2023-2024\C++\1\CALCULATOR\main_grammar_functions.cpp \
+1/CALCULATOR/CMakeFiles/calculator.dir/calculator_globals.cpp.obj: \
+ D:\Programs\2023-2024\C++\1\CALCULATOR\calculator_globals.cpp \
+ D:\Programs\2023-2024\C++\1\CALCULATOR\calculator_globals.h \
+ D:\Programs\2023-2024\C++\1\CALCULATOR\Token.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/std_lib_facilities.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -253,9 +255,5 @@
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/random.tcc \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/numeric \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h \
- D:\Programs\2023-2024\C++\1\CALCULATOR\Token.h \
- D:\Programs\2023-2024\C++\1\CALCULATOR\const_kinds.h \
- D:\Programs\2023-2024\C++\1\CALCULATOR\main_grammar_functions.h \
- D:\Programs\2023-2024\C++\1\CALCULATOR\calculator_globals.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\Names.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\Variable.h

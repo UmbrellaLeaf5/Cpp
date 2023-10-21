@@ -4,7 +4,7 @@
 #include "Token.h"
 #include "const_kinds.h"
 #include "main_grammar_functions.h"
-#include "calculator.h"
+#include "calculator_globals.h"
 
 double primary() 
 {

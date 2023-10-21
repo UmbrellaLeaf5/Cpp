@@ -1,5 +1,7 @@
 #pragma once
 
+#include "std_lib_facilities.h"
+
 // структура токена (у него есть тип, значение и (возможно) имя переменной)
 struct Token
 { 

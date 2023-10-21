@@ -2,7 +2,7 @@
 
 #include "Token.h"
 #include "const_kinds.h"
-#include "calculator.h"
+#include "calculator_globals.h"
 #include "main_grammar_functions.h"
 
 
