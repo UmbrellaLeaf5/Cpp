@@ -34,7 +34,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Platform/Windows.cmake"
   "D:/Program Files/CMake/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake"
   "D:/Program Files/CMake/share/cmake-3.27/Modules/SelectLibraryConfigurations.cmake"
-  "D:/Programs/2023-2024/C++/1/CALCULATOR/CMakeLists.txt"
+  "D:/Programs/2023-2024/C++/1/014/Graph_lib_inheritance/CMakeLists.txt"
   "D:/Programs/2023-2024/C++/CMakeLists.txt"
   "CMakeFiles/3.27.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.27.6/CMakeCXXCompiler.cmake"
@@ -51,10 +51,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "1/CALCULATOR/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "1/014/Graph_lib_inheritance/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "1/CALCULATOR/CMakeFiles/calculator.dir/DependInfo.cmake"
+  "1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/DependInfo.cmake"
   )
