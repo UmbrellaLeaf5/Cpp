@@ -4,10 +4,10 @@ D:/Programs/2023-2024/C++/build/CMakeFiles/list_install_components.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/local.dir
 D:/Programs/2023-2024/C++/build/CMakeFiles/install/strip.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/fractals.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/edit_cache.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/rebuild_cache.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/list_install_components.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/install.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/install/local.dir
-D:/Programs/2023-2024/C++/build/1/013/fractals/CMakeFiles/install/strip.dir
+D:/Programs/2023-2024/C++/build/1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir
+D:/Programs/2023-2024/C++/build/1/014/Graph_lib_inheritance/CMakeFiles/edit_cache.dir
+D:/Programs/2023-2024/C++/build/1/014/Graph_lib_inheritance/CMakeFiles/rebuild_cache.dir
+D:/Programs/2023-2024/C++/build/1/014/Graph_lib_inheritance/CMakeFiles/list_install_components.dir
+D:/Programs/2023-2024/C++/build/1/014/Graph_lib_inheritance/CMakeFiles/install.dir
+D:/Programs/2023-2024/C++/build/1/014/Graph_lib_inheritance/CMakeFiles/install/local.dir
+D:/Programs/2023-2024/C++/build/1/014/Graph_lib_inheritance/CMakeFiles/install/strip.dir

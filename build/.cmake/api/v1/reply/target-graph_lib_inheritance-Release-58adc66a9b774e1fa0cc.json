@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "1/013/fractals/fractals.exe"
+			"path" : "1/014/Graph_lib_inheritance/graph_lib_inheritance.exe"
 		},
 		{
-			"path" : "1/013/fractals/fractals.pdb"
+			"path" : "1/014/Graph_lib_inheritance/graph_lib_inheritance.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -21,7 +21,7 @@
 		],
 		"files" : 
 		[
-			"1/013/fractals/CMakeLists.txt",
+			"1/014/Graph_lib_inheritance/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -117,7 +117,7 @@
 			]
 		}
 	],
-	"id" : "fractals::@d043eef01b96a8f42fb8",
+	"id" : "graph_lib_inheritance::@133d162b12982ab91afa",
 	"install" : 
 	{
 		"destinations" : 
@@ -251,12 +251,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "fractals",
-	"nameOnDisk" : "fractals.exe",
+	"name" : "graph_lib_inheritance",
+	"nameOnDisk" : "graph_lib_inheritance.exe",
 	"paths" : 
 	{
-		"build" : "1/013/fractals",
-		"source" : "1/013/fractals"
+		"build" : "1/014/Graph_lib_inheritance",
+		"source" : "1/014/Graph_lib_inheritance"
 	},
 	"sourceGroups" : 
 	[
@@ -278,7 +278,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "1/013/fractals/main.cpp",
+			"path" : "1/014/Graph_lib_inheritance/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

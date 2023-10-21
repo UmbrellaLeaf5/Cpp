@@ -20,16 +20,16 @@
 					"source" : "."
 				},
 				{
-					"build" : "1/013/fractals",
+					"build" : "1/014/Graph_lib_inheritance",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.013.fractals-Release-49fbce2c4252f2d1857d.json",
+					"jsonFile" : "directory-1.014.Graph_lib_inheritance-Release-a642176d16f7d7dcb2c4.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 1,
-					"source" : "1/013/fractals",
+					"source" : "1/014/Graph_lib_inheritance",
 					"targetIndexes" : 
 					[
 						0
@@ -55,7 +55,7 @@
 					[
 						1
 					],
-					"name" : "fractals",
+					"name" : "graph_lib_inheritance",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -67,9 +67,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "fractals::@d043eef01b96a8f42fb8",
-					"jsonFile" : "target-fractals-Release-4976788d467c7995e9e0.json",
-					"name" : "fractals",
+					"id" : "graph_lib_inheritance::@133d162b12982ab91afa",
+					"jsonFile" : "target-graph_lib_inheritance-Release-58adc66a9b774e1fa0cc.json",
+					"name" : "graph_lib_inheritance",
 					"projectIndex" : 1
 				}
 			]

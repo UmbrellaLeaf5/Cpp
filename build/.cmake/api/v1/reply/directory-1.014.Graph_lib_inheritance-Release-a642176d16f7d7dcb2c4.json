@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"1/013/fractals/CMakeLists.txt"
+			"1/014/Graph_lib_inheritance/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -30,16 +30,16 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"1/013/fractals/fractals.exe"
+				"1/014/Graph_lib_inheritance/graph_lib_inheritance.exe"
 			],
-			"targetId" : "fractals::@d043eef01b96a8f42fb8",
+			"targetId" : "graph_lib_inheritance::@133d162b12982ab91afa",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "1/013/fractals",
-		"source" : "1/013/fractals"
+		"build" : "1/014/Graph_lib_inheritance",
+		"source" : "1/014/Graph_lib_inheritance"
 	}
 }

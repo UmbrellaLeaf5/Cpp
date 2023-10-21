@@ -62,57 +62,57 @@ CMAKE_BINARY_DIR = D:\Programs\2023-2024\C++\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: 1/013/fractals/all
+all: 1/014/Graph_lib_inheritance/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: 1/013/fractals/preinstall
+preinstall: 1/014/Graph_lib_inheritance/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: 1/013/fractals/clean
+clean: 1/014/Graph_lib_inheritance/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory 1/013/fractals
+# Directory level rules for directory 1/014/Graph_lib_inheritance
 
 # Recursive "all" directory target.
-1/013/fractals/all: 1/013/fractals/CMakeFiles/fractals.dir/all
-.PHONY : 1/013/fractals/all
+1/014/Graph_lib_inheritance/all: 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/all
+.PHONY : 1/014/Graph_lib_inheritance/all
 
 # Recursive "preinstall" directory target.
-1/013/fractals/preinstall:
-.PHONY : 1/013/fractals/preinstall
+1/014/Graph_lib_inheritance/preinstall:
+.PHONY : 1/014/Graph_lib_inheritance/preinstall
 
 # Recursive "clean" directory target.
-1/013/fractals/clean: 1/013/fractals/CMakeFiles/fractals.dir/clean
-.PHONY : 1/013/fractals/clean
+1/014/Graph_lib_inheritance/clean: 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/clean
+.PHONY : 1/014/Graph_lib_inheritance/clean
 
 #=============================================================================
-# Target rules for target 1/013/fractals/CMakeFiles/fractals.dir
+# Target rules for target 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir
 
 # All Build rule for target.
-1/013/fractals/CMakeFiles/fractals.dir/all:
-	$(MAKE) $(MAKESILENT) -f 1\013\fractals\CMakeFiles\fractals.dir\build.make 1/013/fractals/CMakeFiles/fractals.dir/depend
-	$(MAKE) $(MAKESILENT) -f 1\013\fractals\CMakeFiles\fractals.dir\build.make 1/013/fractals/CMakeFiles/fractals.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Programs\2023-2024\C++\build\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target fractals"
-.PHONY : 1/013/fractals/CMakeFiles/fractals.dir/all
+1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/all:
+	$(MAKE) $(MAKESILENT) -f 1\014\Graph_lib_inheritance\CMakeFiles\graph_lib_inheritance.dir\build.make 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/depend
+	$(MAKE) $(MAKESILENT) -f 1\014\Graph_lib_inheritance\CMakeFiles\graph_lib_inheritance.dir\build.make 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Programs\2023-2024\C++\build\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target graph_lib_inheritance"
+.PHONY : 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/all
 
 # Build rule for subdir invocation for target.
-1/013/fractals/CMakeFiles/fractals.dir/rule: cmake_check_build_system
+1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/013/fractals/CMakeFiles/fractals.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Programs\2023-2024\C++\build\CMakeFiles 0
-.PHONY : 1/013/fractals/CMakeFiles/fractals.dir/rule
+.PHONY : 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/rule
 
 # Convenience name for target.
-fractals: 1/013/fractals/CMakeFiles/fractals.dir/rule
-.PHONY : fractals
+graph_lib_inheritance: 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/rule
+.PHONY : graph_lib_inheritance
 
 # clean rule for target.
-1/013/fractals/CMakeFiles/fractals.dir/clean:
-	$(MAKE) $(MAKESILENT) -f 1\013\fractals\CMakeFiles\fractals.dir\build.make 1/013/fractals/CMakeFiles/fractals.dir/clean
-.PHONY : 1/013/fractals/CMakeFiles/fractals.dir/clean
+1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 1\014\Graph_lib_inheritance\CMakeFiles\graph_lib_inheritance.dir\build.make 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/clean
+.PHONY : 1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
