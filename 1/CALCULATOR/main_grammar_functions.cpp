@@ -16,8 +16,11 @@ double primary()
 		{	
 			double received_expression = expression(); // вызываем чтение выражения
 			received_token = ts.get();
-			if (received_token.kind != ')') 
+			if (received_token.kind != ')')
+			{
+				ts.unget(received_token);
 				error("')' expected");
+			}
 			return received_expression;
 		}
 		case '{':
@@ -25,7 +28,10 @@ double primary()
 			double received_expression = expression(); // вызываем чтение выражения
 			received_token = ts.get();
 			if (received_token.kind != '}') 
+			{
+				ts.unget(received_token);
 				error("'}' expected");
+			}
 			return received_expression;
 		}
 		// кейс для отрицательного первичного выражения
@@ -80,19 +86,29 @@ double primary()
 				double base_number = expression(); // переменная - основание
 				received_token = ts.get();
 				if (received_token.kind != comma) // за первым аргументом должна следовать запятая
+				{
+					ts.unget(received_token.kind);
 					error("',' expected");
+				}
 				// переменная - показатель
 				int power_number = narrow_cast<int>(expression()); // "сужение" значения с потерей информации и генерацией исключения в противном случае
 				received_token = ts.get();
 				if (received_token.kind != ')')
+				{
+					ts.unget(received_token.kind);
 					error("')' expected");
+				}
 				return pow(base_number, power_number);
 			}
 			else
+			{
+				ts.unget(received_token.kind);
 				error("'(' expected");
+			}
 		}
 		// кейс, если мы не получили, чего хотели
 		default:
+			ts.unget(received_token);
 			error("primary expected");
 	}
 }

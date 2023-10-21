@@ -29,5 +29,5 @@ class Token_stream
 		void unget(Token receive_token) { buffer = receive_token; is_full = true; } 
 
 		// функция, отвечающая за игнорирование ввода токенов до появления символа, переданного как аргумент
-		void ignore(char last_ignore_char); 
+		void ignore(vector<char> last_ignore_chars);
 };

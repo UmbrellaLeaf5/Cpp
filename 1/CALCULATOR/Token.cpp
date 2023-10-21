@@ -11,10 +11,10 @@ Token Token_stream::get()
 		is_full = false; 
 		return buffer; 
 	} 
-	char received_char; 
+	char received_char = ' ';  // FIXME: fix issue when input stream was closed
 	cin.get(received_char);
 	while (isspace(received_char)) { // пропускаем все пробельные символы
-		if (received_char == '\n') // конец строки - вывод на экран
+		if (received_char == line_break) // конец строки - вывод на экран
 			return line_break; // перенос строки мы обрабатываем как отдельный случай, поэтому возвраащем не токен
 		cin.get(received_char);
 	}
@@ -61,11 +61,21 @@ Token Token_stream::get()
 	}
 }
 
+bool contains(const vector<char>& v, char c)
+{
+	for(int i = 0; i < v.size(); i++)
+	{
+		if(v[i] == c)
+			return true;
+	}
+	return false;
+}
+
 // функция, отвечающая за игнорирование ввода до появления символа до которого игнорируем включительно
-void Token_stream::ignore(char last_ignore_char)
+void Token_stream::ignore(vector<char> last_ignore_chars)
 {
 	// если символ этот в буфере, то останавливаемся, очищая буфер
-	if (is_full && last_ignore_char == buffer.kind) { 
+	if (is_full && contains(last_ignore_chars, buffer.kind)) { 
 		is_full = false;
 		return;
 	}
@@ -74,9 +84,7 @@ void Token_stream::ignore(char last_ignore_char)
 	char received_char;
 	while (cin.get(received_char))
 	{
-		if (received_char == line_break)
-			received_char = print; // пусть наш игнор воспринимает перенос строки как ";"
-		if (received_char == last_ignore_char) // останавливаемся при нахождении символа - аргумента функции
+		if (contains(last_ignore_chars, received_char))
 			return;
 	}
 }
