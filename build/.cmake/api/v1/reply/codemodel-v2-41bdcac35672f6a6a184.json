@@ -22,7 +22,7 @@
 				{
 					"build" : "1/CALCULATOR",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.CALCULATOR-Release-ffb3e57a0d0e664acf33.json",
+					"jsonFile" : "directory-1.CALCULATOR-Release-138af5ee2c49d4745972.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
@@ -68,7 +68,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "calculator::@879c774fc5678528d4ce",
-					"jsonFile" : "target-calculator-Release-af5e9ecf802f1b782a25.json",
+					"jsonFile" : "target-calculator-Release-bd54ec3a938825955b4d.json",
 					"name" : "calculator",
 					"projectIndex" : 1
 				}

@@ -36,7 +36,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 30,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
@@ -80,7 +80,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -134,7 +135,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -162,6 +164,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "1/CALCULATOR/Token.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "1/CALCULATOR/calculator_globals.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

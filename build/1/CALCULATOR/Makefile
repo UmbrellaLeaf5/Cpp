@@ -246,6 +246,30 @@ calculator.cpp.s:
 	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/calculator.cpp.s
 .PHONY : calculator.cpp.s
 
+calculator_globals.obj: calculator_globals.cpp.obj
+.PHONY : calculator_globals.obj
+
+# target to build an object file
+calculator_globals.cpp.obj:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/calculator_globals.cpp.obj
+.PHONY : calculator_globals.cpp.obj
+
+calculator_globals.i: calculator_globals.cpp.i
+.PHONY : calculator_globals.i
+
+# target to preprocess a source file
+calculator_globals.cpp.i:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/calculator_globals.cpp.i
+.PHONY : calculator_globals.cpp.i
+
+calculator_globals.s: calculator_globals.cpp.s
+.PHONY : calculator_globals.s
+
+# target to generate assembly for a file
+calculator_globals.cpp.s:
+	cd /d D:\Programs\2023-2024\C++\build && $(MAKE) $(MAKESILENT) -f 1\CALCULATOR\CMakeFiles\calculator.dir\build.make 1/CALCULATOR/CMakeFiles/calculator.dir/calculator_globals.cpp.s
+.PHONY : calculator_globals.cpp.s
+
 main_grammar_functions.obj: main_grammar_functions.cpp.obj
 .PHONY : main_grammar_functions.obj
 
@@ -292,6 +316,9 @@ help:
 	@echo ... calculator.obj
 	@echo ... calculator.i
 	@echo ... calculator.s
+	@echo ... calculator_globals.obj
+	@echo ... calculator_globals.i
+	@echo ... calculator_globals.s
 	@echo ... main_grammar_functions.obj
 	@echo ... main_grammar_functions.i
 	@echo ... main_grammar_functions.s

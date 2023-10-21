@@ -22,5 +22,11 @@
   "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\calculator.dir\\Token.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\CALCULATOR\\Token.cpp",
   "file": "D:/Programs/2023-2024/C++/1/CALCULATOR/Token.cpp",
   "output": "1/CALCULATOR/CMakeFiles/calculator.dir/Token.cpp.obj"
+},
+{
+  "directory": "D:/Programs/2023-2024/C++/build/1/CALCULATOR",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/calculator.dir/includes_CXX.rsp -pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\calculator.dir\\calculator_globals.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\CALCULATOR\\calculator_globals.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/CALCULATOR/calculator_globals.cpp",
+  "output": "1/CALCULATOR/CMakeFiles/calculator.dir/calculator_globals.cpp.obj"
 }
 ]

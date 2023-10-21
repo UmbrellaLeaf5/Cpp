@@ -256,6 +256,6 @@
  D:\Programs\2023-2024\C++\1\CALCULATOR\Token.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\const_kinds.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\main_grammar_functions.h \
- D:\Programs\2023-2024\C++\1\CALCULATOR\calculator.h \
+ D:\Programs\2023-2024\C++\1\CALCULATOR\calculator_globals.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\Names.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\Variable.h

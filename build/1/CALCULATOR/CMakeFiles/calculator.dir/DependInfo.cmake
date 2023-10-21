@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Programs/2023-2024/C++/1/CALCULATOR/Names.cpp" "1/CALCULATOR/CMakeFiles/calculator.dir/Names.cpp.obj" "gcc" "1/CALCULATOR/CMakeFiles/calculator.dir/Names.cpp.obj.d"
   "D:/Programs/2023-2024/C++/1/CALCULATOR/Token.cpp" "1/CALCULATOR/CMakeFiles/calculator.dir/Token.cpp.obj" "gcc" "1/CALCULATOR/CMakeFiles/calculator.dir/Token.cpp.obj.d"
   "D:/Programs/2023-2024/C++/1/CALCULATOR/calculator.cpp" "1/CALCULATOR/CMakeFiles/calculator.dir/calculator.cpp.obj" "gcc" "1/CALCULATOR/CMakeFiles/calculator.dir/calculator.cpp.obj.d"
+  "D:/Programs/2023-2024/C++/1/CALCULATOR/calculator_globals.cpp" "1/CALCULATOR/CMakeFiles/calculator.dir/calculator_globals.cpp.obj" "gcc" "1/CALCULATOR/CMakeFiles/calculator.dir/calculator_globals.cpp.obj.d"
   "D:/Programs/2023-2024/C++/1/CALCULATOR/main_grammar_functions.cpp" "1/CALCULATOR/CMakeFiles/calculator.dir/main_grammar_functions.cpp.obj" "gcc" "1/CALCULATOR/CMakeFiles/calculator.dir/main_grammar_functions.cpp.obj.d"
   )
 
