@@ -3,7 +3,6 @@
 #include "Token.h"
 #include "const_kinds.h"
 
-
 Token Token_stream::get()
 {
 	// если в буфере есть токен, забираем его оттуда
@@ -11,72 +10,89 @@ Token Token_stream::get()
 		is_full = false; 
 		return buffer; 
 	} 
-	char received_char; 
-	cin.get(received_char);
-	while (isspace(received_char)) { // пропускаем все пробельные символы
-		if (received_char == '\n') // конец строки - вывод на экран
-			return line_break; // перенос строки мы обрабатываем как отдельный случай, поэтому возвраащем не токен
-		cin.get(received_char);
-	}
-	switch (received_char) 
-	{
-		// кейсы для операторов
-		case '(': case ')': case '{': case '}':
-		case '+': case '-': case '*': case '/': case '%':
-		case ';': case '\n': case '=': case ',': case '#': case '$': 
-			return Token(received_char);
-		// кейсы для чисел
-		case '0': case '1': case '2': case '3': case '4':
-		case '5': case '6': case '7': case '8': case '9':
-		{
-			cin.unget(); // возвращаем предыдущий символ в стандартный поток ввода
-			double received_value;
-			cin >> received_value;
-			return Token(number, received_value);
+	char rec_ch = ' ';  // FIXME: fix issue when input stream was closed
+	cin.get(rec_ch);
+	if (cin){
+		while (isspace(rec_ch)) { // пропускаем все пробельные символы
+			if (rec_ch == line_break) // конец строки - вывод на экран
+				return line_break; // перенос строки мы обрабатываем как отдельный случай, поэтому возвраащем не токен
+			cin.get(rec_ch);
 		}
-		// кейс для переменных или служебных слов типа 'sqrt', 'exit', 'pow'
-		default: 
+		switch (rec_ch) 
 		{
-			if (isalpha(received_char)) 
+			// кейсы для операторов
+			case '(': case ')': case '{': case '}':
+			case '+': case '-': case '*': case '/': case '%':
+			case ';': case '\n': case '=': case ',': case '#': case '$': 
+				return Token(rec_ch);
+			// кейсы для чисел
+			case '0': case '1': case '2': case '3': case '4':
+			case '5': case '6': case '7': case '8': case '9':
 			{
-				string input_string;
-				input_string += received_char;
-				while (cin.get(received_char) && (isalpha(received_char) || isdigit(received_char))) 
-					// читаем посимвольно слово (из букв и цифр)
-					input_string += received_char; 
-				cin.unget();
-				// если получены служебные слова, организуем соотв. действия в токене
-				if (input_string == "exit") 
-					return Token(exiting);
-				if (input_string == "sqrt") 
-					return Token(square_root);
-				if (input_string == "pow") 
-					return Token(power);
-				if (input_string == "help")
-					return Token(help);
-				return Token(name, input_string); // а было получено не служебное слово, то это была переменная
+				cin.unget(); // возвращаем предыдущий символ в стандартный поток ввода
+				double rec_value;
+				cin >> rec_value;
+				return Token(number, rec_value);
 			}
-			error("bad token");
+			// кейс для переменных или служебных слов типа 'sqrt', 'exit', 'pow'
+			default: 
+			{
+				if (isalpha(rec_ch)) 
+				{
+					string user_input;
+					user_input += rec_ch;
+					while (cin.get(rec_ch) && (isalpha(rec_ch) || isdigit(rec_ch))) 
+						// читаем посимвольно слово (из букв и цифр)
+						user_input += rec_ch; 
+					cin.unget();
+					// если получены служебные слова, организуем соотв. действия в токене
+					if (user_input == "exit") 
+						return Token(exiting);
+					if (user_input == "sqrt") 
+						return Token(square_root);
+					if (user_input == "pow") 
+						return Token(power);
+					if (user_input == "help")
+						return Token(help);
+					return Token(name, user_input); // а было получено не служебное слово, то это была переменная
+				}
+				error("bad token");
+			}
 		}
 	}
+	else
+		return Token(exiting);
 }
 
-// функция, отвечающая за игнорирование ввода до появления символа до которого игнорируем включительно
-void Token_stream::ignore(char last_ignore_char)
+void Token_stream::unget(Token rec_t)
+{ 
+	buffer = rec_t; 
+	is_full = true; 
+}
+
+// функция, проверяющая принадлежность символа вектору
+bool contains(const vector<char>& vec, char ch)
+{
+	for(auto& i : vec){
+		if(i == ch)
+			return true;
+	}
+	return false;
+}
+
+void Token_stream::ignore(vector<char> ending_chars)
 {
 	// если символ этот в буфере, то останавливаемся, очищая буфер
-	if (is_full && last_ignore_char == buffer.kind) { 
+	if (is_full && contains(ending_chars, buffer.kind)) { 
 		is_full = false;
 		return;
 	}
 	is_full = false;
 
-	char received_char;
-	while (cin.get(received_char))
+	char rec_ch;
+	while (cin.get(rec_ch))
 	{
-		if (received_char == line_break)
-			received_char = print; // пусть наш игнор воспринимает перенос строки как ";"
-		if (received_char == last_ignore_char) // останавливаемся при нахождении символа - аргумента функции
+		if (contains(ending_chars, rec_ch))
 			return;
 	}
 }

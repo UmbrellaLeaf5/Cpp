@@ -1,6 +1,7 @@
+#pragma once
+
 #include "std_lib_facilities.h"
 
-#pragma once
 
 // структура, хранящая переменные в памяти (у них есть имя и значение)
 struct Variable 
