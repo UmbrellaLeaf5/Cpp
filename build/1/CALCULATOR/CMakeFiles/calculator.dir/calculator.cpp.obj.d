@@ -255,7 +255,7 @@
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_numeric.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\Token.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\const_kinds.h \
- D:\Programs\2023-2024\C++\1\CALCULATOR\calculator.h \
+ D:\Programs\2023-2024\C++\1\CALCULATOR\calculator_globals.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\Names.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\Variable.h \
  D:\Programs\2023-2024\C++\1\CALCULATOR\main_grammar_functions.h

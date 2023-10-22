@@ -2,7 +2,7 @@
 
 #include "Token.h"
 #include "const_kinds.h"
-#include "calculator.h"
+#include "calculator_globals.h"
 #include "main_grammar_functions.h"
 
 
@@ -19,41 +19,51 @@ void user_help_cout()
 	cout << "! evaluating the expression in brackets, assigning new values to variables ('=')." << endl;
 	cout << "To get the result of a calculation, use the symbol ';' to separate expressions and line breaks, or just use line breaks." << endl;
 	cout << "An example of a working program using all the commands:" << endl;
-	cout << "> # s = 10; $ p = 5; 2 + s; s = 5 * p; pow(p, 4); sqrt(s); s % 10; s / 5; s / (5 % 10) + 6 - 7;" << endl;
+	cout << "> # s = 10; $ p = 5; 2 + s; s = 5 * p; pow(p, 4); sqrt(s); s % 10; s / 5; s / (5 % 10) + 6 - 7; s = 8" << endl;
 }
 
 // функция, очищающая потока ввода (игнорирование буфера до символа вывода результата включительно)
 void clean_up_mess() 
 {
-	ts.ignore(print);
+	ts.ignore({print, line_break});
 }
 
-// функция, обрабатывающая вычисления: инструкция, вывод, выход, вычисление, инструкция
+// функция, обрабатывающая вычисления: инструкция, вывод, выход, вычисление
 void calculate() 
 {
-	for (;cin;) // бесконечный цикл работы, так как завершаемся мы только при получении соотв. команды или сломанном вводе
+	bool is_first_input = true;
+	for (;;)
 	{
 		try 
 		{
-			cout << input_letter; // начинается ввод
-			Token received_token = ts.get();
-			while (received_token.kind == print || received_token.kind == line_break) // пропускаем несколько символов вывода подряд
-				received_token = ts.get(); 
-			if (received_token.kind == exiting) // выход из программы если на ввод было получено соотв. слово
-				return; 
-			if (received_token.kind == help) // вывод сообщения - инструкции
-				user_help_cout();
-			else
-			{
-				ts.unget(received_token); 
-				// если нечего выводить на экран, но и не происходит выход из программы, то возвращаем токен в поток ввода и обрабатываем инструкцию, выводя результат
-				cout << result_letter << statement() << endl;
+			if (is_first_input){
+				cout << input_letter;
+				is_first_input = false;
 			}
+			Token rec_t = ts.get();
+			while (rec_t.kind == print || rec_t.kind == line_break) // пропускаем несколько символов вывода подряд
+				if (rec_t.kind == print)
+					rec_t = ts.get();
+				else if (rec_t.kind == line_break){
+					cout << input_letter;
+					rec_t = ts.get();
+				}
+				if (rec_t.kind == exiting) // выход из программы если на ввод было получено соотв. слово
+					return; 
+				if (rec_t.kind == help) // вывод сообщения - инструкции
+					user_help_cout();
+				else
+				{
+					ts.unget(rec_t); 
+					// если нечего выводить на экран, но и не происходит выход из программы, то возвращаем токен в поток ввода и обрабатываем инструкцию, выводя результат
+					cout << res_letter << statement() << endl;
+				}
 		}
 		catch (runtime_error& exc) // в случае ошибки выводим сообщение и очищаем поток токенов, но не завершаем программу
 		{ 
 			cerr << exc.what() << endl;
 			clean_up_mess();
+			cout << input_letter;
 		}
 	}
 }

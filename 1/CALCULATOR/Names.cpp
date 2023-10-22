@@ -13,20 +13,20 @@ double Names::get_value(string prob_name)
 }
 
 
-double Names::set_value(string received_name, double received_value) 
+double Names::set_value(string rec_name, double rec_value) 
 {
 	for (int i = 0; i <= names.size(); ++i)
 	{
-		if (names[i].name == received_name) 
+		if (names[i].name == rec_name) 
 		{
 			if(!names[i].is_const){
-				names[i].value = received_value;
+				names[i].value = rec_value;
 				return names[i].value;
 			}
-			error("set: " + received_name + " is const");
+			error("set: " + rec_name + " is const");
 		}
 	}
-	error("set: undefined name ", received_name); // переменной не оказалось в нашем списке
+	error("set: undefined name ", rec_name); // переменной не оказалось в нашем списке
 }
 
 
@@ -39,9 +39,9 @@ bool Names::is_declared(string prob_name)
 	return false;
 }
 
-double Names::define_name(string received_var, double value, bool is_const) { 
-	if (is_declared(received_var)) // проверяем, не существует ли уже переменная с таким именем
-		error(received_var, ": declared twice");
-	names.push_back(Variable(received_var, value, is_const)); // иначе добавляем её в вектор
+double Names::define_name(string var_name, double value, bool is_const) { 
+	if (is_declared(var_name)) // проверяем, не существует ли уже переменная с таким именем
+		error(var_name, ": declared twice");
+	names.push_back(Variable(var_name, value, is_const)); // иначе добавляем её в вектор
 	return value;
 }

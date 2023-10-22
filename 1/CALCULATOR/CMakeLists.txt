@@ -20,6 +20,7 @@ add_executable(
     main_grammar_functions.cpp
     Names.cpp
     Token.cpp
+    calculator_globals.cpp
 
 )
 
