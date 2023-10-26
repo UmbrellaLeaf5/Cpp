@@ -1,12 +1,12 @@
-1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/main.cpp.obj: \
- D:\Programs\2023-2024\C++\1\014\Graph_lib_inheritance\main.cpp \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
+1/014-015/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/__/__/__/lib/Graph_lib/GUI.cpp.obj: \
+ D:\Programs\2023-2024\C++\lib\Graph_lib\GUI.cpp \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/sstream \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ios \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iosfwd \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ios \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iosfwd \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/postypes.h \
@@ -126,19 +126,12 @@
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.tcc \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/sstream \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/sstream.tcc \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/utility \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_relops.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
+ D:\Programs\2023-2024\C++\lib\Graph_lib\GUI.h \
+ D:\Programs\2023-2024\C++\lib\Graph_lib\Graph.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
  D:/Program\ Files/MinGW/mingw64/x86_64-w64-mingw32/include/math.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/specfun.h \
@@ -155,28 +148,29 @@
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/poly_hermite.tcc \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/poly_laguerre.tcc \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/riemann_zeta.tcc \
- D:/Programs/2023-2024/C++/lib/Vector_lib/vec2d.h \
- D:/Programs/2023-2024/C++/lib/Vector_lib/poly.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h \
- D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
- D:/Programs/2023-2024/C++/lib/Graph_lib/Graph.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/functional \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tuple \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/utility \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_relops.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/array \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uses_allocator.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/invoke.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/refwrap.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_function.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/unordered_map \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/aligned_buffer.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/node_handle.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/optional \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/enable_special_members.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
+ D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/algorithmfwd.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_heap.h \
@@ -429,9 +423,6 @@
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Fl_Pixmap.H \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Fl_JPEG_Image.H \
  D:/Programs/FLTK/fltk-1.3.8/include/FL/Fl_PNG_Image.H \
- D:/Programs/2023-2024/C++/lib/Graph_lib/Simple_window.h \
- D:/Programs/2023-2024/C++/lib/Graph_lib/GUI.h \
- D:/Programs/2023-2024/C++/lib/Graph_lib/Graph.h \
- D:/Programs/2023-2024/C++/lib/Graph_lib/Window.h \
- D:/Programs/2023-2024/C++/lib/Graph_lib/Point.h \
- D:/Programs/2023-2024/C++/lib/Graph_lib/fltk.h
+ D:\Programs\2023-2024\C++\lib\Graph_lib\Window.h \
+ D:\Programs\2023-2024\C++\lib\Graph_lib\Point.h \
+ D:\Programs\2023-2024\C++\lib\Graph_lib\fltk.h

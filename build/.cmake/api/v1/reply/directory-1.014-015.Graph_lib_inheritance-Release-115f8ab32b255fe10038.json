@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"1/CALCULATOR/CMakeLists.txt"
+			"1/014-015/Graph_lib_inheritance/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,7 +17,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 31,
+				"line" : 47,
 				"parent" : 0
 			}
 		]
@@ -30,16 +30,16 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"1/CALCULATOR/calculator.exe"
+				"1/014-015/Graph_lib_inheritance/graph_lib_inheritance.exe"
 			],
-			"targetId" : "calculator::@879c774fc5678528d4ce",
+			"targetId" : "graph_lib_inheritance::@86dc649fb37527c90e36",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "1/CALCULATOR",
-		"source" : "1/CALCULATOR"
+		"build" : "1/014-015/Graph_lib_inheritance",
+		"source" : "1/014-015/Graph_lib_inheritance"
 	}
 }

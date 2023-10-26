@@ -1671,7 +1671,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Programs/2023-2024/C++/build/1/014/Graph_lib_inheritance"
+			"value" : "D:/Programs/2023-2024/C++/build/1/014-015/Graph_lib_inheritance"
 		},
 		{
 			"name" : "graph_lib_inheritance_IS_TOP_LEVEL",
@@ -1695,7 +1695,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Programs/2023-2024/C++/1/014/Graph_lib_inheritance"
+			"value" : "D:/Programs/2023-2024/C++/1/014-015/Graph_lib_inheritance"
 		},
 		{
 			"name" : "logic_elements_BINARY_DIR",

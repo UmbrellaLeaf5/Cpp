@@ -1,5 +1,5 @@
-1/014/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/main.cpp.obj: \
- D:\Programs\2023-2024\C++\1\014\Graph_lib_inheritance\main.cpp \
+1/014-015/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/main.cpp.obj: \
+ D:\Programs\2023-2024\C++\1\014-015\Graph_lib_inheritance\main.cpp \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  D:/Program\ Files/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \

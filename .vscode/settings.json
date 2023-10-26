@@ -81,6 +81,7 @@
     "streambuf": "cpp",
     "utility": "cpp",
     "cmath": "cpp",
-    "stdexcept": "cpp"
+    "stdexcept": "cpp",
+    "new": "cpp"
   }
 }
