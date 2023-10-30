@@ -64,8 +64,16 @@
 	],
 	"reply" : 
 	{
+		"Desktop.ini" : 
+		{
+			"error" : "unknown query file"
+		},
 		"client-vscode" : 
 		{
+			"Desktop.ini" : 
+			{
+				"error" : "unknown query file"
+			},
 			"query.json" : 
 			{
 				"requests" : 
