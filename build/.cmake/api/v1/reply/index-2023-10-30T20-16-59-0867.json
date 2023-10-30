@@ -26,7 +26,7 @@
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-41bdcac35672f6a6a184.json",
+			"jsonFile" : "codemodel-v2-3cd4fe208123f3c52818.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-f8b0e3b4d85984c6f481.json",
+			"jsonFile" : "cache-v2-a434f4d82fc6fc406c9d.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-6461058f6c9ac43c4032.json",
+			"jsonFile" : "cmakeFiles-v1-8318c4a5910d2e1de4b9.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -64,8 +64,16 @@
 	],
 	"reply" : 
 	{
+		"Desktop.ini" : 
+		{
+			"error" : "unknown query file"
+		},
 		"client-vscode" : 
 		{
+			"Desktop.ini" : 
+			{
+				"error" : "unknown query file"
+			},
 			"query.json" : 
 			{
 				"requests" : 
@@ -90,7 +98,7 @@
 				"responses" : 
 				[
 					{
-						"jsonFile" : "cache-v2-f8b0e3b4d85984c6f481.json",
+						"jsonFile" : "cache-v2-a434f4d82fc6fc406c9d.json",
 						"kind" : "cache",
 						"version" : 
 						{
@@ -99,7 +107,7 @@
 						}
 					},
 					{
-						"jsonFile" : "codemodel-v2-41bdcac35672f6a6a184.json",
+						"jsonFile" : "codemodel-v2-3cd4fe208123f3c52818.json",
 						"kind" : "codemodel",
 						"version" : 
 						{
@@ -117,7 +125,7 @@
 						}
 					},
 					{
-						"jsonFile" : "cmakeFiles-v1-6461058f6c9ac43c4032.json",
+						"jsonFile" : "cmakeFiles-v1-8318c4a5910d2e1de4b9.json",
 						"kind" : "cmakeFiles",
 						"version" : 
 						{

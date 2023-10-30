@@ -319,13 +319,13 @@ fractals_IS_TOP_LEVEL:STATIC=OFF
 fractals_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++/1/013/fractals
 
 //Value Computed by CMake
-graph_lib_inheritance_BINARY_DIR:STATIC=D:/Programs/2023-2024/C++/build/1/014/Graph_lib_inheritance
+graph_lib_inheritance_BINARY_DIR:STATIC=D:/Programs/2023-2024/C++/build/1/014-015/Graph_lib_inheritance
 
 //Value Computed by CMake
 graph_lib_inheritance_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-graph_lib_inheritance_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++/1/014/Graph_lib_inheritance
+graph_lib_inheritance_SOURCE_DIR:STATIC=D:/Programs/2023-2024/C++/1/014-015/Graph_lib_inheritance
 
 //Value Computed by CMake
 logic_elements_BINARY_DIR:STATIC=D:/Programs/2023-2024/C++/build/1/010/logic_elements
