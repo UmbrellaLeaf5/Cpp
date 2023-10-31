@@ -6,30 +6,106 @@
 #include "const_kinds.h"
 #include "main_grammar_functions.h"
 
+double assign_var (string name)
+{
+    Token rec_t_2 = ts.get();  // вспомогательный токен для получения значения после левой части
+    if (rec_t_2.kind == '=')
+    {
+        double var_value = expression();
+        return nm.set_value(name, var_value);
+    }
+
+    ts.unget(rec_t_2);  // возвращаем вспомогательный токен в поток
+    return nm.get_value(name);
+}
+
+double eval_sqrt ()
+{
+    Token rec_t = ts.get();
+
+    if (rec_t.kind != '(')
+    {
+        ts.unget(rec_t);
+        error("'(' expected");
+    }
+
+    double arg = expression();
+    rec_t = ts.get();
+    if (rec_t.kind != ')')
+    {
+        ts.unget(rec_t);
+        error("'(' expected");
+    }
+
+    if (arg < 0)  // проверка на то, что берем корень неотрицательного числа
+        error("square root of a negative number");
+
+    return sqrt(arg);
+}
+
+double eval_power ()
+{
+    Token rec_t = ts.get();
+    if (rec_t.kind != '(')
+    {
+        ts.unget(rec_t);
+        error("'(' expected");
+    }
+
+    double base_number = expression();
+    rec_t = ts.get();
+    if (rec_t.kind != comma)
+    {  // за первым аргументом должна следовать запятая
+        ts.unget(rec_t);
+        error("',' expected");
+    }
+
+    double power_number = expression();  // "сужение" значения с потерей информации и
+                                         // генерацией исключения в противном случае
+    rec_t = ts.get();
+    if (rec_t.kind != ')')
+    {
+        ts.unget(rec_t);
+        error("')' expected");
+    }
+
+    try
+    {
+        return pow(base_number, narrow_cast<int>(power_number));
+    }
+    catch (runtime_error&)  // expect from narrow casting
+    {
+        error("power must be an integer");
+    }
+}
+
+char close_bracket (char open_bracket)
+{
+    switch (open_bracket)
+    {
+    case '(':
+        return ')';
+    case '{':
+        return '}';
+    }
+    error("Ooops, unreachable code point");
+}
+
 double primary ()
 {
     Token rec_t = ts.get();
     switch (rec_t.kind)
     {
     case '(':
-    {
-        double rec_expr = expression();
-        rec_t = ts.get();
-        if (rec_t.kind != ')')
-        {
-            ts.unget(rec_t);
-            error("')' expected");
-        }
-        return rec_expr;
-    }
     case '{':
     {
+        char b = close_bracket(rec_t.kind);
         double rec_expr = expression();
         rec_t = ts.get();
-        if (rec_t.kind != '}')
+        if (rec_t.kind != b)
         {
             ts.unget(rec_t);
-            error("'}' expected");
+            error(to_string(b) + " expected");
         }
         return rec_expr;
     }
@@ -42,74 +118,11 @@ double primary ()
     case number:
         return rec_t.value;
     case name:
-    {
-        Token rec_t_2 = ts.get();  // вспомогательный токен для получения значения после левой части
-        if (rec_t_2.kind == '=')
-        {
-            double var_value = expression();
-            return nm.set_value(rec_t.name, var_value);
-        }
-        else
-        {
-            ts.unget(rec_t_2);  // возвращаем вспомогательный токен в поток
-            return nm.get_value(rec_t.name);
-        }
-    }
+        return assign_var(rec_t.name);
     case square_root:
-    {
-        rec_t = ts.get();
-        if (rec_t.kind == '(')
-        {
-            double rec_expr = expression();
-            rec_t = ts.get();
-            if (rec_t.kind != ')')
-            {
-                ts.unget(rec_t);
-                error("'(' expected");
-            }
-            if (rec_expr >= 0)  // проверка на то, что берем корень неотрицательного числа
-                return sqrt(rec_expr);
-            else
-            {
-                ts.unget(rec_t);
-                error("square root of a negative number");
-            }
-        }
-        else
-        {
-            ts.unget(rec_t);
-            error("'(' expected");
-        }
-    }
+        return eval_sqrt();
     case power:
-    {
-        rec_t = ts.get();
-        if (rec_t.kind == '(')
-        {
-            double base_number = expression();
-            rec_t = ts.get();
-            if (rec_t.kind != comma)
-            {  // за первым аргументом должна следовать запятая
-                ts.unget(rec_t);
-                error("',' expected");
-            }
-            int power_number =
-                narrow_cast<int>(expression());  // "сужение" значения с потерей информации и
-                                                 // генерацией исключения в противном случае
-            rec_t = ts.get();
-            if (rec_t.kind != ')')
-            {
-                ts.unget(rec_t);
-                error("')' expected");
-            }
-            return pow(base_number, power_number);
-        }
-        else
-        {
-            ts.unget(rec_t);
-            error("'(' expected");
-        }
-    }
+        return eval_power();
     // не получили, чего хотели
     default:
     {
