@@ -1,0 +1,34 @@
+0; 1; 2; 3; 4; 5; 6; 7; 8; 9
+1 + 2; 1+2; 1 + 2 + 3;
+1 - 2
+1-2; 1 - 2 - 3;
+1 * 2; 1*2 1 * 2 * 3
+1 / 2; 1/2; 1 / 2 / 3;
+1 + 2*3; 1 - 2*3;
+1 + 2/3; 1 - 2/3
+flkj430478908ufn5649058s6767-4
+;
+@$#!$%%^*()*()LKLKGJ58-099545567/*~~~~())(-=43+4;
+# t;
+# = 2; # # = t; # + x; # y = 8;
+pow; pow(; pow(,; pow(9); pow(9,; pow(9,2)
+sqrt; sqrt(; sqrt(,; sqrt(9); sqrt(9,; sqrt(9,2)
+y + 0; 0 + y; 8 * y; + y * 8; + y / 0;
+5 % 0.1; 5 % 6; {7+8}; (9+5/4);
+26*6/3+(203-78)*2+300/10 
+= 3; y = 5; a = 8; a++; 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam purus dolor, tristique nec vulputate vel, ullamcorper id purus. Aenean ut tempus purus. Nam non dolor purus. Fusce venenatis tellus nec dui eleifend pretium. Pellentesque ligula massa, pellentesque ac accumsan nec, dictum nec lectus. Ut interdum, felis ac suscipit consequat, eros sem fermentum libero, eget pharetra mi magna sed arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam a nunc elementum enim pharetra vestibulum. Aliquam ornare, ex ac rutrum malesuada, quam nibh interdum sapien, eget pharetra urna est nec est.
+Donec laoreet fringilla justo, venenatis tempus risus finibus at. Aliquam in nibh dignissim, ultrices urna vitae, pellentesque erat. Cras mollis ex vitae venenatis pulvinar. Maecenas convallis odio massa, vitae dapibus tortor auctor in. Quisque blandit mi sed lacus tempor iaculis. Phasellus libero eros, dapibus quis sagittis a, hendrerit sit amet nisi. In hac habitasse platea dictumst. Nam ut convallis ante. Phasellus in hendrerit arcu, non placerat nulla. Nulla vulputate dui eros, vitae tincidunt nibh rhoncus eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed quam at ex ultrices bibendum.
+25 + 14; 37 - 19; 8 * 6; 72 / 9; 53 + 28; 45 - 17; 7 * 9; 81; 62 + 49; 94 - 26;
+
+
+
+;
+;
+;
+;
+
+                                           
+                                           '
+                                           -=65
+exit
