@@ -1,2 +1,4 @@
 # Other files
 *.ini
+bin/
+build/

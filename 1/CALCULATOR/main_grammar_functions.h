@@ -1,17 +1,16 @@
 #pragma once
 
-
-// функция, считывающая выражение 
-double expression();
+// функция, считывающая выражение
+double expression ();
 
 // функция, считывающая терм
-double term();
+double term ();
 
 // функция, считывающая первичное выражение
-double primary();
+double primary ();
 
 // функция, отвечающая за объявление переменной ('let имя_переменной = выражение')
-double declaration(bool is_const);
+double declaration (bool is_const);
 
 // функция, читающая вводимые инструкции (объявление или выражение)
-double statement();
+double statement ();
