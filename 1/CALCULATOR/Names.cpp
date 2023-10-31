@@ -15,13 +15,13 @@ double Names::get_value(const string& prob_name) const
 
 double Names::set_value(string rec_name, double rec_value) 
 {
-	for (int i = 0; i <= names.size(); ++i)
+	for (auto& item : names)
 	{
-		if (names[i].name == rec_name) 
+		if (item.name == rec_name) 
 		{
-			if(!names[i].is_const){
-				names[i].value = rec_value;
-				return names[i].value;
+			if(!item.is_const){
+				item.value = rec_value;
+				return item.value;
 			}
 			error("set: " + rec_name + " is const");
 		}
