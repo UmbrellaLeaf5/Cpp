@@ -2,203 +2,223 @@
 #include <cmath>
 
 #include "Token.h"
+#include "calculator_globals.h"
 #include "const_kinds.h"
 #include "main_grammar_functions.h"
-#include "calculator_globals.h"
 
-double primary() 
+double primary ()
 {
-	Token rec_t = ts.get();
-	switch (rec_t.kind) 
-	{
-		case '(':
-		{	
-			double rec_expr = expression();
-			rec_t = ts.get();
-			if (rec_t.kind != ')'){
-				ts.unget(rec_t);
-				error("')' expected");
-			}
-			return rec_expr;
-		}
-		case '{':
-		{	
-			double rec_expr = expression();
-			rec_t = ts.get();
-			if (rec_t.kind != '}'){
-				ts.unget(rec_t);
-				error("'}' expected");
-			}
-			return rec_expr;
-		}
-		// предусмотренный случай для отрицательного первичного выражения
-		case '-': 
-			return -primary();
-		// предусмотренный случай, если пользователь решит начать перв. выраж. с плюса
-		case '+':
-			return primary();
-		case number:
-			return rec_t.value;
-		case name: 
-		{
-			Token rec_t_2 = ts.get(); // вспомогательный токен для получения значения после левой части
-			if(rec_t_2.kind == '='){ 
-				double var_value = expression();
-				return nm.set_value(rec_t.name, var_value);
-			}
-			else{
-				ts.unget(rec_t_2); // возвращаем вспомогательный токен в поток
-				return nm.get_value(rec_t.name);
-			}
-		}
-		case square_root:
-		{
-			rec_t = ts.get();
-			if (rec_t.kind == '(') 
-			{
-				double rec_expr = expression();
-				rec_t = ts.get();
-				if (rec_t.kind != ')'){
-					ts.unget(rec_t);
-					error("'(' expected");
-				}
-				if (rec_expr >= 0) // проверка на то, что берем корень неотрицательного числа
-					return sqrt(rec_expr);
-				else{
-					ts.unget(rec_t);
-					error("square root of a negative number");
-				}
-			}
-			else{
-				ts.unget(rec_t);
-				error("'(' expected");
-			}
-		}
-		case power:
-		{
-			rec_t = ts.get();
-			if (rec_t.kind == '(') 
-			{
-				double base_number = expression();
-				rec_t = ts.get();
-				if (rec_t.kind != comma){ // за первым аргументом должна следовать запятая
-					ts.unget(rec_t);
-					error("',' expected");
-				}
-				int power_number = narrow_cast<int>(expression()); // "сужение" значения с потерей информации и генерацией исключения в противном случае
-				rec_t = ts.get();
-				if (rec_t.kind != ')'){
-					ts.unget(rec_t);
-					error("')' expected");
-				}
-				return pow(base_number, power_number);
-			}
-			else{
-				ts.unget(rec_t);
-				error("'(' expected");
-			}
-		}
-		// не получили, чего хотели
-		default:
-		{
-			ts.unget(rec_t);
-			error("primary expected");
-		}
-	}
+    Token rec_t = ts.get();
+    switch (rec_t.kind)
+    {
+    case '(':
+    {
+        double rec_expr = expression();
+        rec_t = ts.get();
+        if (rec_t.kind != ')')
+        {
+            ts.unget(rec_t);
+            error("')' expected");
+        }
+        return rec_expr;
+    }
+    case '{':
+    {
+        double rec_expr = expression();
+        rec_t = ts.get();
+        if (rec_t.kind != '}')
+        {
+            ts.unget(rec_t);
+            error("'}' expected");
+        }
+        return rec_expr;
+    }
+    // предусмотренный случай для отрицательного первичного выражения
+    case '-':
+        return -primary();
+    // предусмотренный случай, если пользователь решит начать перв. выраж. с плюса
+    case '+':
+        return primary();
+    case number:
+        return rec_t.value;
+    case name:
+    {
+        Token rec_t_2 = ts.get();  // вспомогательный токен для получения значения после левой части
+        if (rec_t_2.kind == '=')
+        {
+            double var_value = expression();
+            return nm.set_value(rec_t.name, var_value);
+        }
+        else
+        {
+            ts.unget(rec_t_2);  // возвращаем вспомогательный токен в поток
+            return nm.get_value(rec_t.name);
+        }
+    }
+    case square_root:
+    {
+        rec_t = ts.get();
+        if (rec_t.kind == '(')
+        {
+            double rec_expr = expression();
+            rec_t = ts.get();
+            if (rec_t.kind != ')')
+            {
+                ts.unget(rec_t);
+                error("'(' expected");
+            }
+            if (rec_expr >= 0)  // проверка на то, что берем корень неотрицательного числа
+                return sqrt(rec_expr);
+            else
+            {
+                ts.unget(rec_t);
+                error("square root of a negative number");
+            }
+        }
+        else
+        {
+            ts.unget(rec_t);
+            error("'(' expected");
+        }
+    }
+    case power:
+    {
+        rec_t = ts.get();
+        if (rec_t.kind == '(')
+        {
+            double base_number = expression();
+            rec_t = ts.get();
+            if (rec_t.kind != comma)
+            {  // за первым аргументом должна следовать запятая
+                ts.unget(rec_t);
+                error("',' expected");
+            }
+            int power_number =
+                narrow_cast<int>(expression());  // "сужение" значения с потерей информации и
+                                                 // генерацией исключения в противном случае
+            rec_t = ts.get();
+            if (rec_t.kind != ')')
+            {
+                ts.unget(rec_t);
+                error("')' expected");
+            }
+            return pow(base_number, power_number);
+        }
+        else
+        {
+            ts.unget(rec_t);
+            error("'(' expected");
+        }
+    }
+    // не получили, чего хотели
+    default:
+    {
+        ts.unget(rec_t);
+        error("primary expected");
+    }
+    }
 }
 
-
-double term() 
+double term ()
 {
-	double left_part = primary();
-	for(;;) {
-		Token rec_t = ts.get();
-		switch (rec_t.kind) 
-		{
-			case '*':
-			{
-				left_part *= primary();
-				break;
-			}
-			case '/':
-			{
-				double right_part = primary();
-				if (right_part == 0){
-					ts.unget(rec_t);
-					error("/: divide by zero");
-				}
-				left_part /= right_part;
-				break;
-			}
-			case '%':
-			{
-				double right_part = primary();
-				if (right_part == 0){
-					ts.unget(rec_t);
-					error("%: divided by zero");
-				}
-				left_part = fmod(left_part, right_part); // фукция из cmath, вычисляющая остаток с плавающей запятой
-				break;
-			}
-			default:
-			{
-				ts.unget(rec_t);
-				return left_part;
-			}
-		}
-	}
+    double left_part = primary();
+    for (;;)
+    {
+        Token rec_t = ts.get();
+        switch (rec_t.kind)
+        {
+        case '*':
+        {
+            left_part *= primary();
+            break;
+        }
+        case '/':
+        {
+            double right_part = primary();
+            if (right_part == 0)
+            {
+                ts.unget(rec_t);
+                error("/: divide by zero");
+            }
+            left_part /= right_part;
+            break;
+        }
+        case '%':
+        {
+            double right_part = primary();
+            if (right_part == 0)
+            {
+                ts.unget(rec_t);
+                error("%: divided by zero");
+            }
+            left_part = fmod(
+                left_part, right_part);  // фукция из cmath, вычисляющая остаток с плавающей запятой
+            break;
+        }
+        default:
+        {
+            ts.unget(rec_t);
+            return left_part;
+        }
+        }
+    }
 }
 
-double expression() 
+double expression ()
 {
-	double left_part = term();
+    double left_part = term();
 
-	for(;;) {
-		Token rec_t = ts.get();
-		switch (rec_t.kind) {
-			case '+':
-				left_part += term();
-				break;
-			case '-':
-				left_part -= term();
-				break;
-			// выражение закончилось
-			default: 
-				ts.unget(rec_t); // возвращаем токен в поток
-				return left_part;
-		}
-	}
+    for (;;)
+    {
+        Token rec_t = ts.get();
+        switch (rec_t.kind)
+        {
+        case '+':
+            left_part += term();
+            break;
+        case '-':
+            left_part -= term();
+            break;
+        // выражение закончилось
+        default:
+            ts.unget(rec_t);  // возвращаем токен в поток
+            return left_part;
+        }
+    }
 }
 
-double declaration(bool is_const)  
+double declaration (bool is_const)
 {
-	Token rec_t = ts.get();
-	if (rec_t.kind != name){ // полученное при вводе не соотв. заданным правилам для имени переменной
-		ts.unget(rec_t);
-		error("name expected in declaration");
-	}
-	string var_name = rec_t.name;
-	Token rec_t_2 = ts.get(); // используем второй токен, чтобы проверить присваивание значения для переменной
-	if (rec_t_2.kind != '='){
-		ts.unget(rec_t_2);
-		error("=: missing in declaration of ", var_name);
-	}
-	double var_value = expression(); // получаем значение переменной - выражение
-	nm.define_name(var_name, var_value, is_const);
-	return var_value;
+    Token rec_t = ts.get();
+    if (rec_t.kind != name)
+    {  // полученное при вводе не соотв. заданным правилам для имени переменной
+        ts.unget(rec_t);
+        error("name expected in declaration");
+    }
+    string var_name = rec_t.name;
+    Token rec_t_2 =
+        ts.get();  // используем второй токен, чтобы проверить присваивание значения для переменной
+    if (rec_t_2.kind != '=')
+    {
+        ts.unget(rec_t_2);
+        error("=: missing in declaration of ", var_name);
+    }
+    double var_value = expression();  // получаем значение переменной - выражение
+    nm.define_name(var_name, var_value, is_const);
+    return var_value;
 }
 
-double statement() 
+double statement ()
 {
-	Token rec_t = ts.get();
-	switch (rec_t.kind) 
-	{
-		case let: 
-			return declaration(false);
-		case cnst:
-			return declaration(true);
-		default:
-			ts.unget(rec_t);
-			return expression();
-	}
+    Token rec_t = ts.get();
+    switch (rec_t.kind)
+    {
+    case let:
+        return declaration(false);
+    case cnst:
+        return declaration(true);
+    default:
+        ts.unget(rec_t);
+        return expression();
+    }
 }
