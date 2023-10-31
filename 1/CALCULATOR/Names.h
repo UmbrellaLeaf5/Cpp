@@ -9,11 +9,11 @@ class Names{ // класс, описывающий список переменн
 		vector<Variable> names; 
 	public: 
 		// функция, отвечающая за получение значения переменной по имени, которое ей дал пользователь
-		double get_value(string prob_name);
+		double get_value(const string &prob_name) const;
 		// функция, отвечающая за передачу значения переменной по имени
-		double set_value(string rec_name, double rec_value); 
+		double set_value(string rec_name, double rec_value);
 		// функция, отвечающая за проверку существования переменной 
-		bool is_declared(string prob_name);
+		bool is_declared(const string &prob_name) const;
 		// функция, добавляющая новую переменную в ветор переменных, если пользователь ввёд её корректно 
 		double define_name(string var_name, double value, bool is_const);
 };

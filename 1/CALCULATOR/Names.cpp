@@ -3,7 +3,7 @@
 #include "Variable.h"
 #include "Names.h"
 
-double Names::get_value(string prob_name) 
+double Names::get_value(const string& prob_name) const
 {
 	for (int i = 0; i < names.size(); ++i) {
 		if (names[i].name == prob_name) 
@@ -30,7 +30,7 @@ double Names::set_value(string rec_name, double rec_value)
 }
 
 
-bool Names::is_declared(string prob_name) 
+bool Names::is_declared(const string& prob_name) const 
 {
 	for (int i = 0; i < names.size(); ++i) {
 		if (names[i].name == prob_name) 
