@@ -57,7 +57,8 @@ void calculate ()
                 ts.unget(rec_t);
                 // если нечего выводить на экран, но и не происходит выход из программы, то
                 // возвращаем токен в поток ввода и обрабатываем инструкцию, выводя результат
-                cout << res_letter << statement() << endl;
+                double res = statement();
+                cout << res_letter << res << endl;
             }
         }
         catch (runtime_error& exc)  // в случае ошибки выводим сообщение и очищаем поток токенов, но
