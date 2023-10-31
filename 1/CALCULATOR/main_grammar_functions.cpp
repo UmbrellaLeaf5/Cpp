@@ -11,10 +11,9 @@ double primary()
 	Token rec_t = ts.get();
 	switch (rec_t.kind) 
 	{
-		// кейс для выражение в скобках
 		case '(':
 		{	
-			double rec_expr = expression(); // вызываем чтение выражения
+			double rec_expr = expression();
 			rec_t = ts.get();
 			if (rec_t.kind != ')'){
 				ts.unget(rec_t);
@@ -24,7 +23,7 @@ double primary()
 		}
 		case '{':
 		{	
-			double rec_expr = expression(); // вызываем чтение выражения
+			double rec_expr = expression();
 			rec_t = ts.get();
 			if (rec_t.kind != '}'){
 				ts.unget(rec_t);
@@ -32,20 +31,17 @@ double primary()
 			}
 			return rec_expr;
 		}
-		// кейс для отрицательного первичного выражения
+		// предусмотренный случай для отрицательного первичного выражения
 		case '-': 
 			return -primary();
-		// кейс, если пользователь решит начать перв. выраж. с плюса
+		// предусмотренный случай, если пользователь решит начать перв. выраж. с плюса
 		case '+':
 			return primary();
-		// кейс для числа
 		case number:
 			return rec_t.value;
-		// кейс для уже существующей переменной
 		case name: 
 		{
 			Token rec_t_2 = ts.get(); // вспомогательный токен для получения значения после левой части
-			// проверяем, что мы вводим после имени перменной
 			if(rec_t_2.kind == '='){ 
 				double var_value = expression();
 				return nm.set_value(rec_t.name, var_value);
@@ -55,7 +51,6 @@ double primary()
 				return nm.get_value(rec_t.name);
 			}
 		}
-		// кейс для квадратного корня
 		case square_root:
 		{
 			rec_t = ts.get();
@@ -79,19 +74,17 @@ double primary()
 				error("'(' expected");
 			}
 		}
-		// кейс для возведения в степень
 		case power:
 		{
 			rec_t = ts.get();
 			if (rec_t.kind == '(') 
 			{
-				double base_number = expression(); // переменная - основание
+				double base_number = expression();
 				rec_t = ts.get();
 				if (rec_t.kind != comma){ // за первым аргументом должна следовать запятая
 					ts.unget(rec_t);
 					error("',' expected");
 				}
-				// переменная - показатель
 				int power_number = narrow_cast<int>(expression()); // "сужение" значения с потерей информации и генерацией исключения в противном случае
 				rec_t = ts.get();
 				if (rec_t.kind != ')'){
@@ -105,7 +98,7 @@ double primary()
 				error("'(' expected");
 			}
 		}
-		// кейс, если мы не получили, чего хотели
+		// не получили, чего хотели
 		default:
 		{
 			ts.unget(rec_t);
@@ -122,38 +115,34 @@ double term()
 		Token rec_t = ts.get();
 		switch (rec_t.kind) 
 		{
-			// кейс для умножения
 			case '*':
 			{
-				left_part *= primary(); // не объявляю правое первичное выражение за отдельную переменную, но имею это в виду
+				left_part *= primary();
 				break;
 			}
-			// кейс для деления
 			case '/':
 			{
-				double right_part = primary(); // считывание первичного выражения справа
-				if (right_part == 0){ // ошибка, связанная с делением на ноль
+				double right_part = primary();
+				if (right_part == 0){
 					ts.unget(rec_t);
 					error("/: divide by zero");
 				}
 				left_part /= right_part;
 				break;
 			}
-			// кейс для остатка от деления
 			case '%':
 			{
-				double right_part = primary(); // считывание первичного выражения справа
-				if (right_part == 0){ // ошибка, связанная с делением на ноль
+				double right_part = primary();
+				if (right_part == 0){
 					ts.unget(rec_t);
 					error("%: divided by zero");
 				}
 				left_part = fmod(left_part, right_part); // фукция из cmath, вычисляющая остаток с плавающей запятой
 				break;
 			}
-			// кейс, когда терм закончился
 			default:
 			{
-				ts.unget(rec_t); // возвращаем токен в поток
+				ts.unget(rec_t);
 				return left_part;
 			}
 		}
@@ -166,7 +155,7 @@ double expression()
 	Token rec_t = ts.get();
 	if (rec_t.kind == name) 
 	{
-		if(!nm.is_declared(rec_t.name)) // проверяем существование переменной в списке имён
+		if(!nm.is_declared(rec_t.name))
 			error(rec_t.name + ": is not declared");
 		Token rec_t_2 = ts.get(); // дополнительный токен для корректного получения значения переменной
 		// если получаем на вход '=' это присваивание
@@ -174,15 +163,11 @@ double expression()
 			double var_value = expression();
 			left_part = nm.set_value(rec_t.name, var_value);
 		}
-		else if (rec_t_2.kind == '*' || rec_t_2.kind == '%' || rec_t_2.kind == '/')
-		{
-			ts.unget(rec_t_2);
-			ts.unget(rec_t);
-			left_part = primary();
-		}
 		else {
 			ts.unget(rec_t_2);
+			//ts.unget(rec_t);
 			left_part = nm.get_value(rec_t.name);
+			//left_part = term();
 		}
 	}
 	else {
@@ -192,15 +177,13 @@ double expression()
 	for(;;) {
 		rec_t = ts.get();
 		switch (rec_t.kind) {
-			// кейс для сложения
 			case '+':
-				left_part += term(); // не объявляю правый терм за отдельную переменную
+				left_part += term();
 				break;
-			// кейс для вычитания
 			case '-':
 				left_part -= term();
 				break;
-			// кейс, когда выражение закончилось
+			// выражение закончилось
 			default: 
 				ts.unget(rec_t); // возвращаем токен в поток
 				return left_part;
@@ -212,17 +195,17 @@ double declaration(bool is_const)
 {
 	Token rec_t = ts.get();
 	if (rec_t.kind != name){ // полученное при вводе не соотв. заданным правилам для имени переменной
-		ts.unget(rec_t); // возвращаем токен в поток
+		ts.unget(rec_t);
 		error("name expected in declaration");
 	}
-	string var_name = rec_t.name; // присваиваем строке имя полученного из потока токена
+	string var_name = rec_t.name;
 	Token rec_t_2 = ts.get(); // используем второй токен, чтобы проверить присваивание значения для переменной
 	if (rec_t_2.kind != '='){
 		ts.unget(rec_t_2);
 		error("=: missing in declaration of ", var_name);
 	}
 	double var_value = expression(); // получаем значение переменной - выражение
-	nm.define_name(var_name, var_value, is_const); // при успехе - запоминаем переменную в программу
+	nm.define_name(var_name, var_value, is_const);
 	return var_value;
 }
 
@@ -231,13 +214,10 @@ double statement()
 	Token rec_t = ts.get();
 	switch (rec_t.kind) 
 	{
-		// кейс для объявления
 		case let: 
 			return declaration(false);
-		// кейс для констант
 		case cnst:
 			return declaration(true);
-		// кейс для выражения
 		default:
 			ts.unget(rec_t);
 			return expression();

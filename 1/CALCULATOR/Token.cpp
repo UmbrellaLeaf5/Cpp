@@ -10,22 +10,23 @@ Token Token_stream::get()
 		is_full = false; 
 		return buffer; 
 	} 
-	char rec_ch = ' ';  // FIXME: fix issue when input stream was closed
+	char rec_ch = ' ';
 	cin.get(rec_ch);
 	if (cin){
 		while (isspace(rec_ch)) { // пропускаем все пробельные символы
 			if (rec_ch == line_break) // конец строки - вывод на экран
-				return line_break; // перенос строки мы обрабатываем как отдельный случай, поэтому возвраащем не токен
-			cin.get(rec_ch);
+				return line_break;
+			if (cin)
+				cin.get(rec_ch);		
+			else
+				return Token(exiting);
 		}
 		switch (rec_ch) 
 		{
-			// кейсы для операторов
 			case '(': case ')': case '{': case '}':
 			case '+': case '-': case '*': case '/': case '%':
 			case ';': case '\n': case '=': case ',': case '#': case '$': 
 				return Token(rec_ch);
-			// кейсы для чисел
 			case '0': case '1': case '2': case '3': case '4':
 			case '5': case '6': case '7': case '8': case '9':
 			{
@@ -34,7 +35,7 @@ Token Token_stream::get()
 				cin >> rec_value;
 				return Token(number, rec_value);
 			}
-			// кейс для переменных или служебных слов типа 'sqrt', 'exit', 'pow'
+			// случай для переменных или служебных слов типа 'sqrt', 'exit', 'pow'
 			default: 
 			{
 				if (isalpha(rec_ch)) 
@@ -70,20 +71,10 @@ void Token_stream::unget(Token rec_t)
 	is_full = true; 
 }
 
-// функция, проверяющая принадлежность символа вектору
-bool contains(const vector<char>& vec, char ch)
-{
-	for(auto& i : vec){
-		if(i == ch)
-			return true;
-	}
-	return false;
-}
-
-void Token_stream::ignore(vector<char> ending_chars)
+void Token_stream::ignore(const string& ending_chars)
 {
 	// если символ этот в буфере, то останавливаемся, очищая буфер
-	if (is_full && contains(ending_chars, buffer.kind)) { 
+	if (is_full && ending_chars.find(buffer.kind) != string::npos) { 
 		is_full = false;
 		return;
 	}
@@ -92,7 +83,7 @@ void Token_stream::ignore(vector<char> ending_chars)
 	char rec_ch;
 	while (cin.get(rec_ch))
 	{
-		if (contains(ending_chars, rec_ch))
+		if (ending_chars.find(rec_ch) != string::npos)
 			return;
 	}
 }

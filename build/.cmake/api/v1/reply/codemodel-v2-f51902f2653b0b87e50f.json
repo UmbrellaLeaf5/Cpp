@@ -11,7 +11,7 @@
 						1
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
@@ -20,23 +20,23 @@
 					"source" : "."
 				},
 				{
-					"build" : "1/014-015/Graph_lib_inheritance",
+					"build" : "1/CALCULATOR",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.014-015.Graph_lib_inheritance-Release-115f8ab32b255fe10038.json",
+					"jsonFile" : "directory-1.CALCULATOR-Debug-138af5ee2c49d4745972.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 1,
-					"source" : "1/014-015/Graph_lib_inheritance",
+					"source" : "1/CALCULATOR",
 					"targetIndexes" : 
 					[
 						0
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -55,7 +55,7 @@
 					[
 						1
 					],
-					"name" : "graph_lib_inheritance",
+					"name" : "calculator",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -67,9 +67,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "graph_lib_inheritance::@86dc649fb37527c90e36",
-					"jsonFile" : "target-graph_lib_inheritance-Release-5c4eba438a46c70b8b20.json",
-					"name" : "graph_lib_inheritance",
+					"id" : "calculator::@879c774fc5678528d4ce",
+					"jsonFile" : "target-calculator-Debug-7437162afc2cb681372c.json",
+					"name" : "calculator",
 					"projectIndex" : 1
 				}
 			]
