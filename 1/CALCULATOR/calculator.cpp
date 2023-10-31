@@ -31,15 +31,11 @@ void clean_up_mess()
 // функция, обрабатывающая вычисления: инструкция, вывод, выход, вычисление
 void calculate() 
 {
-	bool is_first_input = true;
+	cout << input_letter;
 	for (;;)
 	{
 		try 
 		{
-			if (is_first_input){
-				cout << input_letter;
-				is_first_input = false;
-			}
 			Token rec_t = ts.get();
 			while (rec_t.kind == print || rec_t.kind == line_break)
 				if (rec_t.kind == print)
