@@ -4,16 +4,6 @@ set(TARGET "calculator")
 
 project(${TARGET} LANGUAGES CXX)
 
-set(FLTK_SKIP_FLUID True)
-set(OpenGL_GL_PREFERENCE "GLVND")
-
-find_package(FLTK REQUIRED)
-find_package(OpenGL REQUIRED)
-
-include_directories(
-    SYSTEM
-)
-
 add_executable(
     ${TARGET}
     calculator.cpp
@@ -21,11 +11,6 @@ add_executable(
     Names.cpp
     Token.cpp
     calculator_globals.cpp
-
-)
-
-target_link_libraries(
-    ${TARGET}
 )
 
 install(TARGETS ${TARGET})

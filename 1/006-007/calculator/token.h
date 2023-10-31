@@ -4,29 +4,29 @@
 
 struct Token
 {
-  char kind;
-  double value;
-  string name;
+    char kind;
+    double value;
+    string name;
 
-  Token(char ch) : kind{ch}, value{0} {}
+    Token(char ch) : kind{ch}, value{0} {}
 
-  Token(char ch, double val) : kind{ch}, value{val} {}
+    Token(char ch, double val) : kind{ch}, value{val} {}
 
-  Token(char ch , string n) : kind{ch} , name{n} {}
+    Token(char ch, string n) : kind{ch}, name{n} {}
 };
 
 class Token_stream
 {
-  bool full{false};
-  Token buffer{'\0'};
+    bool full{false};
+    Token buffer{'\0'};
 
-public:
-  Token_stream() {}
+  public:
+    Token_stream() {}
 
-  Token get ();
-  void putback (Token t);
+    Token get ();
+    void putback (Token t);
 
-  void ignore (char);
+    void ignore (char);
 };
 
-#endif // #ifndef TOKEN_H
+#endif  // #ifndef TOKEN_H

@@ -1,10 +1,11 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 using namespace std;
-//g++ -Og -Wall -Wextra -pedantic -Ilib -o ../bin/Untitled-1 1/Untitled-1.cpp
-int main()
+
+// g++ -Og -Wall -Wextra -pedantic -Ilib -o ../bin/Untitled-1 1/Untitled-1.cpp
+int main ()
 {
-	int a = 10;
-    cout << a*a << endl;
+    int a = 10;
+    cout << a * a << endl;
     system("pause");
 }

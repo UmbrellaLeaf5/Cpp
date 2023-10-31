@@ -1,27 +1,30 @@
+#include <algorithm>
+#include <array>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
 #include <string>
-#include <string>
-#include <array>
-#include <algorithm>
 
 using namespace std;
 
-void reverse_file(const string& filename) {
+void reverse_file (const string& filename)
+{
     constexpr int chunk = 128;
-    array <char, chunk> lbuf, rbuf;
+    array<char, chunk> lbuf, rbuf;
     fstream lfs{filename, ios_base::binary}, rfs{filename, ios_base::binary};
-    if (!lfs || !rfs) {
+    if (!lfs || !rfs)
+    {
         throw runtime_error{"can't open file"};
     }
     rfs.seekg(0, ios_base::end);
     streampos lpos = lfs.tellg(), rpos = rfs.tellg();
-    while (lpos < rpos) {
+    while (lpos < rpos)
+    {
         lpos = lfs.tellg();
-        
-        int n = (rpos - lpos)/2;
-        if (chunk < n) n = chunk;
+
+        int n = (rpos - lpos) / 2;
+        if (chunk < n)
+            n = chunk;
 
         rpos -= n;
         rfs.seekg(rpos);
@@ -39,7 +42,8 @@ void reverse_file(const string& filename) {
     }
 }
 
-int main() {
+int main ()
+{
     char c = '1';
     cout << sizeof(c);
 }

@@ -1,14 +1,7 @@
 // file1.cpp -> file1.o \ - машинные команды
 //       компиляция      > компоновка -> prog.exe - исполняемый файл
 // file2.cpp -> file2.o /                   ^
-//                             библиотеки   |                             
-
-
-
-
-
-
-
+//                             библиотеки   |
 
 /*
 bitwise logical expressions

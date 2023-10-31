@@ -1,3 +1,0 @@
-"D:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\logic_elements.dir/objects.a
-"D:\Program Files\MinGW\mingw64\bin\ar.exe" qc CMakeFiles\logic_elements.dir/objects.a @CMakeFiles\logic_elements.dir\objects1.rsp
-"D:\Program Files\MinGW\mingw64\bin\g++.exe" -pedantic -Wall -Wextra -g -Wl,--whole-archive CMakeFiles\logic_elements.dir/objects.a -Wl,--no-whole-archive -o logic_elements.exe -Wl,--out-implib,liblogic_elements.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\logic_elements.dir\linkLibs.rsp
