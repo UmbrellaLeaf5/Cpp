@@ -7,7 +7,7 @@
 
 
 // функция, выводящаяя инструкцию по работе с программой
-void user_help_cout()
+void user_help()
 {
 	cout << "Instructions for using the calculator:" << endl;
 	cout << "With the enabled operations, this calculator can calculate lowercase mathematical expressions." << endl;
@@ -25,7 +25,7 @@ void user_help_cout()
 // функция, очищающая потока ввода (игнорирование буфера до символа вывода результата включительно)
 void clean_up_mess() 
 {
-	ts.ignore({print, line_break});
+	ts.ignore(";\n");
 }
 
 // функция, обрабатывающая вычисления: инструкция, вывод, выход, вычисление
@@ -41,17 +41,17 @@ void calculate()
 				is_first_input = false;
 			}
 			Token rec_t = ts.get();
-			while (rec_t.kind == print || rec_t.kind == line_break) // пропускаем несколько символов вывода подряд
+			while (rec_t.kind == print || rec_t.kind == line_break)
 				if (rec_t.kind == print)
 					rec_t = ts.get();
 				else if (rec_t.kind == line_break){
 					cout << input_letter;
 					rec_t = ts.get();
 				}
-				if (rec_t.kind == exiting) // выход из программы если на ввод было получено соотв. слово
+				if (rec_t.kind == exiting)
 					return; 
-				if (rec_t.kind == help) // вывод сообщения - инструкции
-					user_help_cout();
+				if (rec_t.kind == help)
+					user_help();
 				else
 				{
 					ts.unget(rec_t); 
@@ -72,7 +72,7 @@ int main()
 {
 	try 
 	{
-		// объявляем известные константы как переменные
+		// объявляем известные мат. константы
 		nm.define_name("pi", 3.1415926535, true);
 		nm.define_name("e", 2.7182818284, true);
 

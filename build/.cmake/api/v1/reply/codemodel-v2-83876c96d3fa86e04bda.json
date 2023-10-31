@@ -11,7 +11,7 @@
 						1
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
@@ -22,7 +22,7 @@
 				{
 					"build" : "1/014-015/Graph_lib_inheritance",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.014-015.Graph_lib_inheritance-Release-115f8ab32b255fe10038.json",
+					"jsonFile" : "directory-1.014-015.Graph_lib_inheritance-Debug-115f8ab32b255fe10038.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
@@ -36,7 +36,7 @@
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -68,7 +68,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "graph_lib_inheritance::@86dc649fb37527c90e36",
-					"jsonFile" : "target-graph_lib_inheritance-Release-5c4eba438a46c70b8b20.json",
+					"jsonFile" : "target-graph_lib_inheritance-Debug-0195a33d27c4814ff0b5.json",
 					"name" : "graph_lib_inheritance",
 					"projectIndex" : 1
 				}

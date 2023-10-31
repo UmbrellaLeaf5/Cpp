@@ -54,11 +54,11 @@ class Regular_hexagon: public Shape
         Regular_hexagon(Point c, int r)
         {
             this->add({c.x - r,c.y});
-            this->add({c.x - r + r*cos(Graph_lib::pi/3.0),c.y + r*sin(Graph_lib::pi/3.0)});
-            this->add({c.x + r*cos(Graph_lib::pi/3.0), c.y + r*sin(Graph_lib::pi/3.0)});
+            this->add({c.x - r + r*cos(pi/3.0),c.y + r*sin(pi/3.0)});
+            this->add({c.x + r*cos(pi/3.0), c.y + r*sin(pi/3.0)});
             this->add({c.x + r,c.y});
-            this->add({c.x + r*cos(Graph_lib::pi/3.0), c.y - r*sin(Graph_lib::pi/3.0)});
-            this->add({c.x - r*cos(Graph_lib::pi/3.0), c.y - r*sin(Graph_lib::pi/3.0)});
+            this->add({c.x + r*cos(pi/3.0), c.y - r*sin(pi/3.0)});
+            this->add({c.x - r*cos(pi/3.0), c.y - r*sin(pi/3.0)});
             rad = r;
             cntr = c;
         }

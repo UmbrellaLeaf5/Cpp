@@ -30,5 +30,5 @@ class Token_stream
 		void unget(Token rec_t);
 
 		// функция, отвечающая за игнорирование ввода до появления символа включительно
-		void ignore(vector<char> ending_chars);
+		void ignore(const string& ending_chars);
 };

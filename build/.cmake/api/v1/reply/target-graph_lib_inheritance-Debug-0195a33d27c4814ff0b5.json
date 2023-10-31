@@ -82,7 +82,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-pedantic -Wall -Wextra -O3 -DNDEBUG -std=gnu++17"
+					"fragment" : "-pedantic -Wall -Wextra -g -std=gnu++17"
 				}
 			],
 			"includes" : 
@@ -137,7 +137,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-pedantic -Wall -Wextra -O3 -DNDEBUG",
+				"fragment" : "-pedantic -Wall -Wextra -g",
 				"role" : "flags"
 			},
 			{
