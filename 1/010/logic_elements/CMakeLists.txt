@@ -5,6 +5,5 @@ add_executable(
     ${TARGET}
     main.cpp
     logic.cpp
-    logic.h
 )
 install(TARGETS ${TARGET})

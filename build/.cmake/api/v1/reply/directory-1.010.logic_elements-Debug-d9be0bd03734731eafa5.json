@@ -7,7 +7,7 @@
 		],
 		"files" : 
 		[
-			"1/014-015/Graph_lib_inheritance/CMakeLists.txt"
+			"1/010/logic_elements/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,7 +17,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 47,
+				"line" : 9,
 				"parent" : 0
 			}
 		]
@@ -30,16 +30,16 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"1/014-015/Graph_lib_inheritance/graph_lib_inheritance.exe"
+				"1/010/logic_elements/logic_elements.exe"
 			],
-			"targetId" : "graph_lib_inheritance::@86dc649fb37527c90e36",
+			"targetId" : "logic_elements::@f68f00e73d0825712c0d",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
 	],
 	"paths" : 
 	{
-		"build" : "1/014-015/Graph_lib_inheritance",
-		"source" : "1/014-015/Graph_lib_inheritance"
+		"build" : "1/010/logic_elements",
+		"source" : "1/010/logic_elements"
 	}
 }

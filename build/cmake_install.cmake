@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Programs/2023-2024/C++/build/1/014-015/Graph_lib_inheritance/cmake_install.cmake")
+  include("D:/Programs/2023-2024/C++/build/1/010/logic_elements/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

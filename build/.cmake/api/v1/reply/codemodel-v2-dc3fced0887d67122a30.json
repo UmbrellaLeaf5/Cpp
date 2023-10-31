@@ -20,16 +20,16 @@
 					"source" : "."
 				},
 				{
-					"build" : "1/014-015/Graph_lib_inheritance",
+					"build" : "1/010/logic_elements",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-1.014-015.Graph_lib_inheritance-Debug-115f8ab32b255fe10038.json",
+					"jsonFile" : "directory-1.010.logic_elements-Debug-d9be0bd03734731eafa5.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 1,
-					"source" : "1/014-015/Graph_lib_inheritance",
+					"source" : "1/010/logic_elements",
 					"targetIndexes" : 
 					[
 						0
@@ -55,7 +55,7 @@
 					[
 						1
 					],
-					"name" : "graph_lib_inheritance",
+					"name" : "logic_elements",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -67,9 +67,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "graph_lib_inheritance::@86dc649fb37527c90e36",
-					"jsonFile" : "target-graph_lib_inheritance-Debug-0195a33d27c4814ff0b5.json",
-					"name" : "graph_lib_inheritance",
+					"id" : "logic_elements::@f68f00e73d0825712c0d",
+					"jsonFile" : "target-logic_elements-Debug-0d32b7108b68dd4518ea.json",
+					"name" : "logic_elements",
 					"projectIndex" : 1
 				}
 			]

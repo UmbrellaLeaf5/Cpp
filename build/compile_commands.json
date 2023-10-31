@@ -1,38 +1,14 @@
 [
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/014-015/Graph_lib_inheritance",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/graph_lib_inheritance.dir/includes_CXX.rsp -pedantic -Wall -Wextra -g -std=gnu++17 -o CMakeFiles\\graph_lib_inheritance.dir\\main.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\014-015\\Graph_lib_inheritance\\main.cpp",
-  "file": "D:/Programs/2023-2024/C++/1/014-015/Graph_lib_inheritance/main.cpp",
-  "output": "1/014-015/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/main.cpp.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/010/logic_elements",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/logic_elements.dir/includes_CXX.rsp -pedantic -Wall -Wextra -g -std=gnu++17 -o CMakeFiles\\logic_elements.dir\\main.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\010\\logic_elements\\main.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/010/logic_elements/main.cpp",
+  "output": "1/010/logic_elements/CMakeFiles/logic_elements.dir/main.cpp.obj"
 },
 {
-  "directory": "D:/Programs/2023-2024/C++/build/1/014-015/Graph_lib_inheritance",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/graph_lib_inheritance.dir/includes_CXX.rsp -pedantic -Wall -Wextra -g -std=gnu++17 -o CMakeFiles\\graph_lib_inheritance.dir\\__\\__\\__\\lib\\Graph_lib\\Graph.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Graph_lib\\Graph.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Graph_lib/Graph.cpp",
-  "output": "1/014-015/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/__/__/__/lib/Graph_lib/Graph.cpp.obj"
-},
-{
-  "directory": "D:/Programs/2023-2024/C++/build/1/014-015/Graph_lib_inheritance",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/graph_lib_inheritance.dir/includes_CXX.rsp -pedantic -Wall -Wextra -g -std=gnu++17 -o CMakeFiles\\graph_lib_inheritance.dir\\__\\__\\__\\lib\\Graph_lib\\GUI.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Graph_lib\\GUI.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Graph_lib/GUI.cpp",
-  "output": "1/014-015/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/__/__/__/lib/Graph_lib/GUI.cpp.obj"
-},
-{
-  "directory": "D:/Programs/2023-2024/C++/build/1/014-015/Graph_lib_inheritance",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/graph_lib_inheritance.dir/includes_CXX.rsp -pedantic -Wall -Wextra -g -std=gnu++17 -o CMakeFiles\\graph_lib_inheritance.dir\\__\\__\\__\\lib\\Graph_lib\\Window.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Graph_lib\\Window.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Graph_lib/Window.cpp",
-  "output": "1/014-015/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/__/__/__/lib/Graph_lib/Window.cpp.obj"
-},
-{
-  "directory": "D:/Programs/2023-2024/C++/build/1/014-015/Graph_lib_inheritance",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/graph_lib_inheritance.dir/includes_CXX.rsp -pedantic -Wall -Wextra -g -std=gnu++17 -o CMakeFiles\\graph_lib_inheritance.dir\\__\\__\\__\\lib\\Vector_lib\\poly.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Vector_lib\\poly.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Vector_lib/poly.cpp",
-  "output": "1/014-015/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/__/__/__/lib/Vector_lib/poly.cpp.obj"
-},
-{
-  "directory": "D:/Programs/2023-2024/C++/build/1/014-015/Graph_lib_inheritance",
-  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/graph_lib_inheritance.dir/includes_CXX.rsp -pedantic -Wall -Wextra -g -std=gnu++17 -o CMakeFiles\\graph_lib_inheritance.dir\\__\\__\\__\\lib\\Vector_lib\\vec2d.cpp.obj -c D:\\Programs\\2023-2024\\C++\\lib\\Vector_lib\\vec2d.cpp",
-  "file": "D:/Programs/2023-2024/C++/lib/Vector_lib/vec2d.cpp",
-  "output": "1/014-015/Graph_lib_inheritance/CMakeFiles/graph_lib_inheritance.dir/__/__/__/lib/Vector_lib/vec2d.cpp.obj"
+  "directory": "D:/Programs/2023-2024/C++/build/1/010/logic_elements",
+  "command": "\"D:\\Program Files\\MinGW\\mingw64\\bin\\g++.exe\"  @CMakeFiles/logic_elements.dir/includes_CXX.rsp -pedantic -Wall -Wextra -g -std=gnu++17 -o CMakeFiles\\logic_elements.dir\\logic.cpp.obj -c D:\\Programs\\2023-2024\\C++\\1\\010\\logic_elements\\logic.cpp",
+  "file": "D:/Programs/2023-2024/C++/1/010/logic_elements/logic.cpp",
+  "output": "1/010/logic_elements/CMakeFiles/logic_elements.dir/logic.cpp.obj"
 }
 ]
