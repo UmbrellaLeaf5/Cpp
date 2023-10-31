@@ -11,5 +11,4 @@ Callback function
 State (какой-то enum)
 Signal (какой-то enum)
 Output (std::reference_wrapper<Element>)
-
-нам нужна абстрактность?
+Input
