@@ -151,31 +151,10 @@ double term()
 
 double expression() 
 {
-	double left_part = 0;
-	Token rec_t = ts.get();
-	if (rec_t.kind == name) 
-	{
-		if(!nm.is_declared(rec_t.name))
-			error(rec_t.name + ": is not declared");
-		Token rec_t_2 = ts.get(); // дополнительный токен для корректного получения значения переменной
-		// если получаем на вход '=' это присваивание
-		if (rec_t_2.kind == '=') {
-			double var_value = expression();
-			left_part = nm.set_value(rec_t.name, var_value);
-		}
-		else {
-			ts.unget(rec_t_2);
-			//ts.unget(rec_t);
-			left_part = nm.get_value(rec_t.name);
-			//left_part = term();
-		}
-	}
-	else {
-		ts.unget(rec_t);
-		left_part = term();
-	}
+	double left_part = term();
+
 	for(;;) {
-		rec_t = ts.get();
+		Token rec_t = ts.get();
 		switch (rec_t.kind) {
 			case '+':
 				left_part += term();

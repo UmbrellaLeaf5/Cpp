@@ -24,9 +24,10 @@
 = -5
 > = 1.66667
 = 0.333333
-> = flkj430478908ufn5649058s6767: is not declared
+> = get_value: undefined name flkj430478908ufn5649058s6767
 > > bad token
 > > = =: missing in declaration of t
+> > = get_value: undefined name t
 > > = name expected in declaration
 > = name expected in declaration
 > = name expected in declaration
@@ -55,10 +56,10 @@
 > = 332
 > = primary expected
 > = 5
-= a: is not declared
-> = a: is not declared
-> > = Lorem: is not declared
-> = Donec: is not declared
+= set: undefined name a
+> = get_value: undefined name a
+> > = get_value: undefined name Lorem
+> = get_value: undefined name Donec
 > = 39
 = 18
 = 48
