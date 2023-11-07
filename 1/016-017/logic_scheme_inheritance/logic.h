@@ -1,5 +1,6 @@
 #pragma once
 
+#include <functional>
 #include <iostream>
 #include <vector>
 
@@ -17,6 +18,12 @@ using Output = std::vector<std::reference_wrapper<Element>>;
 
 class Input;
 
+struct Connection
+{
+    reference_wrapper<Operation> op;
+    State st;
+};
+
 class Element
 {
   public:
@@ -24,8 +31,10 @@ class Element
     void set_output_state (State st);
     State output_state () const;
     const vector<Output>& outputs () const;
-    Element& operator>> (Operation& rhs);
     bool out{false};
+    // слева может быть и src и oper, а справа - только oper или вспомог. Connection
+    Element& operator>> (Connection rhs);
+    Element& operator>> (Operation& rhs);
 
   protected:
     Element(State output_state, const vector<Output>& elem_outputs);
@@ -49,7 +58,9 @@ class Operation : public Element
   public:
     using Element::Element;
 
-    Input operator~() { return {*this, State::inverted}; }
+    // Input operator~() { return {*this, State::inverted}; }
+
+    Operation& operator~();
 
     const vector<Input>& inputs () const;
 
@@ -87,11 +98,12 @@ class Input
 
     const Element& element () const { return m_elem; }
 
-    bool signal () const;
+    bool sig () const;
     State state () const;
 
   private:
     reference_wrapper<Element> m_elem;
+    // reference_wrapper улучшает копируемость, чтобы удобнее хранить векторы и т.д. в контейнерах
     const bool is_inv;
 };
 
