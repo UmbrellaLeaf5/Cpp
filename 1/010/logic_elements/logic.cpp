@@ -6,7 +6,7 @@ namespace {
 
 using logic::Element;
 
-void check_loop (const Element& loop, const Element& elem)
+/*void check_loop (const Element& loop, const Element& elem)
 {
     if (&loop == &elem)
         throw std::runtime_error{"loop detected"
@@ -14,7 +14,7 @@ void check_loop (const Element& loop, const Element& elem)
 
     for (const auto& out : loop.outputs())
         check_loop(out, elem);
-}
+}*/
 
 }  // namespace
 
@@ -93,7 +93,7 @@ Element& operator>> (Element& lhs, Input rhs)
     if (op == ElementType::source)
         throw std::runtime_error{"inputs for source elements not allowed"};
 
-    check_loop(rhs.element(), lhs);
+    // check_loop(rhs.element(), lhs);
 
     rhs.element().m_inputs.push_back(Input{lhs, rhs.state()});
     lhs.m_outputs.push_back(rhs.element());
