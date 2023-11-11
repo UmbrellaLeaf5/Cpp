@@ -4,10 +4,10 @@
 
 struct Variable
 {
-  string name;
-  double value;
+    string name;
+    double value;
 
-  Variable(string n, double v) : name{n}, value{v} {}
+    Variable(string n, double v) : name{n}, value{v} {}
 };
 
-#endif // #ifndef VARIABLE_H
+#endif  // #ifndef VARIABLE_H

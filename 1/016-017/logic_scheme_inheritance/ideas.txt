@@ -1,0 +1,17 @@
+Element
+    Source
+    Operation
+        Or
+        And   
+        Not
+Scheme
+Board (таблица со всеми вентилями)
+Connection
+Callback function
+State (какой-то enum)
+Signal (какой-то enum) (я захотел bool)
+Output (std::reference_wrapper<Element>)
+Input
+
+static_cast - точно знаем, что происходит
+dynamic_cast - не точно знаем
