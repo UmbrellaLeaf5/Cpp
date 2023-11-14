@@ -14,6 +14,7 @@ include_directories(
 #add_subdirectory("1/013/fractals")
 #add_subdirectory("1/CALCULATOR")
 #add_subdirectory("1/014-015/Graph_lib_inheritance")
-add_subdirectory("1/018/least_squares")
+#add_subdirectory("1/018/least_squares")
+add_subdirectory("1/019/cell_field")
 
 
