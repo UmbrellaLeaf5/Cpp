@@ -9,10 +9,11 @@ include_directories(
 #add_subdirectory("1/006-007/calculator")
 #add_subdirectory("1/008/vec2D")
 #add_subdirectory("1/009/logic_scheme")
-add_subdirectory("1/010/logic_elements")
+#add_subdirectory("1/010/logic_elements")
 #add_subdirectory("1/012/shape_primitives")
 #add_subdirectory("1/013/fractals")
 #add_subdirectory("1/CALCULATOR")
 #add_subdirectory("1/014-015/Graph_lib_inheritance")
+add_subdirectory("1/018/least_squares")
 
 
