@@ -1,5 +1,8 @@
-# Other files
+# Files
 *.ini
+
+# Folders
 bin/
 build/
 graphic_calculator/
+qt/
