@@ -1,3 +1,5 @@
+# cmake.options
+
 cmake_minimum_required(VERSION 3.20)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -15,7 +17,7 @@ include_directories(
 #add_subdirectory("1/CALCULATOR")
 #add_subdirectory("1/014-015/Graph_lib_inheritance")
 #add_subdirectory("1/018/least_squares")
-#add_subdirectory("1/019/cell_field")
-add_subdirectory("graphic_calculator")
+add_subdirectory("1/019/cell_field")
+#add_subdirectory("graphic_calculator")
 
 
