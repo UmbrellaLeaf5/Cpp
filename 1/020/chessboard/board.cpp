@@ -72,6 +72,12 @@ void Chessboard::clicked(Cell& c)
     }
     else
     {
+        if (selected->has_checker())
+        {
+            Cell& c1 = *selected;
+            c.attach_checker(c1.detach_checker());
+        }
+
         selected->deactivate();
 
         if (selected == &c)  // reset selection

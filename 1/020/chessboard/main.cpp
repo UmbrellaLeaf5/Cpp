@@ -17,8 +17,10 @@ int ex_chessboard ()
     Chessboard board{Point{100, 100}};
     WhiteChecker w(board);
     BlackChecker b(board);
-    b.attach(board.at('a', 3));
-    w.attach(board.at('a', 1));
+    // b.attach(board.at('a', 3));
+    // w.attach(board.at('a', 1));
+    board.at('a', 5).attach_checker(w);
+    board.at('a', 7).attach_checker(b);
     board.wait_for_button();
     return 0;
     // return gui_main();
