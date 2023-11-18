@@ -12,7 +12,7 @@ using namespace Graph_lib;
 using namespace std;
 
 MyWindow win({100, 100}, 400, 800, "window");
-ChessBoard cellwin({100, 100});
+CellField cellwin({100, 100});
 
 int main ()
 try

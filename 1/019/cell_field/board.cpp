@@ -8,7 +8,7 @@ using Graph_lib::Point;
 
 string letters ()
 {
-    string s(ChessBoard::N_max, '\0');
+    string s(CellField::N_max, '\0');
     for (size_t i = 0; i < s.size(); ++i)
         s[i] = 'a' + i;  // так как ASCII
     return s;
@@ -16,7 +16,7 @@ string letters ()
 
 string digits ()
 {
-    string s(ChessBoard::N_max, '\0');
+    string s(CellField::N_max, '\0');
     for (size_t i = 0; i < s.size(); ++i)
         s[i] = '1' + i;
     return s;
@@ -40,7 +40,7 @@ void MyWindow::cb_quit(Address, Address widget)
 // функция, определяющая цвет текущей клетки
 Cell::Type type_of_cell (int i, int j) { return (i + j) % 2 ? Cell::black : Cell::white; }
 
-ChessBoard::ChessBoard(Point xy)
+CellField::CellField(Point xy)
     : MyWindow::MyWindow{xy, width, height, "Cell field"}, x_labels{letters()}, y_labels{digits()}
 {
     size_range(width, height, width, height);  // фиксируем размеры окна
@@ -69,13 +69,13 @@ ChessBoard::ChessBoard(Point xy)
     attach(y_labels);
 }
 
-void ChessBoard::cb_clicked(Address, Address widget)
+void CellField::cb_clicked(Address, Address widget)
 {
     auto& btn = Graph_lib::reference_to<Cell>(widget);
-    dynamic_cast<ChessBoard&>(btn.window()).clicked(btn);
+    dynamic_cast<CellField&>(btn.window()).clicked(btn);
 }
 
-void ChessBoard::clicked(Cell& c)
+void CellField::clicked(Cell& c)
 {
     if (!c.is_black())
         return;

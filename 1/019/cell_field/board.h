@@ -22,10 +22,10 @@ class MyWindow : public Simple_window
 };
 
 // класс с полем 8*8 (как в шахматах)
-class ChessBoard : public MyWindow
+class CellField : public MyWindow
 {
   public:
-    ChessBoard(Point xy);
+    CellField(Point xy);
     static constexpr int N = 4;
     static constexpr int N_max = 8;
     static_assert(N <= N_max, "do not allow board larger than N*N_max");

@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 3.20)
 
-set(TARGET "chess_board")
+set(TARGET "chessboard")
 
 set(HEADERS
     board.h
     cell.h
+    checker.h
     ${LIB_DIR}/Graph_lib/fltk.h
     ${LIB_DIR}/Graph_lib/Graph.h
     ${LIB_DIR}/Graph_lib/GUI.h
@@ -14,8 +15,9 @@ set(HEADERS
 )
 set(SOURCES
     main.cpp
-    cell.cpp
     board.cpp
+    cell.cpp
+    checker.cpp
     ${LIB_DIR}/Graph_lib/Graph.cpp
     ${LIB_DIR}/Graph_lib/GUI.cpp
     ${LIB_DIR}/Graph_lib/Window.cpp
