@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-set(TARGET "cell_field")
+set(TARGET "chess_board")
 
 set(HEADERS
     board.h
