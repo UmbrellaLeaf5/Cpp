@@ -1,8 +1,12 @@
 # Files
 *.ini
+*.exe
+settings.json
 
 # Folders
 bin/
 build/
 graphic_calculator/
 qt/
+.vscode/
+1/.vscode/

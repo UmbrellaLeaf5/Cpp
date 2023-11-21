@@ -1,7 +1,4 @@
 {
   "cmake.installPrefix": "${workspaceFolder}",
-  "editor.formatOnSave": true,
-  "files.associations": {
-    "*.tcc": "cpp"
-  }
+  "editor.formatOnSave": true
 }
