@@ -19,6 +19,7 @@ include_directories(
 #add_subdirectory("1/018/least_squares")
 add_subdirectory("1/019/cell_field")
 add_subdirectory("1/020/chessboard")
+add_subdirectory("1/021/pointer_lesson")
 
 
 #add_subdirectory("graphic_calculator")

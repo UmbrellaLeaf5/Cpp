@@ -1,4 +1,7 @@
 {
   "cmake.installPrefix": "${workspaceFolder}",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "stdexcept": "cpp"
+  }
 }
