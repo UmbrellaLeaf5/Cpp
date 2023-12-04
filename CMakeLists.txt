@@ -23,6 +23,7 @@ include_directories(
 add_subdirectory("graphic_calculator/UL_develop")
 # add_subdirectory("graphic_calculator")
 # add_subdirectory("1/022/list_lesson")
-add_subdirectory("1/023/tracer_lesson")
+# add_subdirectory("1/023/tracer_lesson")
+add_subdirectory("1/024-025/template_lesson")
 
 
