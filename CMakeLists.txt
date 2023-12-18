@@ -8,6 +8,7 @@ cmake_path(SET LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
 include_directories(
     ${LIB_DIR}
 )
+
 #add_subdirectory("1/006-007/calculator")
 #add_subdirectory("1/008/vec2D")
 #add_subdirectory("1/009/logic_scheme")
@@ -23,7 +24,7 @@ include_directories(
 # add_subdirectory("graphic_calculator/testing")
 add_subdirectory("graphic_calculator")
 # add_subdirectory("graphic_calculator")
-add_subdirectory("1/022/list_lesson")
+# add_subdirectory("1/022/list_lesson")
 # add_subdirectory("1/023/tracer_lesson")
 # add_subdirectory("1/024-025/template_lesson")
 # add_subdirectory("1/027")
