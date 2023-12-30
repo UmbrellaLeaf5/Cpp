@@ -1,6 +1,7 @@
 # Files
 *.ini
 *.exe
+*.o
 settings.json
 
 # Folders
