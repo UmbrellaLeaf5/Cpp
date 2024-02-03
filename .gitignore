@@ -7,7 +7,7 @@ settings.json
 # Folders
 bin/
 build/
-graphic_calculator/
+projects/
 qt/
 .vscode/
 1/.vscode/
