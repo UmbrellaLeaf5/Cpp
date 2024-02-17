@@ -6,83 +6,67 @@
 
 namespace logic {
 
-enum class ElementType
-{
-    source = 0,
-    and_op,
-    or_op
-};
+enum class ElementType { source = 0, and_op, or_op };
 
-enum class SignalState
-{
-    direct = 0,
-    inverted
-};
+enum class SignalState { direct = 0, inverted };
 
-enum class SourceState
-{
-    off = 0,
-    on
-};
+enum class SourceState { off = 0, on };
 
-enum class Operation
-{
-    and_op = int(ElementType::and_op),
-    or_op = int(ElementType::or_op)
+enum class Operation {
+  and_op = int(ElementType::and_op),
+  or_op = int(ElementType::or_op)
 };
 
 class Element;
 
-class Input
-{
-  public:
-    Input(Element& elem, SignalState st);
+class Input {
+ public:
+  Input(Element& elem, SignalState st);
 
-    Element& element () { return m_elem; }
+  Element& element() { return m_elem; }
 
-    const Element& element () const { return m_elem; }
+  const Element& element() const { return m_elem; }
 
-    bool signal () const;
-    SignalState state () const;
+  bool signal() const;
+  SignalState state() const;
 
-  private:
-    const std::reference_wrapper<Element> m_elem;
-    const bool m_inv;
+ private:
+  const std::reference_wrapper<Element> m_elem;
+  const bool m_inv;
 };
 
 using InputContainer = std::vector<Input>;
 using OutputContainer = std::vector<std::reference_wrapper<Element>>;
 
-class Element
-{
-  public:
-    explicit Element(Operation op, SignalState out = SignalState::direct);
-    explicit Element(SourceState st);
+class Element {
+ public:
+  explicit Element(Operation op, SignalState out = SignalState::direct);
+  explicit Element(SourceState st);
 
-    const InputContainer& inputs () const { return m_inputs; }
+  const InputContainer& inputs() const { return m_inputs; }
 
-    const OutputContainer& outputs () const { return m_outputs; }
+  const OutputContainer& outputs() const { return m_outputs; }
 
-    bool signal () const;
-    SignalState state () const;
+  bool signal() const;
+  SignalState state() const;
 
-    void set (SourceState st);
+  void set(SourceState st);
 
-    Input operator~() { return {*this, SignalState::inverted}; }
+  Input operator~() { return {*this, SignalState::inverted}; }
 
-    friend Element& operator>> (Element& lhs, Input rhs);
+  friend Element& operator>>(Element& lhs, Input rhs);
 
-  private:
-    InputContainer m_inputs;
-    OutputContainer m_outputs;
-    ElementType m_type{ElementType::source};
-    bool m_src_on{false};
-    bool m_out_inv{false};
+ private:
+  InputContainer m_inputs;
+  OutputContainer m_outputs;
+  ElementType m_type{ElementType::source};
+  bool m_src_on{false};
+  bool m_out_inv{false};
 
-    bool calc () const;
+  bool calc() const;
 };
 
-Element& operator>> (Element& lhs, Element& rhs);
+Element& operator>>(Element& lhs, Element& rhs);
 
 }  // namespace logic
 

@@ -3,32 +3,32 @@
 
 class Person  // базовый класс
 {
-  protected:
-    string name;
+ protected:
+  string name;
 
-  public:
-    string get_name () const { return name; }
+ public:
+  string get_name() const { return name; }
 };
 
 class Student : public Person  // класс-наследний
 {
-  private:
-    int stud_id;
+ private:
+  int stud_id;
 
-  public:
-    int get_id () const { return stud_id; }
+ public:
+  int get_id() const { return stud_id; }
 };
 
-class A
-{
-  public:
-    virtual void Print () const { cout << "A" << endl; }
+class A {
+ public:
+  virtual void Print() const { cout << "A" << endl; }
 };
 
-class B : public A
-{
-  public:
-    void Print () const { cout << "B" << endl; }
+class B : public A {
+ public:
+  void Print() const { cout << "B" << endl; }
 };
 
-void ShowInf (const A& a) { a.Print(); }
+void ShowInf(const A& a) {
+  a.Print();
+}

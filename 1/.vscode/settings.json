@@ -1,8 +1,7 @@
 {
     "editor.formatOnSave": true,
-    "clang-format.executable": "D:/Programs/2023-2024/C++/.clang-format",
+    "clang-format.executable": "D:/Program_Files/LLVM/bin/clang-format.exe",
     "files.associations": {
         "iostream": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "disabled"
+    }
 }

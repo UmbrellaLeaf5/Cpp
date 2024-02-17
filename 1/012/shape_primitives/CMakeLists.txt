@@ -34,12 +34,12 @@ target_link_libraries(
 )
 
 if(WIN32)
-target_link_libraries(
-    ${TARGET}
-    fltk_jpeg
-    fltk_png
-    fltk_z
-)
+    target_link_libraries(
+        ${TARGET}
+        fltk_jpeg
+        fltk_png
+        fltk_z
+    )
 endif()
 
 install(TARGETS ${TARGET})
