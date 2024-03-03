@@ -1,8 +1,0 @@
-{
-  "cmake.installPrefix": "${workspaceFolder}",
-  "editor.formatOnSave": true,
-  "files.associations": {
-    "iostream": "cpp",
-    "numbers": "cpp"
-  }
-}
