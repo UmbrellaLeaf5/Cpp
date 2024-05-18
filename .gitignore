@@ -38,5 +38,4 @@
 bin/
 build/
 projects/
-qt/
 .vscode

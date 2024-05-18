@@ -1,0 +1,3 @@
+[submodule "qt/qcustomplot"]
+	path = qt/qcustomplot
+	url = https://github.com/UmbrellaLeaf5/qcustomplot
