@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/bg_1.png</file>
+        <file>images/btn_1.png</file>
+        <file>images/btn_2.png</file>
+        <file>images/door_h.png</file>
+        <file>images/door_v.png</file>
+        <file>images/fl.png</file>
+        <file>images/wall_h.png</file>
+        <file>images/wall_v.png</file>
+        <file>images/slot1.png</file>
+        <file>images/11.png</file>
+        <file>images/12.png</file>
+        <file>images/13.png</file>
+        <file>images/21.png</file>
+        <file>images/22.png</file>
+        <file>images/23.png</file>
+        <file>images/31.png</file>
+        <file>images/32.png</file>
+        <file>images/33.png</file>
+        <file>images/41.png</file>
+        <file>images/42.png</file>
+        <file>images/43.png</file>
+        <file>images/key.png</file>
+        <file>images/sword.png</file>
+    </qresource>
+</RCC>

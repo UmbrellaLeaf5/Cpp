@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>game/hrum.wav</file>
+        <file>game/bzzz.wav</file>
+        <file>game/scream.wav</file>
+    </qresource>
+</RCC>

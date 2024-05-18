@@ -1,0 +1,294 @@
+Microsoft Windows [Version 10.0.19042.985]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\dmitr>CD /D D:\
+
+D:\>CD D:\Programs\2020-2021\Sqliteman-1.2.2
+
+D:\Programs\2020-2021\Sqliteman-1.2.2>sqlite3 test.db
+SQLite version 3.7.3
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .help
+.backup ?DB? FILE      Backup DB (default "main") to FILE
+.bail ON|OFF           Stop after hitting an error.  Default OFF
+.databases             List names and files of attached databases
+.dump ?TABLE? ...      Dump the database in an SQL text format
+                         If TABLE specified, only dump tables matching
+                         LIKE pattern TABLE.
+.echo ON|OFF           Turn command echo on or off
+.exit                  Exit this program
+.explain ?ON|OFF?      Turn output mode suitable for EXPLAIN on or off.
+                         With no args, it turns EXPLAIN on.
+.header(s) ON|OFF      Turn display of headers on or off
+.help                  Show this message
+.import FILE TABLE     Import data from FILE into TABLE
+.indices ?TABLE?       Show names of all indices
+                         If TABLE specified, only show indices for tables
+                         matching LIKE pattern TABLE.
+.load FILE ?ENTRY?     Load an extension library
+.log FILE|off          Turn logging on or off.  FILE can be stderr/stdout
+.mode MODE ?TABLE?     Set output mode where MODE is one of:
+                         csv      Comma-separated values
+                         column   Left-aligned columns.  (See .width)
+                         html     HTML <table> code
+                         insert   SQL insert statements for TABLE
+                         line     One value per line
+                         list     Values delimited by .separator string
+                         tabs     Tab-separated values
+                         tcl      TCL list elements
+.nullvalue STRING      Print STRING in place of NULL values
+.output FILENAME       Send output to FILENAME
+.output stdout         Send output to the screen
+.prompt MAIN CONTINUE  Replace the standard prompts
+.quit                  Exit this program
+.read FILENAME         Execute SQL in FILENAME
+.restore ?DB? FILE     Restore content of DB (default "main") from FILE
+.schema ?TABLE?        Show the CREATE statements
+                         If TABLE specified, only show tables matching
+                         LIKE pattern TABLE.
+.separator STRING      Change separator used by output mode and .import
+.show                  Show the current values for various settings
+.stats ON|OFF          Turn stats on or off
+.tables ?TABLE?        List names of tables
+                         If TABLE specified, only list tables matching
+                         LIKE pattern TABLE.
+.timeout MS            Try opening locked tables for MS milliseconds
+.width NUM1 NUM2 ...   Set column widths for "column" mode
+.timer ON|OFF          Turn the CPU timer measurement on or off
+sqlite> create table authors( id integer primary key autoincrement not null, name varchar(100) not null);
+sqlite> insert into authors(name) values ('Пушкин');
+sqlite> insert into authors(name) values ('Лермонтов');
+sqlite> insert into authors(name) values ('Маяковский');
+sqlite> insert into authors(name) values ('Гоголь');
+sqlite> insert into authors(name) values ('Грибоедов');
+sqlite> select * from authors;
+1|Пушкин
+2|Лермонтов
+3|Маяковский
+4|Гоголь
+5|Грибоедов
+sqlite> .headers on
+sqlite> select * from authors;
+id|name
+1|Пушкин
+2|Лермонтов
+3|Маяковский
+4|Гоголь
+5|Грибоедов
+sqlite> .mode colums;
+Error: mode should be one of: column csv html insert line list tabs tcl
+sqlite> .mode colums
+Error: mode should be one of: column csv html insert line list tabs tcl
+sqlite> .mode columns
+sqlite> select * from authors;
+id          name
+----------  ----------
+1           Пушкин
+2           Лермонтов
+3           Маяковский
+4           Гоголь
+5           Грибоедов
+sqlite> create table types ( id integer primary key autoincrement not null, name varchar(100) not null);
+sqlite>  insert into types(name) values ('Поэма');
+sqlite> insert into types(name) values ('Стихи');
+sqlite> insert into types(name) values ('Романы');
+sqlite> insert into types(name) values ('Драмы');
+sqlite> insert into types(name) values ('Пьессы');
+sqlite> select * from types;
+id          name
+----------  ----------
+1           Поэма
+2           Стихи
+3           Романы
+4           Драмы
+5           Пьессы
+sqlite> f
+   ...> f
+   ...> ff
+   ...> f
+   ...> f
+   ...> f
+   ...> insert;
+Error: near "f": syntax error
+sqlite> hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh;
+Error: near "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh": syntax error
+sqlite> create table books( id integer primary key autoincrement not null, name varchar(255) not null, author integer not null, type integer not null);
+sqlite> select * from authors;
+id          name
+----------  ----------
+1           Пушкин
+2           Лермонтов
+3           Маяковский
+4           Гоголь
+5           Грибоедов
+sqlite> select * from types;
+id          name
+----------  ----------
+1           Поэма
+2           Стихи
+3           Романы
+4           Драмы
+5           Пьессы
+sqlite> insert into books(name, author, type) values ('Руслан и Людмила', '1', '2');
+sqlite> insert into books(name, author, type) values ('Сказка о царе Салтане', '1', '2'), ('Мертвые души', '3', '5');
+Error: near ",": syntax error
+sqlite> insert into books(name, author, type) values ('Сказка о царе Салтане', '1', '2');
+sqlite> insert into books(name, author, type) values ('Мертвые души', '3', '5');
+sqlite> select * from books;
+id          name              author      type
+----------  ----------------  ----------  ----------
+1           Руслан и Людмила  1           2
+2           Сказка о царе Са  1           2
+3           Мертвые души      3           5
+sqlite> insert into books(name, author, type) values ('Горе от ума', '5', '3');
+sqlite> insert into books(name, author, type) values ('Смерть поэта', '2', '2');
+sqlite> select * from books;
+id          name              author      type
+----------  ----------------  ----------  ----------
+1           Руслан и Людмила  1           2
+2           Сказка о царе Са  1           2
+3           Мертвые души      3           5
+4           Горе от ума       5           3
+5           Смерть поэта      2           2
+sqlite> .width 3 25 5 5
+sqlite> select * from books;
+id   name                       autho  type
+---  -------------------------  -----  -----
+1    Руслан и Людмила           1      2
+2    Сказка о царе Салтане      1      2
+3    Мертвые души               3      5
+4    Горе от ума                5      3
+5    Смерть поэта               2      2
+sqlite> .width 3 25 6 5
+sqlite> select * from books;
+id   name                       author  type
+---  -------------------------  ------  -----
+1    Руслан и Людмила           1       2
+2    Сказка о царе Салтане      1       2
+3    Мертвые души               3       5
+4    Горе от ума                5       3
+5    Смерть поэта               2       2
+sqlite> select type, name AS book_name from books;
+typ  book_name
+---  -------------------------
+2    Руслан и Людмила
+2    Сказка о царе Салтане
+5    Мертвые души
+3    Горе от ума
+2    Смерть поэта
+sqlite> select type, name AS book_name from books, order by book_name;
+Error: near "order": syntax error
+sqlite> select type, name AS book_name from books order by book_name;
+typ  book_name
+---  -------------------------
+3    Горе от ума
+5    Мертвые души
+2    Руслан и Людмила
+2    Сказка о царе Салтане
+2    Смерть поэта
+sqlite> select id, name from books where author = '1';
+id   name
+---  -------------------------
+1    Руслан и Людмила
+2    Сказка о царе Салтане
+sqlite> insert into authors(name) values('Помоги, я не автор! Я Дима!');
+sqlite> select * from authors;
+id   name
+---  -------------------------
+1    Пушкин
+2    Лермонтов
+3    Маяковский
+4    Гоголь
+5    Грибоедов
+6    Помоги, я не автор! Я Дим
+sqlite> delete from authors where id = '6';
+sqlite> select * from authors;
+id   name
+---  -------------------------
+1    Пушкин
+2    Лермонтов
+3    Маяковский
+4    Гоголь
+5    Грибоедов
+sqlite>  insert into authors(name) values('Помоги, я не автор! Я Дима!');
+sqlite> update authors set name = 'Ленин';
+sqlite> select * from authors;
+id   name
+---  -------------------------
+1    Ленин
+2    Ленин
+3    Ленин
+4    Ленин
+5    Ленин
+7    Ленин
+sqlite> update authors set name = 'Пушкин' where id = '1';
+sqlite> update authors set name = 'Лермонтов' where id = '2';
+sqlite> update authors set name = 'Маяковский' where id = '3';
+sqlite> update authors set name = 'Гоголь' where id = '4';
+sqlite> update authors set name = 'Грибоедов' where id = '5';
+sqlite> select * from authors;
+id   name
+---  -------------------------
+1    Пушкин
+2    Лермонтов
+3    Маяковский
+4    Гоголь
+5    Грибоедов
+7    Ленин
+sqlite> delete from authors where id = '7';
+sqlite> update authors set name = 'Ленин' where id = '6';
+sqlite> select * from authors;
+id   name
+---  -------------------------
+1    Пушкин
+2    Лермонтов
+3    Маяковский
+4    Гоголь
+5    Грибоедов
+sqlite> insert into authors(name) values('Ленин');
+sqlite> select * from authors;
+id   name
+---  -------------------------
+1    Пушкин
+2    Лермонтов
+3    Маяковский
+4    Гоголь
+5    Грибоедов
+8    Ленин
+sqlite> select * from authors where name like '%abr%';
+sqlite> select * from authors where name like 'r%';
+sqlite> sqlite> update authors set name = 'Lenin' where id = '8';
+Error: near "sqlite": syntax error
+sqlite> update authors set name = 'Lenin' where id = '8';
+sqlite> select * from authors where name like 'L%';
+id   name
+---  -------------------------
+8    Lenin
+sqlite> select * from authors t1, books t2 where t1.id = t2.authors;
+Error: no such column: t2.authors
+sqlite> select * from authors t1, books t2 where t1.id = t2.author;
+id   name                       id      name   author      type
+---  -------------------------  ------  -----  ----------  ----------
+1    Пушкин                     1       Русла  1           2
+1    Пушкин                     2       Сказк  1           2
+3    Маяковский                 3       Мертв  3           5
+5    Грибоедов                  4       Горе   5           3
+2    Лермонтов                  5       Смерт  2           2
+sqlite> .width 3 10 3 20 6 6
+sqlite> select * from authors t1, books t2 where t1.id = t2.author;
+id   name        id   name                  author  type
+---  ----------  ---  --------------------  ------  ------
+1    Пушкин      1    Руслан и Людмила      1       2
+1    Пушкин      2    Сказка о царе Салтан  1       2
+3    Маяковский  3    Мертвые души          3       5
+5    Грибоедов   4    Горе от ума           5       3
+2    Лермонтов   5    Смерть поэта          2       2
+sqlite> select * from authors t1, books t2, types t3 where (t1.id = t2.author and t2.type = t3.id);
+id   name        id   name                  author  type    id          name
+---  ----------  ---  --------------------  ------  ------  ----------  ----------
+1    Пушкин      1    Руслан и Людмила      1       2       2           Стихи
+1    Пушкин      2    Сказка о царе Салтан  1       2       2           Стихи
+3    Маяковский  3    Мертвые души          3       5       5           Пьессы
+5    Грибоедов   4    Горе от ума           5       3       3           Романы
+2    Лермонтов   5    Смерть поэта          2       2       2           Стихи
