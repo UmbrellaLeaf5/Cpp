@@ -4,3 +4,6 @@
 [submodule "projects/graphic_calculator"]
 	path = projects/graphic_calculator
 	url = https://github.com/UmbrellaLeaf5/graphic_calculator
+[submodule "projects/locus_no_pilotus"]
+	path = projects/locus_no_pilotus
+	url = https://github.com/UmbrellaLeaf5/locus_no_pilotus
