@@ -1,7 +1,0 @@
-{
-    "editor.formatOnSave": true,
-    "clang-format.executable": "D:/Program_Files/LLVM/bin/clang-format.exe",
-    "files.associations": {
-        "iostream": "cpp"
-    }
-}
