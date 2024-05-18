@@ -1,3 +1,6 @@
 [submodule "qt/qcustomplot"]
 	path = qt/qcustomplot
 	url = https://github.com/UmbrellaLeaf5/qcustomplot
+[submodule "projects/graphic_calculator"]
+	path = projects/graphic_calculator
+	url = https://github.com/UmbrellaLeaf5/graphic_calculator
