@@ -24,6 +24,7 @@ include_directories(
 # add_subdirectory("semesters/1/020/chessboard")
 # add_subdirectory("semesters/1/021/pointer_lesson")
 add_subdirectory("projects/graphic_calculator")
+add_subdirectory("projects/locus_no_pilotus")
 
 # add_subdirectory("semesters/1/022/list_lesson")
 # add_subdirectory("semesters/1/023/tracer_lesson")
