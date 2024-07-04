@@ -7,3 +7,6 @@
 [submodule "projects/locus_no_pilotus"]
 	path = projects/locus_no_pilotus
 	url = https://github.com/UmbrellaLeaf5/locus_no_pilotus
+[submodule "projects/cmake_eval_calculator"]
+	path = projects/cmake_eval_calculator
+	url = https://github.com/UmbrellaLeaf5/cmake_eval_calculator
