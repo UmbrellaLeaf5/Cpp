@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
   st = MPI_Init(&argc, &argv);
   if (st != MPI_SUCCESS) {
     // ...
-    MPI_Abort(MPI_COMM_WORLD);
+    MPI_Abort(MPI_COMM_WORLD, st);
     // ...
   }
   MPI_Finalize();
