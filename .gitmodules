@@ -10,3 +10,9 @@
 [submodule "projects/cmake_eval_calculator"]
 	path = projects/cmake_eval_calculator
 	url = https://github.com/UmbrellaLeaf5/cmake_eval_calculator
+[submodule "semesters/2/algorithms"]
+	path = semesters/2/algorithms
+	url = https://github.com/UmbrellaLeaf5/alg_spring_homework
+[submodule "semesters/3/algorithms"]
+	path = semesters/3/algorithms
+	url = https://github.com/UmbrellaLeaf5/alg_autumn_homework
