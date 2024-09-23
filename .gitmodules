@@ -16,3 +16,6 @@
 [submodule "semesters/3/algorithms"]
 	path = semesters/3/algorithms
 	url = https://github.com/UmbrellaLeaf5/alg_autumn_homework
+[submodule "projects/graph"]
+	path = projects/graph
+	url = https://github.com/UmbrellaLeaf5/graph_cpp
