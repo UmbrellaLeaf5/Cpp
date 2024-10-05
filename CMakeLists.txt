@@ -33,3 +33,5 @@ add_subdirectory("projects/locus_no_pilotus")
 add_subdirectory("semesters/2/smth/1_SFML")
 
 add_subdirectory("semesters/3/parallel/002/lesson2")
+add_subdirectory("semesters/3/parallel/003/lesson3")
+
