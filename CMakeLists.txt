@@ -34,3 +34,4 @@ add_subdirectory("semesters/2/smth/1_SFML")
 
 add_subdirectory("semesters/3/parallel/lesson_2")
 add_subdirectory("semesters/3/parallel/lesson_3")
+add_subdirectory("semesters/3/parallel/lesson_4")
