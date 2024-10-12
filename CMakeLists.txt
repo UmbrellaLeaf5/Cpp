@@ -24,14 +24,12 @@ include_directories(
 # add_subdirectory("semesters/1/020/chessboard")
 # add_subdirectory("semesters/1/021/pointer_lesson")
 add_subdirectory("projects/graphic_calculator")
-add_subdirectory("projects/locus_no_pilotus")
+
+# add_subdirectory("projects/locus_no_pilotus")
 
 # add_subdirectory("semesters/1/022/list_lesson")
 # add_subdirectory("semesters/1/023/tracer_lesson")
 # add_subdirectory("semesters/1/024-025/template_lesson")
 # add_subdirectory("semesters/1/027")
-add_subdirectory("semesters/2/smth/1_SFML")
-
-add_subdirectory("semesters/3/parallel/lesson_2")
-add_subdirectory("semesters/3/parallel/lesson_3")
-add_subdirectory("semesters/3/parallel/lesson_4")
+# add_subdirectory("semesters/2/smth/1_SFML")
+add_subdirectory("semesters/3/parallel")
