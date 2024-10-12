@@ -32,5 +32,5 @@ add_subdirectory("projects/locus_no_pilotus")
 # add_subdirectory("semesters/1/027")
 add_subdirectory("semesters/2/smth/1_SFML")
 
-add_subdirectory("semesters/3/parallel/002/lesson_2")
-add_subdirectory("semesters/3/parallel/003/lesson_3")
+add_subdirectory("semesters/3/parallel/lesson_2")
+add_subdirectory("semesters/3/parallel/lesson_3")
