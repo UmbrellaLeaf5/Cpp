@@ -23,6 +23,8 @@ include_directories(
 # add_subdirectory("semesters/1/019/cell_field")
 # add_subdirectory("semesters/1/020/chessboard")
 # add_subdirectory("semesters/1/021/pointer_lesson")
+add_subdirectory("semesters/1/CALCULATOR")
+
 add_subdirectory("projects/graphic_calculator")
 
 # add_subdirectory("projects/locus_no_pilotus")

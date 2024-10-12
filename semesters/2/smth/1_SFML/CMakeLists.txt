@@ -6,12 +6,12 @@ set(SOURCES
   main.cpp
 )
 
-project(${TARGET} CXX)
+project(${TARGET} LANGUAGES CXX)
 
 if(LINUX)
   set(SFML_STATIC_LIBRARIES FALSE)
 else()
-  set(SFML_STATIC_LIBRARIES FALSE)
+  set(SFML_STATIC_LIBRARIES TRUE)
 endif()
 
 find_package(SFML COMPONENTS graphics REQUIRED)
