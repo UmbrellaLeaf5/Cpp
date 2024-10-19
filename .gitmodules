@@ -19,3 +19,6 @@
 [submodule "projects/graph"]
 	path = projects/graph
 	url = https://github.com/UmbrellaLeaf5/graph_cpp
+[submodule "semesters/3/parallel"]
+	path = semesters/3/parallel
+	url = https://github.com/UmbrellaLeaf5/alg_parallel
