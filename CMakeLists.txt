@@ -1,17 +1,16 @@
-# cmake.options
+# language: CMake
 
+# ---------------------------------     Project setup      ---------------------------------
 cmake_minimum_required(VERSION 3.20)
 
-project(Cpp)
+project(Cpp LANGUAGES C CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+# ---------------------------------    Set C++ settings    ---------------------------------
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "-pedantic -Wall -Wextra")
-cmake_path(SET LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
-include_directories(
-  ${LIB_DIR}
-)
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic -std=c++23 -O2")
 
+# ---------------------------------    Add subdirectories   --------------------------------
 # add_subdirectory("semesters/1/006-007/calculator")
 # add_subdirectory("semesters/1/008/vec2D")
 # add_subdirectory("semesters/1/009/logic_scheme")
@@ -28,7 +27,6 @@ add_subdirectory("semesters/1/CALCULATOR")
 add_subdirectory("projects/graphic_calculator")
 
 # add_subdirectory("projects/locus_no_pilotus")
-
 # add_subdirectory("semesters/1/022/list_lesson")
 # add_subdirectory("semesters/1/023/tracer_lesson")
 # add_subdirectory("semesters/1/024-025/template_lesson")
