@@ -22,3 +22,6 @@
 [submodule "semesters/3/parallel"]
 	path = semesters/3/parallel
 	url = https://github.com/UmbrellaLeaf5/alg_parallel
+[submodule "semesters/3/os"]
+	path = semesters/3/os
+	url = https://github.com/UmbrellaLeaf5/os_homeworks
