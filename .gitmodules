@@ -25,3 +25,6 @@
 [submodule "semesters/3/os"]
 	path = semesters/3/os
 	url = https://github.com/UmbrellaLeaf5/os_homeworks
+[submodule "projects/drugdesign"]
+	path = projects/drugdesign
+	url = https://gitlab.com/DeevBogdanYi/drugdesign
