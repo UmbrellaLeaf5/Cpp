@@ -25,6 +25,7 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic -std=c++23 -O2")
 add_subdirectory("semesters/1/CALCULATOR")
 
 add_subdirectory("projects/graphic_calculator")
+add_subdirectory("projects/graph")
 
 # add_subdirectory("projects/locus_no_pilotus")
 # add_subdirectory("semesters/1/022/list_lesson")
