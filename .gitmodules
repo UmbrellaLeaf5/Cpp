@@ -28,3 +28,6 @@
 [submodule "semesters/4/advanced_cpp"]
 	path = semesters/4/advanced_cpp
 	url = https://github.com/UmbrellaLeaf5/advanced_cpp
+[submodule "template"]
+	path = template
+	url = https://github.com/UmbrellaLeaf5/template_repo_cpp_lessons
