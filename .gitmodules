@@ -25,3 +25,6 @@
 [submodule "projects/drugdesign"]
 	path = projects/drugdesign
 	url = https://gitlab.com/DeevBogdanYi/drugdesign
+[submodule "semesters/4/advanced_cpp"]
+	path = semesters/4/advanced_cpp
+	url = https://github.com/UmbrellaLeaf5/advanced_cpp
