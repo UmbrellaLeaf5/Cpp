@@ -31,3 +31,6 @@
 [submodule "template"]
 	path = template
 	url = https://github.com/UmbrellaLeaf5/template_repo_cpp_lessons
+[submodule "semesters/4/network_systems"]
+	path = semesters/4/network_systems
+	url = https://github.com/UmbrellaLeaf5/network_systems
