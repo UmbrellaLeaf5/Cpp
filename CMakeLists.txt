@@ -33,7 +33,8 @@ add_subdirectory("projects/graph")
 # add_subdirectory("semesters/1/024-025/template_lesson")
 # add_subdirectory("semesters/1/027")
 # add_subdirectory("semesters/2/smth/1_SFML")
-# add_subdirectory("semesters/3/parallel")
-add_subdirectory("semesters/4/advanced_cpp")
+add_subdirectory("semesters/3/parallel")
+
+# add_subdirectory("semesters/4/advanced_cpp")
 
 # add_subdirectory("template")
