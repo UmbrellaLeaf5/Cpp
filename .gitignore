@@ -79,3 +79,5 @@ compile_commands.json
 build/
 .vscode/
 doxygen/
+
+temp.*
