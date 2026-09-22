@@ -28,6 +28,9 @@
 [submodule "semesters/4/network_and_distributed_systems"]
 	path = semesters/4/network_and_distributed_systems
 	url = https://github.com/UmbrellaLeaf5/network_and_distributed_systems
-[submodule "template"]
-	path = template
-	url = https://github.com/UmbrellaLeaf5/template_cpp_lessons
+[submodule "semesters/template"]
+	path = semesters/template
+	url = git@github.com:UmbrellaLeaf5/template_cpp_lessons.git
+[submodule "semesters/7/practical_software_development"]
+	path = semesters/7/practical_software_development
+	url = git@github.com:UmbrellaLeaf5/practical_software_development.git
