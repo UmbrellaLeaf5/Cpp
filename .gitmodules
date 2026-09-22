@@ -1,33 +1,33 @@
 [submodule "projects/graphic_calculator"]
 	path = projects/graphic_calculator
-	url = https://github.com/BPLA-Team/graphic_calculator
+	url = git@github.com:BPLA-Team/graphic_calculator.git
 [submodule "projects/locus_no_pilotus"]
 	path = projects/locus_no_pilotus
-	url = https://github.com/BPLA-Team/locus_no_pilotus
+	url = git@github.com:BPLA-Team/locus_no_pilotus.git
 [submodule "projects/cmake_eval_calculator"]
 	path = projects/cmake_eval_calculator
-	url = https://github.com/UmbrellaLeaf5/cmake_eval_calculator
+	url = git@github.com:UmbrellaLeaf5/cmake_eval_calculator.git
 [submodule "semesters/2/algorithms"]
 	path = semesters/2/algorithms
-	url = https://github.com/UmbrellaLeaf5/alg_spring_homework
+	url = git@github.com:UmbrellaLeaf5/alg_spring_homework.git
 [submodule "semesters/3/algorithms"]
 	path = semesters/3/algorithms
-	url = https://github.com/UmbrellaLeaf5/alg_autumn_homework
+	url = git@github.com:UmbrellaLeaf5/alg_autumn_homework.git
 [submodule "projects/graph"]
 	path = projects/graph
-	url = https://github.com/UmbrellaLeaf5/graph_cpp
+	url = git@github.com:UmbrellaLeaf5/graph_cpp.git
 [submodule "semesters/3/parallel"]
 	path = semesters/3/parallel
-	url = https://github.com/UmbrellaLeaf5/alg_parallel
+	url = git@github.com:UmbrellaLeaf5/alg_parallel.git
 [submodule "semesters/3/os"]
 	path = semesters/3/os
-	url = https://github.com/UmbrellaLeaf5/os_homeworks
+	url = git@github.com:UmbrellaLeaf5/os_homeworks.git
 [submodule "semesters/4/advanced_cpp"]
 	path = semesters/4/advanced_cpp
-	url = https://github.com/UmbrellaLeaf5/advanced_cpp
+	url = git@github.com:UmbrellaLeaf5/advanced_cpp.git
 [submodule "semesters/4/network_and_distributed_systems"]
 	path = semesters/4/network_and_distributed_systems
-	url = https://github.com/UmbrellaLeaf5/network_and_distributed_systems
+	url = git@github.com:UmbrellaLeaf5/network_and_distributed_systems.git
 [submodule "semesters/template"]
 	path = semesters/template
 	url = git@github.com:UmbrellaLeaf5/template_cpp_lessons.git
