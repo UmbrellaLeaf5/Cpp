@@ -5,6 +5,8 @@ cmake_minimum_required(VERSION 3.20)
 
 project(Cpp LANGUAGES C CXX)
 
+set(LIB_DIR "${CMAKE_SOURCE_DIR}/lib")
+
 # ---------------------------------    Set C++ settings    ---------------------------------
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -15,7 +17,8 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic -std=c++23 -O2")
 # add_subdirectory("semesters/1/008/vec2D")
 # add_subdirectory("semesters/1/009/logic_scheme")
 # add_subdirectory("semesters/1/010/logic_elements")
-# add_subdirectory("semesters/1/012/shape_primitives")
+add_subdirectory("semesters/1/012/shape_primitives")
+
 # add_subdirectory("semesters/1/013/fractals")
 # add_subdirectory("semesters/1/014-015/Graph_lib_inheritance")
 # add_subdirectory("semesters/1/018/least_squares")
@@ -24,8 +27,8 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic -std=c++23 -O2")
 # add_subdirectory("semesters/1/021/pointer_lesson")
 add_subdirectory("semesters/1/CALCULATOR")
 
-add_subdirectory("projects/graphic_calculator")
-add_subdirectory("projects/graph")
+# add_subdirectory("projects/graphic_calculator")
+# add_subdirectory("projects/graph")
 
 # add_subdirectory("projects/locus_no_pilotus")
 # add_subdirectory("semesters/1/022/list_lesson")
@@ -33,7 +36,7 @@ add_subdirectory("projects/graph")
 # add_subdirectory("semesters/1/024-025/template_lesson")
 # add_subdirectory("semesters/1/027")
 # add_subdirectory("semesters/2/smth/1_SFML")
-add_subdirectory("semesters/3/parallel")
+# add_subdirectory("semesters/3/parallel")
 
 # add_subdirectory("semesters/4/advanced_cpp")
 

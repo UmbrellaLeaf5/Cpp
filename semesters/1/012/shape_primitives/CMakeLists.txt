@@ -11,6 +11,7 @@ find_package(FLTK REQUIRED)
 find_package(OpenGL REQUIRED)
 
 include_directories(
+    ${LIB_DIR}
     SYSTEM
     ${FLTK_INCLUDE_DIR}
 )
@@ -33,13 +34,13 @@ target_link_libraries(
     ${OPENGL_LIBRARIES}
 )
 
-if(WIN32)
-    target_link_libraries(
-        ${TARGET}
-        fltk_jpeg
-        fltk_png
-        fltk_z
-    )
-endif()
+# if(WIN32)
+#     target_link_libraries(
+#         ${TARGET}
+#         fltk_jpeg
+#         fltk_png
+#         fltk_z
+#     )
+# endif()
 
 install(TARGETS ${TARGET})
