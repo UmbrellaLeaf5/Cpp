@@ -1,0 +1,27 @@
+#include <iostream>
+#define MYCONST 10
+#include <windows.h>
+
+using namespace std;
+
+void F(int* D)
+{
+    *D = *D + 20;
+}
+
+int main()
+{
+    int A = 10;
+    cout << "value A: " << A << endl;
+    cout << "adres A: " << &A << endl;
+    int *ptA;
+    ptA = &A;
+    cout << "ptA: " << ptA << endl;
+    cout << "value ptA: " << *ptA << endl;
+    *ptA = *ptA + 1;
+    cout << A << endl;
+    F(&A);
+    cout << A << endl;
+    return 0;
+
+}

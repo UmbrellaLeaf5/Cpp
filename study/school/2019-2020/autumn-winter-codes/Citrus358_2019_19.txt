@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+void decor()
+{
+    cout << "================" << endl;
+    cout << "================" << endl;
+}
+void getS(int A, int B, int C)
+{
+     cout << C * 60  *  60 + B * 60 + A;
+}
+int main()
+{
+    int Q;
+    int W;
+    int E;
+    decor();
+    cout << "Seconds: ";
+    cin >> Q;
+    cout << "Minutes: ";
+    cin >> W;
+    cout << "Hours: ";
+    cin >> E;
+    decor();
+    cout << "Seconds: ";
+    getS(Q,W,E);
+    return 0;
+}

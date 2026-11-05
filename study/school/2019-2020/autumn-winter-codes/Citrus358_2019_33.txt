@@ -1,0 +1,31 @@
+#include <iostream>
+#include <fstream>
+#include <string.h>
+#include <windows.h>
+
+using namespace std;
+
+int main()
+{
+    ofstream fOut;
+    fOut.open("F:\\DIMA\\Other\\q.txt", ios_base::app);
+    fOut << endl << "abc";
+    //cout << "Yes";
+    fOut.close();
+
+    ifstream fIn;
+    fIn.open("F:\\DIMA\\Other\\q.txt");
+    char Str[100];
+    char S[100] = "abc";
+    while(fIn.eof() == false)
+    {
+        fIn.getline(Str, 100);
+        if(strcmpi(S, Str)== 0)
+        {
+            cout << "Ya" << endl;
+        }
+
+    }
+    fIn.close();
+    return 0;
+}

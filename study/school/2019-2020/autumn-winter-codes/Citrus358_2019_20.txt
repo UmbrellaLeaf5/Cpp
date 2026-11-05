@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char Q[] = " hjktrjhjkftbkfdljgkfgjbhklfjigrejhbifjHi ";
+    int i = 0;
+    while (true)
+        {
+            cout << Q[i];
+            cout << endl;
+            if(Q[i] == '\0')
+                {
+                    cout << "end" << endl;
+
+                    cout << i;
+                    break;
+                }
+            i++;
+        }
+    return 0;
+}

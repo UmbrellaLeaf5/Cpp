@@ -1,0 +1,38 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+void A()
+{
+    cout << endl;
+    cout << "====================================="<< endl;
+    cout << endl;
+}
+
+int main()
+{
+    A();
+    ifstream F;
+    F.open("F:\\DIMA\\Other\\house.txt");
+    bool fopen;
+    fopen = F.is_open();
+    if (fopen == false)
+    {
+        cout << " NO " << endl;
+        return 0;
+    }
+    else
+    {
+        cout << " YES " << endl;
+    }
+    A();
+    char S[255];
+    while(F.eof() == false)
+    {
+        F.getline(S, 255);
+        cout << S;
+        cout << endl;
+    }
+    F.close();
+    return 0;
+}

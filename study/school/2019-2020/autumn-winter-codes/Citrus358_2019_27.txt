@@ -1,0 +1,21 @@
+#include <iostream>
+#include <fstream>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+    int Q;
+    srand(time(NULL));
+    int i = 0;
+    ofstream F("F:\\DIMA\\Other\\y.txt");
+    while(i < 100)
+    {
+        Q = rand();
+        F << Q << " ";
+        i += 1;
+    }
+    F.close();
+    return 0;
+}

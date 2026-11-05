@@ -1,0 +1,25 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    int A;
+    ofstream Out;
+    Out.open("F:/DIMA/Other\\test.txt");
+    if(Out.is_open()== true)
+    {
+        cout << "Yes" << endl;
+        Out << "HAHAHAHAHAHAHAHAAHAHAHAHHAHAHHAHAHAHAHA YOU ARE LOSER!" << endl;
+        Out << "ÏÐÈÂÅÒ" << endl;
+        Out.close();
+
+    }
+    else
+    {
+        cout << "No" << endl;
+    }
+    cout << endl;
+    return 0;
+}

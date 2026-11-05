@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+struct Vopros
+{
+    string text = "Hi!";
+    string otvet = "ABC";
+    int ves = 1;
+};
+
+int main()
+{
+    Vopros A;
+    cout << A.text << endl;
+    A.text = " FGH ";
+    cout << A.text << endl;
+    Vopros B;
+    cout << B.text << endl;
+    return 0;
+}

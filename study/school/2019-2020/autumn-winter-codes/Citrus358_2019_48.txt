@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+void Sum(int *A, int B, int C)
+{
+     *A = C + B;
+}
+void Sum2(int &R, int A, int B)
+{
+    R = A + B;
+}
+
+int main()
+{   
+    cout << "A: ";
+    int A;
+    cin >> A;
+    cout << "B: ";
+    int B;
+    cin >> B;
+    int Res;
+    Sum (&Res, A, B);
+    cout << Res << endl;
+    Sum2(Res, 10, 100);
+    cout << Res << endl;
+    return 0;
+}

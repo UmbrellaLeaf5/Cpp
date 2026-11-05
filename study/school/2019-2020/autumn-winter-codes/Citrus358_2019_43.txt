@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string S = "Москва";
+    string I;
+    cout << S.length() << endl;
+    unsigned int L = S.length() -1;
+    cout << S[L] << endl;
+
+    string T[] = {"Санкт-Петербург" , "Москва" , "Псков"};
+    for(int i = 0; i < 3; i++)
+    {
+        cout << T[i] << " ";
+        cout << T[i][0] << " ";
+        unsigned int L = T[i].length();
+        cout << T[i][L-1] << endl;
+
+    }
+    return 0;
+}

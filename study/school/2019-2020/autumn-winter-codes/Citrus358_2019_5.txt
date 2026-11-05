@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ cout << "TEST" << endl;
+ int Q;
+ int W;
+ int E;
+
+ cout << "45 - 5 = " ;
+ cin >> Q;
+ if (Q == 40)
+ {
+  cout << "Yes" << endl;
+ }
+ else
+ {
+     cout << "No" << endl;
+ }
+ cout << "25 - 5 = " ;
+ cin >> W;
+ if (W == 20)
+ {
+  cout << "Yes" << endl;
+ }
+ else
+ {
+     cout << "No" << endl;
+ }
+ cout << "35 - 5 = " ;
+ cin >> E;
+ if (E == 30)
+ {
+  cout << "Yes" << endl;
+ }
+ else
+ {
+     cout << "No" << endl;
+ }
+    return 0;
+}

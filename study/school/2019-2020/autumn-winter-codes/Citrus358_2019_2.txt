@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "1. C to F" <<endl;
+    cout << "2. F to C" <<endl;
+    cout << "3. Exit" << endl;
+    cout << "Input Number" << endl;
+    short N;
+    double C;
+    double F;
+    cin >> N;
+    if(N == 1)
+    {
+        cout << "C to F" << endl;
+        cout << "********" << endl;
+        cout << "Input C" << endl;
+        cin >> C;
+        F = 3 * C;
+        cout << "*******";
+        cout << C << "C" << F << "F" << endl;
+    }
+    else if (N == 2)
+    {
+        cout << "F to C" << endl;
+        cout << "********" << endl;
+        cout << "Input F" << endl;
+        cin >> F;
+        C = F - 5;
+        cout << "*******";
+        cout << F << "F" << C << "C" << endl;
+    }
+
+
+
+
+    return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int A;
+    while(true)
+    {
+        cin >> A;
+        if(A == 0)
+    {
+        break;
+    }
+
+    }
+    cout << "End programm. ";
+    return 0;
+}

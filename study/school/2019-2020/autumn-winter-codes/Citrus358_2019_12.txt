@@ -1,0 +1,30 @@
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+       cout << " 1) Do " << endl;
+       cout << " 2) exit " << endl;
+       char Ch; 
+       while (true)
+       {
+           cout << " > ";
+           cin >> Ch;
+           if (Ch == '1')
+           {
+           break;
+           }
+           else if (Ch == '2')
+           {
+               return 0;
+           }
+           else
+           {
+               cout << " Oh" << endl;
+               
+                cout << " I am doing..." << endl;
+           }
+       }
+    return 0;
+}

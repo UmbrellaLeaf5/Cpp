@@ -1,0 +1,18 @@
+#include <iostream>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+    srand(time(NULL));
+    int i = 0;
+    char Ch;
+    while ( i != 10)
+        {
+    i ++;
+    Ch = rand() % 26 + 65;
+    cout << int(Ch) << " " << Ch << endl;
+        }
+    return 0;
+}

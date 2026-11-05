@@ -1,0 +1,27 @@
+#include <iostream>
+#include <time.h>
+using namespace std;
+void decor()
+{
+    cout << "===============" << endl;
+    cout << "===============" << endl;
+}
+void Sum()
+{
+    int Q, W;
+    cout << " A = ";
+    cin >> Q;
+    cout << " B = ";
+    cin >> W;
+    cout << " Sum = " << Q + W << endl;
+}
+int main()
+{
+
+    decor();
+    cout << " Function " << endl;
+    decor();
+    Sum();
+    decor();
+    return 0;
+}

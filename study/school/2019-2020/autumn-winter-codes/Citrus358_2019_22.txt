@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+int str_len(char S[])
+{
+        int i = 0;
+        while(true)
+        {
+            if(S[i]== '\0')
+            {
+                break;
+            }
+            i++;
+        }
+        return i;
+}
+int main()
+{
+    char A[100];
+    cout << " Пароль: ";
+    cin >> A;
+    int Len = str_len(A);
+    cout << Len;
+    if ( Len > 10)
+    {
+            cout << " Long. ";
+    }
+    else if ( Len < 4)
+    {
+            cout << " Not long. ";
+    }
+    else
+    {
+        cout << " Good. ";
+    }
+    return 0;
+}

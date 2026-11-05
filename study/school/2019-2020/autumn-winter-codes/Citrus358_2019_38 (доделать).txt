@@ -1,0 +1,300 @@
+#include <iostream>
+
+using namespace std;
+
+
+void Ekran(char A1, char A2, char A3, char A4, char A5, char A6, char A7, char A8, char A9)
+{
+    cout << "|" << A1  << "|" << A2  << "|" << A3  << "|" << endl;
+    cout << "|" << A4  << "|" << A5  << "|" << A6  << "|" << endl;
+    cout << "|" << A7  << "|" << A8  << "|" << A9  << "|" << endl;
+}
+void Nachalo()
+{
+    cout << "       X  vs  O       " << endl;
+    cout << endl;
+}
+
+int main()
+{
+     Nachalo();
+     char A1= ' ';
+     char A2= ' ';
+     char A3= ' ';
+     char A4= ' ';
+     char A5= ' ';
+     char A6= ' ';
+     char A7= ' ';
+     char A8= ' ';
+     char A9= ' ';
+     Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+     int S;
+     while (true)
+
+{
+     cout << "Player 1, choose! ";
+     cin >> S;
+     if ( S == 0 )
+    {
+
+        cout << "NO!" << endl;
+    }
+else if( S == 1)
+    {
+        A1 = 'O';
+        Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+    }
+else if( S == 2)
+    {
+        A2 = 'O';
+        Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+    }
+else if( S == 3)
+    {
+        A3 = 'O';
+        Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+    }
+else if( S == 4)
+    {
+        A4 = 'O';
+        Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+    }
+else if( S == 5)
+    {
+        A5 = 'O';
+        Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+    }
+else if( S == 6)
+    {
+        A6 = 'O';
+        Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+    }
+else if( S == 7)
+    {
+        A7 = 'O';
+        Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+    }
+else if( S == 8)
+    {
+        A8 = 'O';
+        Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+    }
+else if( S == 9)
+    {
+        A9 = 'O';
+        Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+    }
+
+if (A1 == 'O')
+{
+    if (A5 == 'O')
+    {
+        if (A9 == 'O')
+        {
+            cout << "Player 1 won!";
+            break;
+        }
+    }
+}
+if (A2 == 'O')
+{
+    if (A5 == 'O')
+    {
+        if (A8 == 'O')
+        {
+            cout << "Player 1 won!";
+            break;
+        }
+    }
+}
+if (A3 == 'O')
+{
+    if (A5 == 'O')
+    {
+        if (A7 == 'O')
+        {
+            cout << "Player 1 won!";
+            break;
+        }
+    }
+}
+if (A1 == 'O')
+{
+    if (A4 == 'O')
+    {
+        if (A7 == 'O')
+        {
+            cout << "Player 1 won!";
+            break;
+        }
+    }
+}
+if (A7 == 'O')
+{
+    if (A8 == 'O')
+    {
+        if (A9 == 'O')
+        {
+            cout << "Player 1 won!";
+            break;
+        }
+    }
+}
+if (A9 == 'O')
+{
+    if (A6 == 'O')
+    {
+        if (A3 == 'O')
+        {
+            cout << "Player 1 won!";
+            break;
+        }
+    }
+}
+if (A4 == 'O')
+{
+    if (A5 == 'O')
+    {
+        if (A6 == 'O')
+        {
+            cout << "Player 1 won!";
+            break;
+        }
+    }
+}
+
+cout << "Player 2, choose! ";
+            cin >> S;
+            if ( S == 0 )
+            {
+
+                cout << "NO!" << endl;
+            }
+            else if( S == 1)
+                {
+                    A1 = 'X';
+                    Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+                }
+            else if( S == 2)
+                {
+                    A2 = 'X';
+                    Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+                }
+            else if( S == 3)
+                {
+                    A3 = 'X';
+                    Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+                }
+            else if( S == 4)
+                {
+                    A4 = 'X';
+                    Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+                }
+            else if( S == 5)
+                {
+                    A5 = 'X';
+                    Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+                }
+            else if( S == 6)
+                {
+                    A6 = 'X';
+                    Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+                }
+            else if( S == 7)
+                {
+                    A7 = 'X';
+                    Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+                }
+            else if( S == 8)
+                {
+                    A8 = 'X';
+                    Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+                }
+            else if( S == 9)
+                {
+                    A9 = 'X';
+                    Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+                }
+
+            if (A1 == 'X')
+            {
+                if (A5 == 'X')
+                {
+                    if (A9 == 'X')
+                    {
+                        cout << "Player 2 won!";
+                        break;
+                    }
+                }
+            }
+            if (A2 == 'X')
+            {
+                if (A5 == 'X')
+                {
+                    if (A8 == 'X')
+                    {
+                        cout << "Player 2 won!";
+                        break;
+                    }
+                }
+            }
+            if (A3 == 'X')
+            {
+                if (A5 == 'X')
+                {
+                    if (A7 == 'X')
+                    {
+                        cout << "Player 2 won!";
+                        break;
+                    }
+                }
+            }
+            if (A1 == 'X')
+            {
+                if (A4 == 'X')
+                {
+                    if (A7 == 'X')
+                    {
+                        cout << "Player 2 won!";
+                        break;
+                    }
+                }
+            }
+            if (A7 == 'X')
+            {
+                if (A8 == 'X')
+                {
+                    if (A9 == 'X')
+                    {
+                        cout << "Player 2 won!";
+                        break;
+                    }
+                }
+            }
+            if (A9 == 'X')
+            {
+                if (A6 == 'X')
+                {
+                    if (A3 == 'X')
+                    {
+                        cout << "Player 2 won!";
+                        break;
+                    }
+                }
+            }
+            if (A4 == 'X')
+            {
+                if (A5 == 'X')
+                {
+                    if (A6 == 'X')
+                    {
+                        cout << "Player 2 won!";
+                        break;
+                    }
+                }
+            }
+            system ("cls");
+            Ekran(A1, A2, A3, A4, A5, A6, A7, A8, A9);
+}
+    return 0;
+}

@@ -1,0 +1,33 @@
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+    srand(time(NULL));
+    int A, B, Q;
+    Q = 0;
+    cout << "========" << endl;
+    cout << "=KAZINO=" << endl;
+    cout << "========" << endl;
+    cout << " Word number ( 1 - 10) " << endl;
+    cin >> B;
+    while(true)
+    {
+       Q = Q + 1;
+       A = rand() % 10;
+       if ( B == A )
+    {
+       cout << " Yes. ";
+       cout << " Tryed " << Q << " times.";
+       break;
+    }
+       else
+    {
+       cout << " No, " << A;
+       cout << " Number: ";
+       cin >> B;
+    }
+    }
+    return 0;
+}

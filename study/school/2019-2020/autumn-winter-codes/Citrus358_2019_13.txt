@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char Q = 'A' ;
+    char W = 68 ;
+    cout << int(Q) << endl;
+    cout << W << endl;
+    return 0;
+}

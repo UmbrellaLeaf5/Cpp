@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int A = 5;
+    double F = 5.4;
+    if(A == 5)
+    {
+        cout << "Very Good!";
+    }
+    else if(A == 4)
+    {
+       cout << "Good!";
+    }
+    else if( A == 3)
+    {
+        cout << "Norm.";
+    }
+    else
+    {
+       cout << " Bad!";
+    }
+    return 0;
+}

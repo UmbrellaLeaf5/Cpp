@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int A, B;
+    while(true)
+    {
+        cout << "A: ";
+        cin >> A;
+        cout << "B: ";
+        cin >> B;
+        cout << "A + B =" << A + B << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Mark;
+    int Res;
+    cout << "***********" << endl;
+    cout << " Mark Test " << endl;
+    cout << "***********" << endl;
+    cout << "What your result?" << endl;
+    cin >> Res;
+    if (Res > 85)
+    {
+        Mark = 5;
+    }
+    else if (Res > 70)
+    {
+        Mark = 4;
+    }
+    else if (Res > 55)
+    {
+        Mark = 3;
+    }
+    else
+    {
+            Mark = 2;
+    }
+    cout << " Mark is " << Mark << endl;
+    return 0;
+}

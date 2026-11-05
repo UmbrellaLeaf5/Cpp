@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char A[] = "abcgh";
+    int i = 0;
+    while (true)
+    {
+        if (A [i] == '\0')
+        {
+            break;
+        }
+        cout << A[i] << endl;
+        i++;
+    }
+    return 0;
+}

@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+void DECOR()
+{
+    cout << endl;
+    cout << "============================" << endl;
+    cout << "         DECORATON          " << endl;
+    cout << "============================" << endl;
+    cout << endl;
+}
+int main()
+{
+    DECOR();
+    /* char S[100];
+    cout << "->";
+    cin >> S; */
+    char S[] = "abcd";
+    char in[4] = {'a', 'b', 'c', 'd'};
+    char out[4] = {'w', 'x', 'y', 'z'};
+    for(int i = 0; i < 4; i ++)
+    {
+        for(int j = 0; j < 4; j ++)
+        {
+            cout << S[i];
+            if (S[i] == in[j])
+            {
+            cout << '=';
+            cout << in[j];
+            S[i] = out[j];
+            }
+            else
+            {
+                cout << "!=";
+                cout << in[j];
+            }
+            cout << endl;
+        }
+    }
+    for( int i = 0; i < 4; i ++)
+    {
+        cout << S[i];
+    }
+    return 0;
+}

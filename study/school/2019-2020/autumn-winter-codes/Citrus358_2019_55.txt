@@ -1,0 +1,79 @@
+#include <iostream>
+#define STR_LEN 3
+using namespace std;
+
+static string Str[STR_LEN] =
+{
+    "’‡ı",
+    "’Âı‡ı",
+    "’¿’≈’¿’≈’¿"
+};
+
+int getLen()
+{
+    int Res = 0;
+    for(int i = 0; i < STR_LEN; i++)
+    {
+        if (Str[i].length() > Res)
+        {
+            Res = Str[i].length();
+        }
+    }
+    return Res;
+}
+
+void show (int OPA)
+{
+    int Len = getLen();
+    for(int i = 0; i < Len + 2 + OPA + OPA ;i++)
+    {
+        cout << "*";
+    }
+    cout << endl;
+    for(int i = 0; i < STR_LEN; i++)
+    {
+        cout << "*";
+        for (int i = 0; i < OPA; i ++)
+        {
+            cout << " ";
+        }
+        cout << Str[i];
+        if (Str[i].length() == Len)
+        {
+            for (int i = 0; i < OPA; i ++)
+            {
+                cout << " ";
+            }
+            cout << "*" << endl;
+        }
+        else
+        {
+            int T = 0;
+            T = Len - Str[i].length();
+            for(int i = 0; i < T; i ++)
+            {
+                cout << " ";
+            }
+            for (int i = 0; i < OPA; i ++)
+            {
+                cout << " ";
+            }
+
+            cout << "*" << endl;
+        }
+    }
+
+    for(int i = 0; i < Len + 2 + OPA + OPA;i++)
+    {
+        cout << "*";
+    }
+
+
+}
+
+
+int main()
+{
+    show(2);
+    return 0;
+}

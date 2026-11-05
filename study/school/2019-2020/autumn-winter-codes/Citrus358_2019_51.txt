@@ -1,0 +1,61 @@
+#include <iostream>
+#include <time.h>
+
+using namespace std;
+
+struct Vopros
+{
+    string text = "Hi!";
+    string otvet = "ABC";
+    int ves = 1;
+};
+
+int main()
+{
+    srand(time(NULL));
+    Vopros Test[5];
+    Test[0].text = " 2 + 2 = ";
+    Test[0].otvet = "4";
+
+    Test[1].text = " 3 + 2 = ";
+    Test[1].otvet = "5";
+    Test[1].ves = 2;
+
+    Test[2].text = " 3 + 3 = ";
+    Test[2].otvet = "6";
+    Test[2].ves = 3;
+
+    Test[3].text = " 4 + 3 = ";
+    Test[3].otvet = "7";
+    Test[3].ves = 4;
+
+    Test[4].text = " 4 + 4 = ";
+    Test[4].otvet = "8";
+    Test[4].ves = 5;
+    int i = 0;
+    int Res = 0;
+    while(i < 5)
+    {
+        int rnd = rand() % 5;
+        Vopros tmp = Test[i];
+        Test[i] = Test[rnd];
+        Test[rnd] = tmp;
+        cout << "Vopros " << i + 1 << endl;
+        cout << Test[i].text;
+        string A;
+        cin >> A;
+        if (A == Test[i].otvet)
+        {
+            cout << " Verno " << endl;
+            Res =  Res + Test[i].ves;
+        }
+        else
+        {
+            cout << " Neverno " << endl;
+        }
+        cout << endl;
+        i ++;
+    }
+    cout << "Your result is: " << Res << endl;
+    return 0;
+}

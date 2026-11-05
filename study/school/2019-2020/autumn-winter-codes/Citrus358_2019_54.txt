@@ -1,0 +1,137 @@
+#include <iostream>
+
+using namespace std;
+
+class Table{
+public:
+    void setSize(int R, int C)
+    {
+        if(R > 0)
+        {
+            countRows = R;
+        }
+        if(C > 0)
+        {
+            countCols = C;
+        }
+    }
+    void show()
+    {
+        showTop();
+        for (int i = 0; i < countRows; i ++)
+        {
+            showMiddle();
+            if (i < (countRows - 1))
+            {
+                showCenter();
+            }
+        }
+        showBottom();
+    }
+    void showRow()
+    {
+        showTop();
+        showMiddle();
+        showCenter();
+        showMiddle();
+        showBottom();
+    }
+private:
+    int countRows = 1;
+    int countCols = 1;
+    int leftTop = 218;
+    int leftBot = 192;
+    int rightTop = 191;
+    int rightBot = 217;
+    int tLeft = 195;
+    int tRight = 180;
+    int tTop = 194;
+    int tBot = 193;
+    int center = 197;
+    int vert = 179;
+    int horz = 196;
+    void showTop()
+    {
+        cout << char(leftTop);
+        for (int i = 0; i < countCols; i ++)
+        {
+        cout << char(horz);
+        if( i < (countCols - 1))
+        {
+            cout << char(tTop);
+        }
+        }
+            // << char(horz)
+            // << char(tTop)
+            // << char(horz)
+        cout << char(rightTop)
+             << endl;
+    }
+    void showMiddle()
+    {
+        cout << char(vert);
+                for (int i = 0; i < countCols; i ++)
+                {
+                cout << " ";
+                if( i < (countCols - 1))
+                {
+                    cout << char(vert);
+                }
+                }
+             //<< " "
+             //<< char(vert)
+             //<< " "
+             cout << char(vert)
+             << endl;
+    }
+    void showCenter()
+    {
+        cout << char(tLeft);
+                for (int i = 0; i < countCols; i ++)
+                {
+                cout << char(horz);
+                if( i < (countCols - 1))
+                {
+                    cout << char(center);
+                }
+                }
+             //<< char(horz)
+             //<< char(center)
+             //<< char(horz)
+            cout << char(tRight)
+             << endl;
+    }
+    void showBottom()
+    {
+
+                cout << char(leftBot);
+                for (int i = 0; i < countCols; i ++)
+                {
+                cout << char(horz);
+                if( i < (countCols - 1))
+                {
+                    cout << char(tBot);
+                }
+                }
+             //<< char(horz)
+             //<< char(tBot)
+             //<< char(horz)
+            cout << char(rightBot)
+             << endl;
+    }
+};
+
+int main()
+{
+    Table T;
+    T.setSize(2, 4);
+    T.show();
+   // int i = 1;
+   // while(i<255)
+   // {
+   //     i++;
+   //     cout << i << "-" << char(i) << endl << endl;
+   // }
+
+    return 0;
+}

@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Q;
+    int W;
+    int E;
+    int R;
+    int T;
+    cout << " Введите 1, если хотите узнать ответ в секундах.                                 Введите 2, если хотите узнать ответ в часах и т.п." << endl;
+    cin >> T;
+    if (T == 1)
+    {
+        cout << " Hours: ";
+        cin >> Q;
+        cout << " Minutes: ";
+        cin >> W;
+        cout << " Секунды: ";
+        cin >> E;
+        R = Q * 60  *  60 + W * 60 + E;
+        if (R > 0)
+    {
+            cout << " Секунды: " << R;
+    }
+            else
+    {
+            cout << " Ошибка. ";
+    }
+    }
+    else if (T == 2)
+    {
+        cout << " Секунды: ";
+        cin >> R;
+        Q = R / 3600; 
+        R = R - Q * 3600;
+        W = Q / 60;
+        E = R % 60;
+        cout << " Часы: " << Q << endl;
+        cout << " Минуты: " << W << endl;
+        cout << " Секунды: " << E << endl;
+    }
+    return 0;
+}

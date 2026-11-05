@@ -1,0 +1,49 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+class HTML{
+public:
+    string head = "";
+    string body = "";
+    string fName = "";
+    void setTitle (string S)
+    {
+        head += "<title>" + S;
+        head += "</title>";
+    }
+    void addHeader(string L, string S)
+    {
+        body += "<h" + L + ">";
+        body += S;
+        body += "</h" + L + ">";
+    }
+    void print()
+    {
+       ofstream R;
+       R.open(fName);
+       R << "<html>" << endl;
+       R << "<head>" << endl;
+       R << head << endl;
+       R << "<head>" << endl;
+       R << "<body>" << endl;
+       R << body << endl;
+       R << "</body>" << endl;
+       R << "</html>" << endl;
+       R.close();
+
+    }
+private:
+
+};
+
+int main()
+{
+    HTML myfile;
+    myfile.addHeader("1", "HGT");
+    myfile.addHeader("2", "HGOKT");
+    myfile.setTitle("Ex.");
+    myfile.fName = "file.html";
+    myfile.print();
+
+    return 0;
+}

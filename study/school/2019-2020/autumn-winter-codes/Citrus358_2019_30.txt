@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int main()
+{
+    char Q[] = "cat";
+    char W[] = "caT";
+    if ( strcmpi(Q, W) == 0 )
+    {
+        cout << "OK";
+    }
+    else
+    {
+        cout << "NOT";
+    }
+    return 0;
+}

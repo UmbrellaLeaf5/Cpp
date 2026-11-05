@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int A;
+    cout << " Введите число : ";
+    cin >> A;
+    if( A == 0)
+    {
+        cout << " Это ноль. " << endl;
+    }
+    else if( A > 0)
+    {
+        cout << " Полож ";
+    }
+    else
+    {
+        cout << " Отриц.";
+    }
+    return 0;
+}

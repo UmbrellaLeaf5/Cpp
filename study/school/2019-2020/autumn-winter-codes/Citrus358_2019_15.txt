@@ -1,0 +1,89 @@
+#include <iostream>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+    int Com;
+    int Size;
+    while(true){
+        cout << " =========================== " << endl;
+        cout << " = Generator of passswords = " << endl;
+        cout << " =========================== " << endl;
+        srand(time(NULL));
+        cout << " 1. a-z " << endl;
+        cout << " 2. a-Z " << endl;
+        cout << " 3. a-Z 0-9 " << endl;
+        cout << " 0. Exit " << endl;
+        cout << " What do you want? (Write number) " << endl;
+        cin >> Com;
+        if ( Com == 1 )
+            {
+                cout << " Numbers: ";
+                cin >> Size;
+                char Ch;
+                while(Size > 0)
+                {
+                    Ch = rand() % 26 + 97;
+                    cout << Ch;
+                    Size --;
+                }
+                cout << endl;
+            }
+        else if ( Com == 2 )
+            {
+                cout << " Numbers: ";
+                cin >> Size;
+                char Ch;
+                while(Size > 0)
+                {
+                    if((rand()% 2)==1)
+                    {
+                        Ch = rand() % 26 + 65;
+                    }
+                    else
+                    {
+                        Ch = rand() % 26 + 97;
+                    }
+                    cout << Ch;
+                    Size --;
+                }
+            cout << endl;
+            }
+        else if ( Com == 3 )
+            {
+                cout << " Numbers: ";
+                cin >> Size;
+                char Ch;
+                while(Size > 0)
+                {
+                    if((rand()% 3)== 1)
+                    {
+                        Ch = rand() % 26 + 65;
+                    }
+                    else if ((rand()% 3)== 2)
+                    {
+                        Ch = rand() % 26 + 97;
+                    }
+                    else
+                    {
+                        Ch = rand() % 10 + 48;
+                    }
+                    cout << Ch;
+                    Size --;
+                }
+            cout << endl;
+            }
+        else if ( Com == 0 )
+            {
+                break;
+            }
+        else
+            {
+                cout << " No, it isn't in your want list. " << endl;
+            }
+    }
+    return 0;
+}
+

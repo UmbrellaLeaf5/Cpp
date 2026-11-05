@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+void Decor()
+{
+    cout << " = = = = = = = = = = = =" << endl;
+    cout << "=      Decoration      =" << endl;
+    cout << "= = = = = = = = = = = = " << endl;
+}
+void DECOR2()
+{
+    cout << "=======================" << endl;
+}
+void func2 ( int *D, int L)
+{
+    int min_val = D[0];
+    for (int i = 1; i < L ;i ++ )
+    {
+        if (D[i] < min_val)
+        {
+             min_val = D[i];
+        }
+    }
+    cout << "Your min val " << min_val;
+}
+int main()
+{
+    Decor();
+    int O;
+    cout << "Enter length ";
+    cin >> O;
+    int F[O];
+    for ( int i = 0; i < O; i ++)
+    {
+        cout << "Enter something number " << i + 1 << ": ";
+        cin >> F[i];
+        DECOR2();
+    }
+    func2(F, O);
+    return 0;
+}

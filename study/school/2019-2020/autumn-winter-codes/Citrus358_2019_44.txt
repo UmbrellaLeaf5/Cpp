@@ -1,0 +1,82 @@
+#include <iostream>
+#include <conio.h>
+#include <windows.h>
+#include <time.h>
+using namespace std;
+int Menu()
+{
+    int Ind = 0;
+    while (true)
+    {
+
+        system("cls");
+    string M[] = {"Сложно",
+                 "Просто",
+                 "Очень просто",
+                 "Выход"};
+
+    for (int i = 0; i < 4; i++)
+    {
+        if (Ind == i)
+        {
+            cout << "<";
+            cout << M[i];
+            cout << ">" << endl;
+        }
+        else
+        {
+            cout << " " << M[i] << endl;
+
+        }
+
+    }
+    while(true)
+    {
+        if(kbhit() == true)
+        {
+            int Code_1 = getch();
+            if(Code_1 == 224)
+            {
+                int Code = getch();
+                if(Code == 72)
+                {
+                    Ind --;
+                    if (Ind == -1)
+                    {
+                        Ind = 3;
+                    }
+                    break;
+                }
+                else if(Code == 80)
+                {
+                    Ind ++;
+                    if (Ind == 4)
+                    {
+                        Ind = 0;
+                    }
+                    break;
+                }
+            }else if(Code_1 == 13)
+            {
+                return Ind;
+            }
+        }
+    }
+}
+}
+void D()
+{
+    cout << "====================" << endl;
+    cout << "=====Decoration=====" << endl;
+    cout << "====================" << endl;
+}
+int main()
+{
+    srand(time(NULL));
+    int Event = Menu();
+    string Comp[] = {"Ну пускай будет ", "Не было ", "Давай " };
+    string T[] = {"Санкт-Петербург" , "Москва" , "Псков", "Мурино", "Тверь", "Гдов", "Владивосток", "Орёл",};
+    //Sleep(5000);
+    cout << Comp[rand()%3] << T[0] << endl;
+    return 0;
+}

@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+void DECOR()
+{
+    cout << endl;
+    cout << "============================" << endl;
+    cout << "         DECORATON          " << endl;
+    cout << "============================" << endl;
+    cout << endl;
+}
+int main()
+{
+    DECOR();
+    int A[4] = {1, 50, 25, 7};
+    cout << A[3] << endl;
+    int B[5];
+    B[3] = 125;
+    cout << B[3] + A[1] << endl << endl;
+    DECOR();
+    for (int i = 0; i < 4; i ++)
+    {
+        cout << A[i] << endl;
+    }
+    DECOR();
+    int D[10];
+    for (int i = 0; i < 10; i ++)
+    {
+        cout << ": ";
+        cin >> D[i];
+    }
+    DECOR();
+    cout << "A = {";
+    for ( int q = 0; q < 10; q ++)
+    {
+        cout << " " << D[q];
+        if ( q < 9 )
+        {
+            cout << ",";
+        }
+    }
+    cout << " }";
+    return 0;
+}

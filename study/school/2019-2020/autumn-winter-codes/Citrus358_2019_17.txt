@@ -1,0 +1,22 @@
+#include <iostream>
+#include <time.h>
+using namespace std;
+int myrand(int A, int B)
+{
+    int Os = B - A + 1;
+    int Res = rand() % 10 + 1;
+    return Res;
+}
+int main()
+{
+    srand(time(NULL));
+    int R;
+    int i = 0;
+    while( i < 100 )
+        {
+            R = myrand(1, 10);
+            cout << R << " ";
+            i++;
+        }
+    return 0;
+}
